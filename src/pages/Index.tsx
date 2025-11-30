@@ -577,12 +577,13 @@ const Index = () => {
 
       {/* Section 2 – Parcours dédiés */}
       <section className="relative bg-[#020813] border-t border-[#3D5E73]/50" aria-label="Segments prioritaires">
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(61,94,115,0.05),rgba(61,94,115,0.02))]" aria-hidden />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(224,43,43,0.05),transparent_60%)] opacity-90" aria-hidden />
         <div className="relative max-w-6xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#E02B2B]">Parcours guidés</p>
-            <h2 className="mt-4 text-3xl lg:text-4xl font-semibold text-[#DFEAF7]">Choisissez le cadre qui correspond à votre rôle</h2>
-            <p className="mt-4 text-[#DFEAF7]/85">
+            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#E02B2B]/95">Parcours guidés</p>
+            <h2 className="mt-4 text-3xl lg:text-4xl font-semibold text-[#CEDEF2]">Choisissez le cadre qui correspond à votre rôle</h2>
+            <p className="mt-4 text-[#CEDEF2]/85">
               Le collectif consolide des signalements réels : diagnostics modifiés, devis opaques et pressions psychologiques. Nous ne publions que des éléments sourcés et disponibles dans notre dossier.
             </p>
           </div>
@@ -591,17 +592,17 @@ const Index = () => {
             {heroSegments.map(segment => {
               const Icon = segment.icon;
               return (
-                <div key={segment.id} className="rounded-2xl border border-[#3D5E73]/40 bg-[#395066]/70 p-6 shadow-[0_30px_80px_rgba(2,8,19,0.65)] backdrop-blur">
+                <div key={segment.id} className="rounded-2xl border border-white/5 bg-[#3D5E73]/80 p-6 shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-xs uppercase tracking-widest text-[#E02B2B] font-semibold">{segment.badge}</span>
                     <Icon className="h-6 w-6 text-[#E02B2B]" aria-hidden="true" />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#DFEAF7] mb-2">{segment.title}</h3>
-                  <p className="text-[#DFEAF7]/80 mb-6 leading-relaxed">{segment.description}</p>
+                  <h3 className="text-2xl font-bold text-[#CEDEF2] mb-2">{segment.title}</h3>
+                  <p className="text-[#CEDEF2]/85 mb-6 leading-relaxed">{segment.description}</p>
                   <Button
                     onClick={() => scrollToSection(segment.target)}
                     variant="secondary"
-                    className="w-full group"
+                    className="w-full group bg-[#CEDEF2] text-[#020813] shadow-[0_12px_30px_rgba(0,0,0,0.25)] hover:bg-[#CEDEF2]/90 hover:shadow-[0_0_28px_rgba(61,94,115,0.45)]"
                     aria-label={`Accéder à l'espace ${segment.id}`}
                   >
                     <span className="flex items-center justify-center gap-2">
@@ -618,11 +619,11 @@ const Index = () => {
             {heroValueProps.map(prop => {
               const Icon = prop.icon;
               return (
-                <div key={prop.title} className="flex items-center gap-3 rounded-2xl border border-[#3D5E73]/40 bg-[#395066]/60 px-4 py-3 backdrop-blur">
+                <div key={prop.title} className="flex items-center gap-3 rounded-2xl border border-white/5 bg-[#395066]/80 px-4 py-3 shadow-[0_8px_30px_rgba(0,0,0,0.2)] backdrop-blur">
                   <Icon className="h-5 w-5 text-[#E02B2B]" aria-hidden="true" />
                   <div>
-                    <p className="text-sm font-semibold text-[#DFEAF7]">{prop.title}</p>
-                    <p className="text-xs text-[#DFEAF7]/80">{prop.description}</p>
+                    <p className="text-sm font-semibold text-[#CEDEF2]">{prop.title}</p>
+                    <p className="text-xs text-[#CEDEF2]/80">{prop.description}</p>
                   </div>
                 </div>
               );
