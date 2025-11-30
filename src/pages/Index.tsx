@@ -459,20 +459,25 @@ const Index = () => {
       {/* Hero Section – Cinematic video-ready canvas */}
       <section id="accueil" className="relative min-h-screen w-full overflow-hidden bg-black text-white">
         <div className="relative w-full overflow-hidden min-h-screen">
-          {/* Video background */}
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            ref={heroVideoRef}
-            src={heroVideoSrc ?? undefined}
-            className="absolute inset-0 w-full h-full object-cover z-0"
-            aria-label="Vidéo de fond illustrant la page d'accueil"
-          >
-            <source src={heroVideoSrc ?? undefined} type="video/mp4" />
-          </video>
+          {/* Video background with showcase framing */}
+          <div className="absolute inset-0 z-0 overflow-hidden">
+            <div className="absolute inset-0 bg-[rgba(57,80,102,0.35)] shadow-[0_30px_90px_-40px_rgba(2,8,19,0.35)]" />
+            <div className="absolute inset-0 ring-1 ring-inset ring-[rgba(255,255,255,0.08)]" />
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              ref={heroVideoRef}
+              src={heroVideoSrc ?? undefined}
+              className="absolute inset-0 w-full h-full object-cover z-[1]"
+              aria-label="Vidéo de fond illustrant la page d'accueil"
+            >
+              <source src={heroVideoSrc ?? undefined} type="video/mp4" />
+            </video>
+            <div className="pointer-events-none absolute inset-0 z-[2] bg-[linear-gradient(to_bottom,rgba(2,8,19,0.25),transparent_35%),linear-gradient(to_top,rgba(2,8,19,0.25),transparent_35%)]" />
+          </div>
 
           {/* Hero content */}
           <div className="relative z-20">
