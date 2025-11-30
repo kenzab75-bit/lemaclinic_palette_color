@@ -632,7 +632,7 @@ const Index = () => {
 
           {/* Qui suis-je & Pourquoi ce site */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
-            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#020813]/95 via-[#395066]/90 to-[#3D5E73]/85 border border-white/10 shadow-[0_24px_80px_-30px_rgba(2,8,19,0.75)] ring-1 ring-primary-red/10 backdrop-blur">
+            <div className="story-card rounded-2xl p-10">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-gradient-to-br from-primary-red to-dark-red rounded-xl mr-4">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -660,7 +660,7 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#020813]/95 via-[#395066]/90 to-[#3D5E73]/85 border border-white/10 shadow-[0_24px_80px_-30px_rgba(2,8,19,0.75)] ring-1 ring-primary-red/10 backdrop-blur">
+            <div className="story-card rounded-2xl p-10">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-gradient-to-br from-primary-red to-dark-red rounded-xl mr-4">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -691,7 +691,7 @@ const Index = () => {
 
           {/* Mon expérience */}
           <div className="max-w-5xl mx-auto">
-            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#020813]/95 via-[#395066]/90 to-[#3D5E73]/85 border border-white/10 shadow-[0_28px_90px_-32px_rgba(2,8,19,0.78)] ring-1 ring-primary-red/10 backdrop-blur">
+            <div className="story-card rounded-2xl p-10">
               <h3 className="text-2xl font-bold text-[#E9F2FB] mb-6">
                 Mon expérience
               </h3>
