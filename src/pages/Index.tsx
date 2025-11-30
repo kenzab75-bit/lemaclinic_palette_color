@@ -612,8 +612,7 @@ const Index = () => {
       </section>
 
       {/* My Story Section - Introduction */}
-      <section id="histoire" className="py-section bg-gradient-to-br from-background via-secondary to-background relative overflow-hidden pattern-dots">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-red/5 via-transparent to-primary-red/5" />
+      <section id="histoire" className="py-section bg-[#FAF9FF]">
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
           <div className="text-center mb-20">
@@ -625,7 +624,7 @@ const Index = () => {
 
           {/* Qui suis-je & Pourquoi ce site */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
-            <div className="glass-card rounded-2xl p-10">
+            <div className="glass-card rounded-2xl p-10 bg-[rgba(57,80,102,0.65)] border border-[rgba(255,255,255,0.08)] shadow-[0px_8px_24px_rgba(0,0,0,0.18)]">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-gradient-to-br from-primary-red to-dark-red rounded-xl mr-4">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -653,7 +652,7 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="glass-card rounded-2xl p-10">
+            <div className="glass-card rounded-2xl p-10 bg-[rgba(57,80,102,0.65)] border border-[rgba(255,255,255,0.08)] shadow-[0px_8px_24px_rgba(0,0,0,0.18)]">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-gradient-to-br from-primary-red to-dark-red rounded-xl mr-4">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -684,7 +683,7 @@ const Index = () => {
 
           {/* Mon expérience */}
           <div className="max-w-5xl mx-auto">
-            <div className="glass-card rounded-2xl p-10">
+            <div className="glass-card rounded-2xl p-10 bg-[rgba(57,80,102,0.65)] border border-[rgba(255,255,255,0.08)] shadow-[0px_8px_24px_rgba(0,0,0,0.18)]">
               <h3 className="text-2xl font-bold text-foreground mb-6">
                 Mon expérience
               </h3>
