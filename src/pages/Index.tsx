@@ -581,9 +581,9 @@ const Index = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(224,43,43,0.05),transparent_60%)] opacity-90" aria-hidden />
         <div className="relative max-w-6xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#E02B2B]/95">Parcours guidés</p>
-            <h2 className="mt-4 text-3xl lg:text-4xl font-semibold text-[#CEDEF2]">Choisissez le cadre qui correspond à votre rôle</h2>
-            <p className="mt-4 text-[#CEDEF2]/85">
+            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#E02B2B]">Parcours guidés</p>
+            <h2 className="mt-4 text-3xl lg:text-4xl font-semibold text-[#E3EBF3]">Choisissez le cadre qui correspond à votre rôle</h2>
+            <p className="mt-4 text-[#CEDEF2]/90">
               Le collectif consolide des signalements réels : diagnostics modifiés, devis opaques et pressions psychologiques. Nous ne publions que des éléments sourcés et disponibles dans notre dossier.
             </p>
           </div>
@@ -592,17 +592,20 @@ const Index = () => {
             {heroSegments.map(segment => {
               const Icon = segment.icon;
               return (
-                <div key={segment.id} className="rounded-2xl border border-white/5 bg-[#3D5E73]/80 p-6 shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur">
+                <div
+                  key={segment.id}
+                  className="rounded-2xl border border-white/10 bg-[#3D5E73]/80 p-6 shadow-lg shadow-black/30 backdrop-blur-[1px] transition-all duration-300 ease-out hover:-translate-y-[2px] hover:shadow-xl hover:shadow-black/40 hover:ring-1 hover:ring-[#3D5E73]/20"
+                >
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-xs uppercase tracking-widest text-[#E02B2B] font-semibold">{segment.badge}</span>
                     <Icon className="h-6 w-6 text-[#E02B2B]" aria-hidden="true" />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#CEDEF2] mb-2">{segment.title}</h3>
-                  <p className="text-[#CEDEF2]/85 mb-6 leading-relaxed">{segment.description}</p>
+                  <h3 className="text-2xl font-semibold text-white/95 mb-2">{segment.title}</h3>
+                  <p className="text-white/60 mb-6 leading-relaxed">{segment.description}</p>
                   <Button
                     onClick={() => scrollToSection(segment.target)}
                     variant="secondary"
-                    className="w-full group bg-[#CEDEF2] text-[#020813] shadow-[0_12px_30px_rgba(0,0,0,0.25)] hover:bg-[#CEDEF2]/90 hover:shadow-[0_0_28px_rgba(61,94,115,0.45)]"
+                    className="w-full group rounded-xl bg-[#D8E4EF] text-[#020813] border border-black/10 shadow-[0_12px_30px_rgba(0,0,0,0.25)] hover:bg-[#C7D6E2] hover:border-black/20 hover:shadow-[0_14px_34px_rgba(0,0,0,0.3)]"
                     aria-label={`Accéder à l'espace ${segment.id}`}
                   >
                     <span className="flex items-center justify-center gap-2">
