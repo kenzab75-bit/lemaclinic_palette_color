@@ -576,13 +576,13 @@ const Index = () => {
       </section>
 
       {/* Section 2 – Parcours dédiés */}
-      <section className="relative bg-[#020813] border-t border-[rgba(255,255,255,0.06)]" aria-label="Segments prioritaires">
+      <section className="relative bg-[#020813] border-t border-[#3D5E73]/50" aria-label="Segments prioritaires">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(224,43,43,0.05),transparent_60%)] opacity-90" aria-hidden />
         <div className="relative max-w-6xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#3D5E73]">Parcours guidés</p>
-            <h2 className="mt-4 text-3xl lg:text-4xl font-semibold text-[#020813]">Choisissez le cadre qui correspond à votre rôle</h2>
-            <p className="mt-4 text-[#3D5E73]">
+            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#E02B2B]">Parcours guidés</p>
+            <h2 className="mt-4 text-3xl lg:text-4xl font-semibold text-[#DFEAF7]">Choisissez le cadre qui correspond à votre rôle</h2>
+            <p className="mt-4 text-[#DFEAF7]/85">
               Le collectif consolide des signalements réels : diagnostics modifiés, devis opaques et pressions psychologiques. Nous ne publions que des éléments sourcés et disponibles dans notre dossier.
             </p>
           </div>
@@ -591,13 +591,13 @@ const Index = () => {
             {heroSegments.map(segment => {
               const Icon = segment.icon;
               return (
-                <div key={segment.id} className="rounded-2xl border border-[#3D5E73]/40 bg-[#395066]/70 p-6 shadow-ink-elevated backdrop-blur">
+                <div key={segment.id} className="rounded-2xl border border-[#3D5E73]/40 bg-[#395066]/70 p-6 shadow-[0_30px_80px_rgba(2,8,19,0.65)] backdrop-blur">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs uppercase tracking-widest text-[#3D5E73] font-semibold">{segment.badge}</span>
-                    <Icon className="h-6 w-6 text-[#3D5E73]" aria-hidden="true" />
+                    <span className="text-xs uppercase tracking-widest text-[#E02B2B] font-semibold">{segment.badge}</span>
+                    <Icon className="h-6 w-6 text-[#E02B2B]" aria-hidden="true" />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#020813] mb-2">{segment.title}</h3>
-                  <p className="text-[#CEDEF2] mb-6 leading-relaxed">{segment.description}</p>
+                  <h3 className="text-2xl font-bold text-[#DFEAF7] mb-2">{segment.title}</h3>
+                  <p className="text-[#DFEAF7]/80 mb-6 leading-relaxed">{segment.description}</p>
                   <Button
                     onClick={() => scrollToSection(segment.target)}
                     variant="secondary"
@@ -618,11 +618,11 @@ const Index = () => {
             {heroValueProps.map(prop => {
               const Icon = prop.icon;
               return (
-                <div key={prop.title} className="flex items-center gap-3 rounded-2xl border border-[rgba(255,255,255,0.06)] bg-[#395066]/60 px-4 py-3 backdrop-blur">
-                  <Icon className="h-5 w-5 text-[#3D5E73]" aria-hidden="true" />
+                <div key={prop.title} className="flex items-center gap-3 rounded-2xl border border-[#3D5E73]/40 bg-[#395066]/60 px-4 py-3 backdrop-blur">
+                  <Icon className="h-5 w-5 text-[#E02B2B]" aria-hidden="true" />
                   <div>
-                    <p className="text-sm font-semibold text-[#3D5E73]">{prop.title}</p>
-                    <p className="text-xs text-[#CEDEF2]">{prop.description}</p>
+                    <p className="text-sm font-semibold text-[#DFEAF7]">{prop.title}</p>
+                    <p className="text-xs text-[#DFEAF7]/80">{prop.description}</p>
                   </div>
                 </div>
               );
@@ -633,14 +633,9 @@ const Index = () => {
 
       {/* My Story Section - Introduction */}
       <section id="histoire" className="relative py-section bg-[#FAF9FF] overflow-hidden">
-        <div
-          className="absolute inset-0 pointer-events-none [background:radial-gradient(circle_at_center,#FAF9FF_15%,rgba(61,94,115,0.12)_65%,rgba(61,94,115,0.2)_100%)] blur-3xl"
-          aria-hidden
-        />
         <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-[#CEDEF2]/60 via-[#FAF9FF]/70 to-transparent pointer-events-none" aria-hidden />
         <div className="absolute inset-y-10 left-10 h-72 w-72 bg-[radial-gradient(circle_at_top_left,#E02B2B1A,transparent_60%)] blur-3xl" aria-hidden />
         <div className="absolute inset-y-10 right-10 h-72 w-72 bg-[radial-gradient(circle_at_top_right,#3D5E731A,transparent_55%)] blur-3xl" aria-hidden />
-        <div className="pointer-events-none absolute inset-0 border border-white/5" aria-hidden />
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
           <div
@@ -671,7 +666,7 @@ const Index = () => {
 
           {/* Qui suis-je & Pourquoi ce site */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
-            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#020813]/95 via-[#395066]/90 to-[#3D5E73]/85 border border-white/10 shadow-ink-pinned ring-1 ring-primary-red/10 backdrop-blur">
+            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#020813]/95 via-[#395066]/90 to-[#3D5E73]/85 border border-white/10 shadow-[0_24px_80px_-30px_rgba(2,8,19,0.75)] ring-1 ring-primary-red/10 backdrop-blur">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-gradient-to-br from-primary-red to-dark-red rounded-xl mr-4">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -699,7 +694,7 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#020813]/95 via-[#395066]/90 to-[#3D5E73]/85 border border-white/10 shadow-ink-pinned ring-1 ring-primary-red/10 backdrop-blur">
+            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#020813]/95 via-[#395066]/90 to-[#3D5E73]/85 border border-white/10 shadow-[0_24px_80px_-30px_rgba(2,8,19,0.75)] ring-1 ring-primary-red/10 backdrop-blur">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-gradient-to-br from-primary-red to-dark-red rounded-xl mr-4">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -730,7 +725,7 @@ const Index = () => {
 
           {/* Mon expérience */}
           <div className="max-w-5xl mx-auto">
-            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#020813]/95 via-[#395066]/90 to-[#3D5E73]/85 border border-white/10 shadow-ink-deep ring-1 ring-primary-red/10 backdrop-blur">
+            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#020813]/95 via-[#395066]/90 to-[#3D5E73]/85 border border-white/10 shadow-[0_28px_90px_-32px_rgba(2,8,19,0.78)] ring-1 ring-primary-red/10 backdrop-blur">
               <h3 className="text-2xl font-bold text-[#E9F2FB] mb-6">
                 Mon expérience
               </h3>
@@ -1065,7 +1060,7 @@ const Index = () => {
           {/* 3 Cartes principales */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* Carte 1 - Chiffrement */}
-            <div className="bg-[#020813] rounded-2xl p-8 border border-[rgba(255,255,255,0.06)] hover:border-primary-red/40 transition-all duration-300">
+            <div className="bg-[#020813] rounded-2xl p-8 border border-[#3D5E73]/50 hover:border-primary-red/40 transition-all duration-300">
               <ShieldCheck className="h-10 w-10 text-primary-red mb-6" />
               <h3 className="text-xl font-bold text-foreground mb-4">
                 Chiffrement de bout en bout
@@ -1076,7 +1071,7 @@ const Index = () => {
             </div>
 
             {/* Carte 2 - Consentement */}
-            <div className="bg-[#020813] rounded-2xl p-8 border border-[rgba(255,255,255,0.06)] hover:border-primary-red/40 transition-all duration-300">
+            <div className="bg-[#020813] rounded-2xl p-8 border border-[#3D5E73]/50 hover:border-primary-red/40 transition-all duration-300">
               <FileText className="h-10 w-10 text-primary-red mb-6" />
               <h3 className="text-xl font-bold text-foreground mb-4">
                 Consentement explicite
@@ -1087,7 +1082,7 @@ const Index = () => {
             </div>
 
             {/* Carte 3 - Conservation */}
-            <div className="bg-[#020813] rounded-2xl p-8 border border-[rgba(255,255,255,0.06)] hover:border-primary-red/40 transition-all duration-300">
+            <div className="bg-[#020813] rounded-2xl p-8 border border-[#3D5E73]/50 hover:border-primary-red/40 transition-all duration-300">
               <Lock className="h-10 w-10 text-primary-red mb-6" />
               <h3 className="text-xl font-bold text-foreground mb-4">
                 Conservation limitée
@@ -1101,7 +1096,7 @@ const Index = () => {
           {/* 2 Grandes cartes */}
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Carte 4 - Vos droits */}
-            <div className="bg-[#020813] rounded-2xl p-10 border border-[rgba(255,255,255,0.06)] hover:border-primary-red/40 transition-all duration-300">
+            <div className="bg-[#020813] rounded-2xl p-10 border border-[#3D5E73]/50 hover:border-primary-red/40 transition-all duration-300">
               <h3 className="text-2xl font-bold text-foreground mb-8">
                 Vos droits à tout moment
               </h3>
@@ -1135,7 +1130,7 @@ const Index = () => {
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Les formulaires utilisent une fonction Supabase Edge. Chaque témoignage est haché, consigné puis isolé dans un coffre-fort numérique, ce qui permet de tracer les dépôts sans exposer l'identité des témoins.
               </p>
-              <div className="bg-[#395066]/50 rounded-lg p-4 border border-[rgba(255,255,255,0.06)]">
+              <div className="bg-[#395066]/50 rounded-lg p-4 border border-[#3D5E73]/50">
                 <p className="text-sm text-muted-foreground font-mono">
                   Journalisation: hash SHA-256 + reçu public · Transmission: HTTPS Supabase.
                 </p>
