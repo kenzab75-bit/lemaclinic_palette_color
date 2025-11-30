@@ -100,6 +100,21 @@ const Index = () => {
     }
   ];
 
+  const storyMarkers = [
+    {
+      label: "Étape 1",
+      title: "Qui suis-je ?",
+    },
+    {
+      label: "Étape 2",
+      title: "Pourquoi ce site ?",
+    },
+    {
+      label: "Étape 3",
+      title: "Mon expérience",
+    }
+  ];
+
   const heroVideoFallback = "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4";
   const [heroVideoSrc, setHeroVideoSrc] = useState<string | null>(heroVideoFallback);
 
@@ -628,6 +643,25 @@ const Index = () => {
         <div className="pointer-events-none absolute inset-0 border border-white/5" aria-hidden />
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
+          <div
+            className="pointer-events-none absolute inset-y-24 left-3 sm:left-8 lg:left-16 hidden sm:flex flex-col justify-between"
+            aria-hidden
+          >
+            <div className="absolute left-2 top-0 bottom-0 w-px bg-[rgba(255,255,255,0.05)]" />
+            {storyMarkers.map(marker => (
+              <div key={marker.label} className="relative flex flex-col items-start gap-2 pl-2">
+                <span className="block h-2 w-2 rounded-full bg-[#E02B2B]/60" />
+                <div className="ml-4">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#CEDEF2]">
+                    {marker.label}
+                  </p>
+                  <p className="text-sm font-extrabold text-[#020813] leading-tight">
+                    {marker.title}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
           <div className="text-center mb-20">
             <h2 className="text-5xl lg:text-6xl font-black text-gradient mb-8 font-display">
               Mon Histoire
