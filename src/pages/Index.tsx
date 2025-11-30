@@ -477,7 +477,7 @@ const Index = () => {
           {/* Hero content */}
           <div className="relative z-20">
             <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 pt-32 md:pt-40 pb-24">
-              <div className="absolute right-6 top-6 flex items-center gap-3 rounded-full border border-white/10 bg-black/40 px-3 py-1.5 backdrop-blur-lg shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
+              <div className="absolute right-6 top-6 flex items-center gap-3 rounded-full border border-white/10 bg-black/40 px-3 py-1.5 backdrop-blur-lg shadow-ink-soft">
                 <span className="text-xs uppercase tracking-[0.3em] text-white/70">Vidéo</span>
                 <button
                   type="button"
@@ -518,10 +518,10 @@ const Index = () => {
                   </div>
 
                   <div className="mt-8 text-left">
-                    <div className="max-w-3xl rounded-3xl border border-white/10 bg-black/35 p-8 backdrop-blur-xl shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
+                    <div className="max-w-3xl rounded-3xl border border-white/10 bg-black/35 p-8 backdrop-blur-xl shadow-ink-elevated">
                       <div className="space-y-6">
                         <div className="space-y-3">
-                          <h1 className="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight font-display text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.4)]">LemaClinic Truth</h1>
+                          <h1 className="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight font-display text-white drop-shadow-ink">LemaClinic Truth</h1>
                           <p className="text-xl sm:text-2xl text-red-300/90">La vérité éclaire toujours.</p>
                         </div>
                         <p className="text-lg text-white/85 leading-relaxed">
@@ -571,7 +571,7 @@ const Index = () => {
             {heroSegments.map(segment => {
               const Icon = segment.icon;
               return (
-                <div key={segment.id} className="rounded-2xl border border-[#3D5E73]/40 bg-[#395066]/70 p-6 shadow-[0_30px_80px_rgba(2,8,19,0.65)] backdrop-blur">
+                <div key={segment.id} className="rounded-2xl border border-[#3D5E73]/40 bg-[#395066]/70 p-6 shadow-ink-elevated backdrop-blur">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-xs uppercase tracking-widest text-primary-red font-semibold">{segment.badge}</span>
                     <Icon className="h-6 w-6 text-primary-red" aria-hidden="true" />
@@ -627,7 +627,7 @@ const Index = () => {
 
           {/* Qui suis-je & Pourquoi ce site */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
-            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#020813]/95 via-[#395066]/90 to-[#3D5E73]/85 border border-white/10 shadow-[0_24px_80px_-30px_rgba(2,8,19,0.75)] ring-1 ring-primary-red/10 backdrop-blur">
+            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#020813]/95 via-[#395066]/90 to-[#3D5E73]/85 border border-white/10 shadow-ink-pinned ring-1 ring-primary-red/10 backdrop-blur">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-gradient-to-br from-primary-red to-dark-red rounded-xl mr-4">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -655,7 +655,7 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#020813]/95 via-[#395066]/90 to-[#3D5E73]/85 border border-white/10 shadow-[0_24px_80px_-30px_rgba(2,8,19,0.75)] ring-1 ring-primary-red/10 backdrop-blur">
+            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#020813]/95 via-[#395066]/90 to-[#3D5E73]/85 border border-white/10 shadow-ink-pinned ring-1 ring-primary-red/10 backdrop-blur">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-gradient-to-br from-primary-red to-dark-red rounded-xl mr-4">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -686,7 +686,7 @@ const Index = () => {
 
           {/* Mon expérience */}
           <div className="max-w-5xl mx-auto">
-            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#020813]/95 via-[#395066]/90 to-[#3D5E73]/85 border border-white/10 shadow-[0_28px_90px_-32px_rgba(2,8,19,0.78)] ring-1 ring-primary-red/10 backdrop-blur">
+            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#020813]/95 via-[#395066]/90 to-[#3D5E73]/85 border border-white/10 shadow-ink-deep ring-1 ring-primary-red/10 backdrop-blur">
               <h3 className="text-2xl font-bold text-[#E9F2FB] mb-6">
                 Mon expérience
               </h3>
@@ -740,7 +740,7 @@ const Index = () => {
                     className={`relative flex flex-col lg:flex-row items-center gap-10 ${isEven ? "lg:flex-row-reverse" : ""}`}
                   >
                     <div className="flex-1 w-full">
-                      <div className="glass-card rounded-3xl p-8 lg:p-10 bg-gradient-to-br from-black/80 via-[#160202] to-black/80 border border-primary-red/20 shadow-[0_20px_60px_-20px_rgba(255,0,0,0.4)]">
+                      <div className="glass-card rounded-3xl p-8 lg:p-10 bg-gradient-to-br from-black/80 via-[#160202] to-black/80 border border-primary-red/20 shadow-ink-pinned">
                         <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.3em] uppercase text-primary-red mb-4">
                           <span className="h-2 w-2 rounded-full bg-primary-red" />
                           <span>{step.stepNumber}</span>
@@ -760,7 +760,7 @@ const Index = () => {
                     <div className="relative flex flex-col items-center" aria-hidden="true">
                       <div className="relative">
                         <div className="absolute inset-0 bg-primary-red/30 blur-2xl rounded-full animate-pulse" />
-                        <div className="relative h-16 w-16 rounded-full bg-gradient-to-b from-[#ff4d4d] to-primary-red border border-white/20 flex items-center justify-center text-2xl font-black text-white shadow-[0_10px_30px_rgba(255,0,0,0.6)]">
+                        <div className="relative h-16 w-16 rounded-full bg-gradient-to-b from-[#ff4d4d] to-primary-red border border-white/20 flex items-center justify-center text-2xl font-black text-white shadow-ink-soft">
                           {index + 1}
                         </div>
                       </div>
@@ -1244,7 +1244,7 @@ const Index = () => {
       </footer>
 
       <Dialog open={!!activeTimelineStep} onOpenChange={(open) => setActiveTimelineStep(open ? activeTimelineStep : null)}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-[#0b0b0b] border border-primary-red/40 text-foreground">
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-[hsl(var(--shadow-ink)/0.92)] border border-primary-red/40 text-foreground shadow-ink-elevated ring-overlay-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-4">
           <DialogHeader className="relative pb-6">
             <div className="inline-flex items-center gap-2 bg-primary-red/20 text-primary-red px-4 py-2 rounded-full text-sm font-semibold tracking-[0.3em] uppercase">
               <span className="h-2 w-2 rounded-full bg-primary-red" />
