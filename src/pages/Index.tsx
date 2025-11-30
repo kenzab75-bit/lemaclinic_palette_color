@@ -612,7 +612,10 @@ const Index = () => {
       </section>
 
       {/* My Story Section - Introduction */}
-      <section id="histoire" className="py-section bg-[#FAF9FF]">
+      <section id="histoire" className="relative py-section bg-[#FAF9FF] overflow-hidden">
+        <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-[#CEDEF2]/60 via-[#FAF9FF]/70 to-transparent pointer-events-none" aria-hidden />
+        <div className="absolute inset-y-10 left-10 h-72 w-72 bg-[radial-gradient(circle_at_top_left,#E02B2B1A,transparent_60%)] blur-3xl" aria-hidden />
+        <div className="absolute inset-y-10 right-10 h-72 w-72 bg-[radial-gradient(circle_at_top_right,#3D5E731A,transparent_55%)] blur-3xl" aria-hidden />
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
           <div className="text-center mb-20">
@@ -624,18 +627,18 @@ const Index = () => {
 
           {/* Qui suis-je & Pourquoi ce site */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
-            <div className="glass-card rounded-2xl p-10 bg-[rgba(57,80,102,0.65)] border border-[rgba(255,255,255,0.08)] shadow-[0px_8px_24px_rgba(0,0,0,0.18)]">
+            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#020813]/95 via-[#395066]/90 to-[#3D5E73]/85 border border-white/10 shadow-[0_24px_80px_-30px_rgba(2,8,19,0.75)] ring-1 ring-primary-red/10 backdrop-blur">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-gradient-to-br from-primary-red to-dark-red rounded-xl mr-4">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">
+                <h3 className="text-2xl font-bold text-[#E9F2FB]">
                   Qui suis-je ?
                 </h3>
               </div>
-              <div className="space-y-4 text-muted-foreground leading-relaxed text-lg">
+              <div className="space-y-4 text-[#CEDEF2]/85 leading-relaxed text-lg">
                 <p>
                   Je suis une patiente qui a fait confiance à la clinique{" "}
                   <span className="text-primary-red font-semibold">Lema Dental</span> à Istanbul.
@@ -652,18 +655,18 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="glass-card rounded-2xl p-10 bg-[rgba(57,80,102,0.65)] border border-[rgba(255,255,255,0.08)] shadow-[0px_8px_24px_rgba(0,0,0,0.18)]">
+            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#020813]/95 via-[#395066]/90 to-[#3D5E73]/85 border border-white/10 shadow-[0_24px_80px_-30px_rgba(2,8,19,0.75)] ring-1 ring-primary-red/10 backdrop-blur">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-gradient-to-br from-primary-red to-dark-red rounded-xl mr-4">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">
+                <h3 className="text-2xl font-bold text-[#E9F2FB]">
                   Pourquoi ce site ?
                 </h3>
               </div>
-              <div className="space-y-4 text-muted-foreground leading-relaxed text-lg">
+              <div className="space-y-4 text-[#CEDEF2]/85 leading-relaxed text-lg">
                 <p>
                   J'ai créé ce site pour révéler la vérité et prévenir d'autres victimes.
                 </p>
@@ -683,15 +686,15 @@ const Index = () => {
 
           {/* Mon expérience */}
           <div className="max-w-5xl mx-auto">
-            <div className="glass-card rounded-2xl p-10 bg-[rgba(57,80,102,0.65)] border border-[rgba(255,255,255,0.08)] shadow-[0px_8px_24px_rgba(0,0,0,0.18)]">
-              <h3 className="text-2xl font-bold text-foreground mb-6">
+            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#020813]/95 via-[#395066]/90 to-[#3D5E73]/85 border border-white/10 shadow-[0_28px_90px_-32px_rgba(2,8,19,0.78)] ring-1 ring-primary-red/10 backdrop-blur">
+              <h3 className="text-2xl font-bold text-[#E9F2FB] mb-6">
                 Mon expérience
               </h3>
 
-              <div className="space-y-4 text-muted-foreground leading-relaxed text-lg">
+              <div className="space-y-4 text-[#CEDEF2]/85 leading-relaxed text-lg">
                 <p>
-                  Comme beaucoup d'autres, j'ai été attiré par les promesses alléchantes de Lema Dental Clinic à Istanbul. 
-                  Des soins dentaires de qualité à des prix attractifs, une équipe professionnelle, des installations modernes... 
+                  Comme beaucoup d'autres, j'ai été attiré par les promesses alléchantes de Lema Dental Clinic à Istanbul.
+                  Des soins dentaires de qualité à des prix attractifs, une équipe professionnelle, des installations modernes...
                   La réalité s'est révélée bien différente.
                 </p>
 
