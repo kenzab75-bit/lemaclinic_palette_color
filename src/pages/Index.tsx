@@ -550,7 +550,7 @@ const Index = () => {
                         <div className="flex flex-wrap items-center gap-4">
                           <Button
                             onClick={() => scrollToSection("histoire")}
-                            className="group rounded-full px-8 py-3 text-base font-medium bg-gradient-to-r from-red-500 via-red-500 to-red-600 text-white shadow-[0_0_25px_rgba(248,113,113,0.25)] hover:shadow-[0_0_35px_rgba(248,113,113,0.4)] hover:-translate-y-0.5 transition-all"
+                            className="group rounded-full px-8 py-3 text-base font-semibold border border-[rgba(224,43,43,0.45)] text-[#E02B2B] bg-transparent shadow-none hover:bg-[rgba(224,43,43,0.08)] hover:shadow-[0_8px_24px_rgba(224,43,43,0.25)] hover:-translate-y-0.5 transition-all"
                           >
                             <span className="flex items-center gap-2">
                               Découvrir la vérité
