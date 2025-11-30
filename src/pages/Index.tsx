@@ -613,9 +613,14 @@ const Index = () => {
 
       {/* My Story Section - Introduction */}
       <section id="histoire" className="relative py-section bg-[#FAF9FF] overflow-hidden">
+        <div
+          className="absolute inset-0 pointer-events-none [background:radial-gradient(circle_at_center,#FAF9FF_15%,rgba(61,94,115,0.12)_65%,rgba(61,94,115,0.2)_100%)] blur-3xl"
+          aria-hidden
+        />
         <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-[#CEDEF2]/60 via-[#FAF9FF]/70 to-transparent pointer-events-none" aria-hidden />
         <div className="absolute inset-y-10 left-10 h-72 w-72 bg-[radial-gradient(circle_at_top_left,#E02B2B1A,transparent_60%)] blur-3xl" aria-hidden />
         <div className="absolute inset-y-10 right-10 h-72 w-72 bg-[radial-gradient(circle_at_top_right,#3D5E731A,transparent_55%)] blur-3xl" aria-hidden />
+        <div className="pointer-events-none absolute inset-0 border border-white/5" aria-hidden />
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
           <div className="text-center mb-20">
