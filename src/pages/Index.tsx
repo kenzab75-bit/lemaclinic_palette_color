@@ -642,47 +642,28 @@ const Index = () => {
         <div className="absolute inset-y-10 left-10 h-72 w-72 bg-[radial-gradient(circle_at_top_left,#E02B2B14,transparent_60%)] blur-3xl" aria-hidden />
         <div className="absolute inset-y-10 right-10 h-72 w-72 bg-[radial-gradient(circle_at_top_right,#3D5E7314,transparent_55%)] blur-3xl" aria-hidden />
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-          <div
-            className="pointer-events-none absolute inset-y-24 left-3 sm:left-8 lg:left-16 hidden sm:flex flex-col justify-between"
-            aria-hidden
-          >
-            <div className="absolute left-2 top-0 bottom-0 w-px bg-[rgba(255,255,255,0.05)]" />
-            {storyMarkers.map(marker => (
-              <div key={marker.label} className="relative flex flex-col items-start gap-2 pl-2">
-                <span className="block h-2 w-2 rounded-full bg-[#E02B2B]/60" />
-                <div className="ml-4">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#CEDEF2]">
-                    {marker.label}
-                  </p>
-                  <p className="text-sm font-extrabold text-[#020813] leading-tight">
-                    {marker.title}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mb-20">
-            <h2 className="text-5xl lg:text-6xl font-black text-gradient mb-8 font-display">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 relative">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl lg:text-6xl font-black text-[#020813] mb-6 font-display">
               Mon Histoire
             </h2>
             <div className="w-32 h-1 bg-gradient-to-r from-primary-red to-primary rounded-full mx-auto" />
           </div>
 
           {/* Qui suis-je & Pourquoi ce site */}
-          <div className="grid lg:grid-cols-2 gap-8 mb-16">
-            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#132029]/95 via-[#22384B]/92 to-[#395066]/90 border border-white/10 shadow-[0_24px_80px_-36px_rgba(2,8,19,0.65)] ring-1 ring-[#3D5E73]/18 backdrop-blur-sm">
+          <div className="grid lg:grid-cols-2 gap-8 mb-16 mt-10">
+            <div className="rounded-[20px] p-8 bg-[linear-gradient(180deg,#395066_0%,#132029_100%)] border border-white/10 shadow-[0_4px_12px_rgba(0,0,0,0.25)] backdrop-blur-[1px]">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-gradient-to-br from-primary-red to-dark-red rounded-xl mr-4">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-[#E9F2FB]">
+                <h3 className="text-2xl font-semibold text-[#F7F9FB]">
                   Qui suis-je ?
                 </h3>
               </div>
-              <div className="space-y-4 text-[#CEDEF2]/85 leading-relaxed text-lg">
+              <div className="space-y-4 text-[#DDE7EE] leading-relaxed text-lg">
                 <p>
                   Je suis une patiente qui a fait confiance à la clinique{" "}
                   <span className="text-primary-red font-semibold">Lema Dental</span> à Istanbul.
@@ -699,18 +680,18 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#132029]/95 via-[#22384B]/92 to-[#395066]/90 border border-white/10 shadow-[0_24px_80px_-36px_rgba(2,8,19,0.65)] ring-1 ring-[#3D5E73]/18 backdrop-blur-sm">
+            <div className="rounded-[20px] p-8 bg-[linear-gradient(180deg,#395066_0%,#132029_100%)] border border-white/10 shadow-[0_4px_12px_rgba(0,0,0,0.25)] backdrop-blur-[1px]">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-gradient-to-br from-primary-red to-dark-red rounded-xl mr-4">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-[#E9F2FB]">
+                <h3 className="text-2xl font-semibold text-[#F7F9FB]">
                   Pourquoi ce site ?
                 </h3>
               </div>
-              <div className="space-y-4 text-[#CEDEF2]/85 leading-relaxed text-lg">
+              <div className="space-y-4 text-[#DDE7EE] leading-relaxed text-lg">
                 <p>
                   J'ai créé ce site pour révéler la vérité et prévenir d'autres victimes.
                 </p>
@@ -729,13 +710,13 @@ const Index = () => {
           </div>
 
           {/* Mon expérience */}
-          <div className="max-w-5xl mx-auto">
-            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#132029]/95 via-[#22384B]/92 to-[#395066]/90 border border-white/10 shadow-[0_28px_90px_-34px_rgba(2,8,19,0.62)] ring-1 ring-[#3D5E73]/18 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-[#E9F2FB] mb-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="rounded-[20px] p-8 bg-[linear-gradient(180deg,#395066_0%,#132029_100%)] border border-white/10 shadow-[0_4px_12px_rgba(0,0,0,0.25)] backdrop-blur-[1px]">
+              <h3 className="text-2xl font-semibold text-[#F7F9FB] mb-6">
                 Mon expérience
               </h3>
 
-              <div className="space-y-4 text-[#CEDEF2]/85 leading-relaxed text-lg">
+              <div className="space-y-4 text-[#DDE7EE] leading-relaxed text-lg">
                 <p>
                   Comme beaucoup d'autres, j'ai été attiré par les promesses alléchantes de Lema Dental Clinic à Istanbul.
                   Des soins dentaires de qualité à des prix attractifs, une équipe professionnelle, des installations modernes...
