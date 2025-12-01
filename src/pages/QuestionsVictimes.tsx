@@ -89,7 +89,7 @@ const QuestionsVictimes = () => {
       <section className="py-6 border-b border-border/20">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Link to="/" className="hover:text-[#A51616] transition-colors">
+            <Link to="/" className="hover:text-[#E02B2B] transition-colors">
               Accueil
             </Link>
             <ChevronRight className="h-4 w-4" />
@@ -100,15 +100,15 @@ const QuestionsVictimes = () => {
 
       {/* Hero Section */}
       <section className="relative py-16 md:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#A51616]/10 via-[#A51616]/5 to-background" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(165,22,22,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#E02B2B]/10 via-[#E02B2B]/5 to-background" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(224,43,43,0.1),transparent_50%)]" />
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in">
             {/* Badge Premium */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#A51616]/10 border border-[#A51616]/20">
-              <div className="w-2 h-2 rounded-full bg-[#A51616] animate-pulse" />
-              <span className="text-sm font-medium text-[#A51616] tracking-wider uppercase">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#E02B2B]/10 border border-[#E02B2B]/20">
+              <div className="w-2 h-2 rounded-full bg-[#E02B2B] animate-pulse" />
+              <span className="text-sm font-medium text-[#E02B2B] tracking-wider uppercase">
                 Guide Juridique
               </span>
             </div>
@@ -134,7 +134,7 @@ const QuestionsVictimes = () => {
                 placeholder="Rechercher une question..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-12 pr-4 py-6 text-lg bg-background border-border/50 focus:border-[#A51616] focus:ring-2 focus:ring-[#A51616]/20 transition-all rounded-xl"
+                className="pl-12 pr-4 py-6 text-lg bg-background border-border/50 focus:border-[#E02B2B] focus:ring-2 focus:ring-[#E02B2B]/20 transition-all rounded-xl"
               />
             </div>
             {searchQuery && (
@@ -159,18 +159,18 @@ const QuestionsVictimes = () => {
                     <AccordionItem
                       key={index}
                       value={`item-${index}`}
-                      className="glass-card border border-border/20 rounded-2xl overflow-hidden hover:border-[#A51616]/40 hover:shadow-lg hover:shadow-[#A51616]/10 transition-all duration-300 animate-fade-in"
+                      className="glass-card border border-border/20 rounded-2xl overflow-hidden hover:border-[#E02B2B]/40 hover:shadow-lg hover:shadow-[#E02B2B]/10 transition-all duration-300 animate-fade-in"
                       style={{ animationDelay: `${index * 50}ms` }}
                     >
                       <AccordionTrigger className="px-6 py-5 text-left hover:no-underline group">
                         <div className="flex items-start gap-4 pr-4 w-full">
                           <div className="flex items-center gap-3 flex-shrink-0">
-                            <span className="text-2xl font-bold text-[#A51616]/50 font-display">
+                            <span className="text-2xl font-bold text-[#E02B2B]/50 font-display">
                               {String(index + 1).padStart(2, '0')}
                             </span>
-                            <IconComponent className="h-5 w-5 text-[#A51616]" />
+                            <IconComponent className="h-5 w-5 text-[#E02B2B]" />
                           </div>
-                          <span className="text-lg font-medium text-foreground group-hover:text-[#A51616] transition-colors text-left">
+                          <span className="text-lg font-medium text-foreground group-hover:text-[#E02B2B] transition-colors text-left">
                             {item.question}
                           </span>
                         </div>
@@ -198,10 +198,10 @@ const QuestionsVictimes = () => {
             {/* Sidebar */}
             <div className="space-y-6">
               {/* CTA Card */}
-              <div className="glass-card border border-[#A51616]/20 rounded-2xl p-6 sticky top-24 space-y-4">
+              <div className="glass-card border border-[#E02B2B]/20 rounded-2xl p-6 sticky top-24 space-y-4">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-[#A51616]/10 flex items-center justify-center">
-                    <Shield className="h-5 w-5 text-[#A51616]" />
+                  <div className="w-10 h-10 rounded-full bg-[#E02B2B]/10 flex items-center justify-center">
+                    <Shield className="h-5 w-5 text-[#E02B2B]" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground">
                     Besoin d'aide ?
@@ -220,14 +220,14 @@ const QuestionsVictimes = () => {
                         document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                       }, 100);
                     }}
-                    className="block w-full bg-[#A51616] hover:bg-[#C41E1E] text-white font-bold py-3 px-4 rounded-xl transition-all duration-300 text-center hover:shadow-lg hover:shadow-[#A51616]/30 hover:-translate-y-0.5"
+                    className="block w-full bg-[#E02B2B] hover:bg-[#b82424] text-white font-bold py-3 px-4 rounded-xl transition-all duration-300 text-center hover:shadow-lg hover:shadow-[#E02B2B]/30 hover:-translate-y-0.5"
                   >
                     Contactez-nous
                   </Link>
                   
                   <Link
                     to="/"
-                    className="block w-full border border-border/50 hover:border-[#A51616]/50 text-foreground font-medium py-3 px-4 rounded-xl transition-all duration-300 text-center hover:bg-[#A51616]/5"
+                    className="block w-full border border-border/50 hover:border-[#E02B2B]/50 text-foreground font-medium py-3 px-4 rounded-xl transition-all duration-300 text-center hover:bg-[#E02B2B]/5"
                   >
                     Retour à l'accueil
                   </Link>
@@ -239,7 +239,7 @@ const QuestionsVictimes = () => {
                     <span>Support disponible</span>
                   </div>
                   <p className="text-xs text-muted-foreground/70">
-                    Plus de <span className="text-[#A51616] font-semibold">200 victimes</span> accompagnées
+                    Plus de <span className="text-[#E02B2B] font-semibold">200 victimes</span> accompagnées
                   </p>
                 </div>
               </div>
@@ -249,7 +249,7 @@ const QuestionsVictimes = () => {
       </section>
 
       {/* CTA Footer Section */}
-      <section className="py-16 bg-gradient-to-br from-[#A51616]/5 via-background to-background border-t border-border/20">
+      <section className="py-16 bg-gradient-to-br from-[#E02B2B]/5 via-background to-background border-t border-border/20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -266,14 +266,14 @@ const QuestionsVictimes = () => {
                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                   }, 100);
                 }}
-                className="inline-flex items-center gap-2 bg-[#A51616] hover:bg-[#C41E1E] text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[#A51616]/30 hover:-translate-y-0.5 justify-center pulse-glow"
+                className="inline-flex items-center gap-2 bg-[#E02B2B] hover:bg-[#b82424] text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[#E02B2B]/30 hover:-translate-y-0.5 justify-center pulse-glow"
               >
                 <Mail className="h-5 w-5" />
                 Contactez-nous
               </Link>
               <Link
                 to="/"
-                className="inline-flex items-center gap-2 border border-border/50 hover:border-[#A51616]/50 text-foreground font-medium py-4 px-8 rounded-xl transition-all duration-300 hover:bg-[#A51616]/5 justify-center"
+                className="inline-flex items-center gap-2 border border-border/50 hover:border-[#E02B2B]/50 text-foreground font-medium py-4 px-8 rounded-xl transition-all duration-300 hover:bg-[#E02B2B]/5 justify-center"
               >
                 <ChevronRight className="h-5 w-5" />
                 Retour à l'accueil
@@ -298,7 +298,7 @@ const QuestionsVictimes = () => {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 w-12 h-12 bg-[#A51616] hover:bg-[#C41E1E] text-white rounded-full shadow-lg hover:shadow-[#A51616]/30 transition-all duration-300 flex items-center justify-center z-50 animate-fade-in hover:-translate-y-1"
+          className="fixed bottom-8 right-8 w-12 h-12 bg-[#E02B2B] hover:bg-[#b82424] text-white rounded-full shadow-lg hover:shadow-[#E02B2B]/30 transition-all duration-300 flex items-center justify-center z-50 animate-fade-in hover:-translate-y-1"
           aria-label="Retour en haut"
         >
           <ArrowUp className="h-5 w-5" />
