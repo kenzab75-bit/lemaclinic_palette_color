@@ -637,9 +637,10 @@ const Index = () => {
 
       {/* My Story Section - Introduction */}
       <section id="histoire" className="relative py-section bg-[#FAF9FF] overflow-hidden">
-        <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-[#CEDEF2]/60 via-[#FAF9FF]/70 to-transparent pointer-events-none" aria-hidden />
-        <div className="absolute inset-y-10 left-10 h-72 w-72 bg-[radial-gradient(circle_at_top_left,#E02B2B1A,transparent_60%)] blur-3xl" aria-hidden />
-        <div className="absolute inset-y-10 right-10 h-72 w-72 bg-[radial-gradient(circle_at_top_right,#3D5E731A,transparent_55%)] blur-3xl" aria-hidden />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#020813]/10 via-[#FAF9FF]/95 to-[#FAF9FF] pointer-events-none" aria-hidden />
+        <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-[#CEDEF2]/70 via-[#FAF9FF]/80 to-transparent pointer-events-none" aria-hidden />
+        <div className="absolute inset-y-10 left-10 h-72 w-72 bg-[radial-gradient(circle_at_top_left,#E02B2B14,transparent_60%)] blur-3xl" aria-hidden />
+        <div className="absolute inset-y-10 right-10 h-72 w-72 bg-[radial-gradient(circle_at_top_right,#3D5E7314,transparent_55%)] blur-3xl" aria-hidden />
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
           <div
@@ -670,7 +671,7 @@ const Index = () => {
 
           {/* Qui suis-je & Pourquoi ce site */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
-            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#020813]/95 via-[#395066]/90 to-[#3D5E73]/85 border border-white/10 shadow-[0_24px_80px_-30px_rgba(2,8,19,0.75)] ring-1 ring-primary-red/10 backdrop-blur">
+            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#132029]/95 via-[#22384B]/92 to-[#395066]/90 border border-white/10 shadow-[0_24px_80px_-36px_rgba(2,8,19,0.65)] ring-1 ring-[#3D5E73]/18 backdrop-blur-sm">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-gradient-to-br from-primary-red to-dark-red rounded-xl mr-4">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -698,7 +699,7 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#020813]/95 via-[#395066]/90 to-[#3D5E73]/85 border border-white/10 shadow-[0_24px_80px_-30px_rgba(2,8,19,0.75)] ring-1 ring-primary-red/10 backdrop-blur">
+            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#132029]/95 via-[#22384B]/92 to-[#395066]/90 border border-white/10 shadow-[0_24px_80px_-36px_rgba(2,8,19,0.65)] ring-1 ring-[#3D5E73]/18 backdrop-blur-sm">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-gradient-to-br from-primary-red to-dark-red rounded-xl mr-4">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -729,7 +730,7 @@ const Index = () => {
 
           {/* Mon expérience */}
           <div className="max-w-5xl mx-auto">
-            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#020813]/95 via-[#395066]/90 to-[#3D5E73]/85 border border-white/10 shadow-[0_28px_90px_-32px_rgba(2,8,19,0.78)] ring-1 ring-primary-red/10 backdrop-blur">
+            <div className="glass-card rounded-2xl p-10 bg-gradient-to-br from-[#132029]/95 via-[#22384B]/92 to-[#395066]/90 border border-white/10 shadow-[0_28px_90px_-34px_rgba(2,8,19,0.62)] ring-1 ring-[#3D5E73]/18 backdrop-blur-sm">
               <h3 className="text-2xl font-bold text-[#E9F2FB] mb-6">
                 Mon expérience
               </h3>
