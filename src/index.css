@@ -8,50 +8,50 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 6%;
-    --foreground: 0 0% 98%;
+    --background: 219 81% 4%;
+    --foreground: 213 58% 88%;
 
-    --card: 0 0% 6%;
-    --card-foreground: 0 0% 98%;
+    --card: 209 28% 31%;
+    --card-foreground: 213 58% 92%;
 
-    --popover: 0 0% 6%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 209 28% 31%;
+    --popover-foreground: 213 58% 92%;
 
-    --primary: 0 84% 60%;
+    --primary: 0 74% 52%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 203 31% 35%;
+    --secondary-foreground: 213 58% 92%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 203 25% 55%;
+    --muted-foreground: 213 24% 80%;
 
-    --accent: 0 84% 60%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 203 31% 35%;
+    --accent-foreground: 213 58% 92%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 74% 52%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 0 84% 60%;
+    --border: 209 28% 26%;
+    --input: 209 28% 26%;
+    --ring: 0 74% 52%;
 
     --radius: 0.75rem;
 
     /* Custom colors */
-    --primary-red: 0 84% 60%;
-    --dark-red: 0 63% 31%;
-    --light-red: 0 93% 94%;
-    --dark-bg: 0 0% 6%;
-    --darker-bg: 0 0% 2%;
-    --glass-bg: 0 0% 100% / 0.05;
-    --glass-border: 0 0% 100% / 0.1;
+    --primary-red: 0 74% 52%;
+    --dark-red: 0 74% 35%;
+    --light-red: 0 74% 92%;
+    --dark-bg: 219 81% 6%;
+    --darker-bg: 219 81% 2%;
+    --glass-bg: 213 58% 88% / 0.05;
+    --glass-border: 213 58% 88% / 0.1;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(0 84% 60%) 0%, hsl(0 63% 31%) 100%);
-    --gradient-hero: radial-gradient(circle at 20% 80%, hsl(0 84% 60% / 0.15) 0%, transparent 50%),
-                     radial-gradient(circle at 80% 20%, hsl(0 84% 60% / 0.1) 0%, transparent 50%),
-                     linear-gradient(135deg, hsl(0 0% 2%) 0%, hsl(0 0% 6%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(0 74% 52%) 0%, hsl(0 74% 35%) 100%);
+    --gradient-hero: radial-gradient(circle at 20% 80%, hsl(0 74% 52% / 0.15) 0%, transparent 50%),
+                     radial-gradient(circle at 80% 20%, hsl(0 74% 52% / 0.1) 0%, transparent 50%),
+                     linear-gradient(135deg, hsl(219 81% 2%) 0%, hsl(219 81% 6%) 100%);
     
     /* Typography Scale */
     --text-xs: 0.75rem;       /* 12px */
@@ -81,9 +81,9 @@ All colors MUST be HSL.
     --shadow-premium: 0 4px 6px hsl(0 0% 0% / 0.05),
                       0 10px 20px hsl(0 0% 0% / 0.08),
                       0 20px 40px hsl(0 0% 0% / 0.12);
-    --shadow-glow: 0 0 20px hsl(0 84% 60% / 0.3),
-                   0 0 40px hsl(0 84% 60% / 0.2),
-                   0 0 60px hsl(0 84% 60% / 0.1);
+    --shadow-glow: 0 0 20px hsl(0 74% 52% / 0.3),
+                   0 0 40px hsl(0 74% 52% / 0.2),
+                   0 0 60px hsl(0 74% 52% / 0.1);
     --shadow-card: 0 2px 8px hsl(0 0% 0% / 0.08),
                    0 8px 24px hsl(0 0% 0% / 0.12),
                    0 16px 48px hsl(0 0% 0% / 0.16);
@@ -282,14 +282,14 @@ All colors MUST be HSL.
 
   /* Text gradients */
   .text-gradient {
-    background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 50%, #ffffff 100%);
+    background: linear-gradient(135deg, #cedef2 0%, #e4ecf7 50%, #cedef2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .text-red-gradient {
-    background: linear-gradient(135deg, hsl(var(--primary-red)) 0%, #ef4444 50%, hsl(var(--primary-red)) 100%);
+    background: linear-gradient(135deg, hsl(var(--primary-red)) 0%, #b82424 50%, hsl(var(--primary-red)) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -320,7 +320,7 @@ All colors MUST be HSL.
 
   .btn-premium:hover {
     transform: translateY(-2px);
-    box-shadow: 0 15px 30px rgba(220, 38, 38, 0.4);
+    box-shadow: 0 15px 30px rgba(224, 43, 43, 0.4);
   }
 }
 
@@ -333,14 +333,14 @@ All colors MUST be HSL.
 
   @keyframes pulse-glow {
     0%, 100% { 
-      box-shadow: 0 0 20px rgba(220, 38, 38, 0.5),
-                 0 0 40px rgba(220, 38, 38, 0.3),
-                 0 0 60px rgba(220, 38, 38, 0.1);
+      box-shadow: 0 0 20px rgba(224, 43, 43, 0.5),
+                 0 0 40px rgba(224, 43, 43, 0.3),
+                 0 0 60px rgba(224, 43, 43, 0.1);
     }
-    50% { 
-      box-shadow: 0 0 30px rgba(220, 38, 38, 0.8),
-                 0 0 60px rgba(220, 38, 38, 0.5),
-                 0 0 90px rgba(220, 38, 38, 0.3);
+    50% {
+      box-shadow: 0 0 30px rgba(224, 43, 43, 0.8),
+                 0 0 60px rgba(224, 43, 43, 0.5),
+                 0 0 90px rgba(224, 43, 43, 0.3);
     }
   }
 
