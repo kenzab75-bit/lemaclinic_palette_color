@@ -100,6 +100,21 @@ const Index = () => {
     }
   ];
 
+  const storyMarkers = [
+    {
+      label: "Étape 1",
+      title: "Qui suis-je ?",
+    },
+    {
+      label: "Étape 2",
+      title: "Pourquoi ce site ?",
+    },
+    {
+      label: "Étape 3",
+      title: "Mon expérience",
+    }
+  ];
+
   const heroVideoFallback = "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4";
   const [heroVideoSrc, setHeroVideoSrc] = useState<string | null>(heroVideoFallback);
 
@@ -459,25 +474,30 @@ const Index = () => {
       {/* Hero Section – Cinematic video-ready canvas */}
       <section id="accueil" className="relative min-h-screen w-full overflow-hidden bg-black text-white">
         <div className="relative w-full overflow-hidden min-h-screen">
-          {/* Video background */}
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            ref={heroVideoRef}
-            src={heroVideoSrc ?? undefined}
-            className="absolute inset-0 w-full h-full object-cover z-0"
-            aria-label="Vidéo de fond illustrant la page d'accueil"
-          >
-            <source src={heroVideoSrc ?? undefined} type="video/mp4" />
-          </video>
+          {/* Video background with showcase framing */}
+          <div className="absolute inset-0 z-0 overflow-hidden">
+            <div className="absolute inset-0 bg-[rgba(57,80,102,0.35)] shadow-[0_30px_90px_-40px_rgba(2,8,19,0.35)]" />
+            <div className="absolute inset-0 ring-1 ring-inset ring-[rgba(255,255,255,0.08)]" />
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              ref={heroVideoRef}
+              src={heroVideoSrc ?? undefined}
+              className="absolute inset-0 w-full h-full object-cover z-[1]"
+              aria-label="Vidéo de fond illustrant la page d'accueil"
+            >
+              <source src={heroVideoSrc ?? undefined} type="video/mp4" />
+            </video>
+            <div className="pointer-events-none absolute inset-0 z-[2] bg-[linear-gradient(to_bottom,rgba(2,8,19,0.25),transparent_35%),linear-gradient(to_top,rgba(2,8,19,0.25),transparent_35%)]" />
+          </div>
 
           {/* Hero content */}
           <div className="relative z-20">
             <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 pt-32 md:pt-40 pb-24">
-              <div className="absolute right-6 top-6 flex items-center gap-3 rounded-full border border-white/10 bg-black/40 px-3 py-1.5 backdrop-blur-lg shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
+              <div className="absolute right-6 top-6 flex items-center gap-3 rounded-full border border-white/10 bg-black/40 px-3 py-1.5 backdrop-blur-lg shadow-ink-soft">
                 <span className="text-xs uppercase tracking-[0.3em] text-white/70">Vidéo</span>
                 <button
                   type="button"
@@ -518,10 +538,10 @@ const Index = () => {
                   </div>
 
                   <div className="mt-8 text-left">
-                    <div className="max-w-3xl rounded-3xl border border-white/10 bg-black/35 p-8 backdrop-blur-xl shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
+                    <div className="max-w-3xl rounded-3xl border border-white/10 bg-black/35 p-8 backdrop-blur-xl shadow-ink-elevated">
                       <div className="space-y-6">
                         <div className="space-y-3">
-                          <h1 className="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight font-display text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.4)]">LemaClinic Truth</h1>
+                          <h1 className="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight font-display text-white drop-shadow-ink">LemaClinic Truth</h1>
                           <p className="text-xl sm:text-2xl text-red-300/90">La vérité éclaire toujours.</p>
                         </div>
                         <p className="text-lg text-white/85 leading-relaxed">
@@ -530,7 +550,7 @@ const Index = () => {
                         <div className="flex flex-wrap items-center gap-4">
                           <Button
                             onClick={() => scrollToSection("histoire")}
-                            className="group rounded-full px-8 py-3 text-base font-medium bg-gradient-to-r from-red-500 via-red-500 to-red-600 text-white shadow-[0_0_25px_rgba(248,113,113,0.25)] hover:shadow-[0_0_35px_rgba(248,113,113,0.4)] hover:-translate-y-0.5 transition-all"
+                            className="group rounded-full px-8 py-3 text-base font-semibold border border-[rgba(224,43,43,0.45)] text-[#E02B2B] bg-transparent shadow-none hover:bg-[rgba(224,43,43,0.08)] hover:shadow-[0_8px_24px_rgba(224,43,43,0.25)] hover:-translate-y-0.5 transition-all"
                           >
                             <span className="flex items-center gap-2">
                               Découvrir la vérité
@@ -745,7 +765,7 @@ const Index = () => {
                     className={`relative flex flex-col lg:flex-row items-center gap-10 ${isEven ? "lg:flex-row-reverse" : ""}`}
                   >
                     <div className="flex-1 w-full">
-                      <div className="glass-card rounded-3xl p-8 lg:p-10 bg-gradient-to-br from-black/80 via-[#160202] to-black/80 border border-primary-red/20 shadow-[0_20px_60px_-20px_rgba(255,0,0,0.4)]">
+                      <div className="glass-card rounded-3xl p-8 lg:p-10 bg-gradient-to-br from-black/80 via-[#160202] to-black/80 border border-primary-red/20 shadow-ink-pinned">
                         <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.3em] uppercase text-primary-red mb-4">
                           <span className="h-2 w-2 rounded-full bg-primary-red" />
                           <span>{step.stepNumber}</span>
@@ -765,7 +785,7 @@ const Index = () => {
                     <div className="relative flex flex-col items-center" aria-hidden="true">
                       <div className="relative">
                         <div className="absolute inset-0 bg-primary-red/30 blur-2xl rounded-full animate-pulse" />
-                        <div className="relative h-16 w-16 rounded-full bg-gradient-to-b from-[#ff4d4d] to-primary-red border border-white/20 flex items-center justify-center text-2xl font-black text-white shadow-[0_10px_30px_rgba(255,0,0,0.6)]">
+                        <div className="relative h-16 w-16 rounded-full bg-gradient-to-b from-[#ff4d4d] to-primary-red border border-white/20 flex items-center justify-center text-2xl font-black text-white shadow-ink-soft">
                           {index + 1}
                         </div>
                       </div>
@@ -1249,7 +1269,7 @@ const Index = () => {
       </footer>
 
       <Dialog open={!!activeTimelineStep} onOpenChange={(open) => setActiveTimelineStep(open ? activeTimelineStep : null)}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-[#0b0b0b] border border-primary-red/40 text-foreground">
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-[hsl(var(--shadow-ink)/0.92)] border border-primary-red/40 text-foreground shadow-ink-elevated ring-overlay-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-4">
           <DialogHeader className="relative pb-6">
             <div className="inline-flex items-center gap-2 bg-primary-red/20 text-primary-red px-4 py-2 rounded-full text-sm font-semibold tracking-[0.3em] uppercase">
               <span className="h-2 w-2 rounded-full bg-primary-red" />
