@@ -615,7 +615,7 @@ useEffect(() => {
 
         <div className="max-w-6xl mx-auto px-6 lg:px-8 relative">
           <div className="text-center mb-16">
-          <h2 className="text-5xl lg:text-6xl font-black text-[#233540] tracking-tight mb-4 font-display">
+          <h2 className="text-5xl lg:text-6xl font-extrabold text-[#233540] tracking-tight mb-6 font-display">
   Mon Histoire
 </h2>
             <div className="w-32 h-1 bg-gradient-to-r from-primary-red to-primary rounded-full mx-auto" />
