@@ -251,6 +251,36 @@ All colors MUST be HSL.
     box-shadow: var(--shadow-premium);
   }
 
+  /* Premium story cards */
+  .story-card {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(145deg, rgba(2, 8, 19, 0.12) 0%, rgba(57, 80, 102, 0.12) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(26px);
+    box-shadow:
+      0 28px 90px -32px rgba(2, 8, 19, 0.72),
+      0 0 0 1px rgba(255, 255, 255, 0.09);
+    transition: transform 220ms ease-out, box-shadow 220ms ease-out, border-color 220ms ease-out;
+  }
+
+  .story-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .story-card:is(:hover, :focus-within) {
+    transform: translateY(-4px);
+    box-shadow:
+      0 32px 100px -30px rgba(224, 43, 43, 0.24),
+      0 20px 70px -36px rgba(2, 8, 19, 0.68),
+      0 0 0 1px rgba(255, 255, 255, 0.09),
+      0 0 0 8px rgba(224, 43, 43, 0.24);
+  }
+
   /* Section separators */
   .section-divider {
     height: 1px;

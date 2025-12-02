@@ -100,6 +100,21 @@ const Index = () => {
     }
   ];
 
+  const storyMarkers = [
+    {
+      label: "Étape 1",
+      title: "Qui suis-je ?",
+    },
+    {
+      label: "Étape 2",
+      title: "Pourquoi ce site ?",
+    },
+    {
+      label: "Étape 3",
+      title: "Mon expérience",
+    }
+  ];
+
   const heroVideoFallback = "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4";
   const [heroVideoSrc, setHeroVideoSrc] = useState<string | null>(heroVideoFallback);
 
@@ -459,20 +474,25 @@ const Index = () => {
       {/* Hero Section – Cinematic video-ready canvas */}
       <section id="accueil" className="relative min-h-screen w-full overflow-hidden bg-black text-white">
         <div className="relative w-full overflow-hidden min-h-screen">
-          {/* Video background */}
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            ref={heroVideoRef}
-            src={heroVideoSrc ?? undefined}
-            className="absolute inset-0 w-full h-full object-cover z-0"
-            aria-label="Vidéo de fond illustrant la page d'accueil"
-          >
-            <source src={heroVideoSrc ?? undefined} type="video/mp4" />
-          </video>
+          {/* Video background with showcase framing */}
+          <div className="absolute inset-0 z-0 overflow-hidden">
+            <div className="absolute inset-0 bg-[rgba(57,80,102,0.35)] shadow-[0_30px_90px_-40px_rgba(2,8,19,0.35)]" />
+            <div className="absolute inset-0 ring-1 ring-inset ring-[rgba(255,255,255,0.08)]" />
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              ref={heroVideoRef}
+              src={heroVideoSrc ?? undefined}
+              className="absolute inset-0 w-full h-full object-cover z-[1]"
+              aria-label="Vidéo de fond illustrant la page d'accueil"
+            >
+              <source src={heroVideoSrc ?? undefined} type="video/mp4" />
+            </video>
+            <div className="pointer-events-none absolute inset-0 z-[2] bg-[linear-gradient(to_bottom,rgba(2,8,19,0.25),transparent_35%),linear-gradient(to_top,rgba(2,8,19,0.25),transparent_35%)]" />
+          </div>
 
           {/* Hero content */}
           <div className="relative z-20">
@@ -530,7 +550,7 @@ const Index = () => {
                         <div className="flex flex-wrap items-center gap-4">
                           <Button
                             onClick={() => scrollToSection("histoire")}
-                            className="group rounded-full px-8 py-3 text-base font-medium bg-gradient-to-r from-red-500 via-red-500 to-red-600 text-white shadow-[0_0_25px_rgba(248,113,113,0.25)] hover:shadow-[0_0_35px_rgba(248,113,113,0.4)] hover:-translate-y-0.5 transition-all"
+                            className="group rounded-full px-8 py-3 text-base font-semibold border border-[rgba(224,43,43,0.45)] text-[#E02B2B] bg-transparent shadow-none hover:bg-[rgba(224,43,43,0.08)] hover:shadow-[0_8px_24px_rgba(224,43,43,0.25)] hover:-translate-y-0.5 transition-all"
                           >
                             <span className="flex items-center gap-2">
                               Découvrir la vérité
@@ -557,12 +577,13 @@ const Index = () => {
 
       {/* Section 2 – Parcours dédiés */}
       <section className="relative bg-[#020813] border-t border-[#3D5E73]/50" aria-label="Segments prioritaires">
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(61,94,115,0.05),rgba(61,94,115,0.02))]" aria-hidden />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(224,43,43,0.05),transparent_60%)] opacity-90" aria-hidden />
         <div className="relative max-w-6xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-primary-red/70">Parcours guidés</p>
-            <h2 className="mt-4 text-3xl lg:text-4xl font-semibold text-[#CEDEF2]">Choisissez le cadre qui correspond à votre rôle</h2>
-            <p className="mt-4 text-[#CEDEF2]/80">
+            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#E02B2B]">Parcours guidés</p>
+            <h2 className="mt-4 text-3xl lg:text-4xl font-semibold text-[#E3EBF3]">Choisissez le cadre qui correspond à votre rôle</h2>
+            <p className="mt-4 text-[#CEDEF2]/90">
               Le collectif consolide des signalements réels : diagnostics modifiés, devis opaques et pressions psychologiques. Nous ne publions que des éléments sourcés et disponibles dans notre dossier.
             </p>
           </div>
@@ -573,15 +594,15 @@ const Index = () => {
               return (
                 <div key={segment.id} className="rounded-2xl border border-[#3D5E73]/40 bg-[#395066]/70 p-6 shadow-ink-elevated backdrop-blur">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs uppercase tracking-widest text-primary-red font-semibold">{segment.badge}</span>
-                    <Icon className="h-6 w-6 text-primary-red" aria-hidden="true" />
+                    <span className="text-xs uppercase tracking-widest text-[#E02B2B] font-semibold">{segment.badge}</span>
+                    <Icon className="h-6 w-6 text-[#E02B2B]" aria-hidden="true" />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#CEDEF2] mb-2">{segment.title}</h3>
-                  <p className="text-[#CEDEF2]/80 mb-6 leading-relaxed">{segment.description}</p>
+                  <h3 className="text-2xl font-semibold text-white/95 mb-2">{segment.title}</h3>
+                  <p className="text-white/60 mb-6 leading-relaxed">{segment.description}</p>
                   <Button
                     onClick={() => scrollToSection(segment.target)}
                     variant="secondary"
-                    className="w-full group"
+                    className="w-full group rounded-xl bg-[#D8E4EF] text-[#020813] border border-black/10 shadow-[0_12px_30px_rgba(0,0,0,0.25)] hover:bg-[#C7D6E2] hover:border-black/20 hover:shadow-[0_14px_34px_rgba(0,0,0,0.3)]"
                     aria-label={`Accéder à l'espace ${segment.id}`}
                   >
                     <span className="flex items-center justify-center gap-2">
@@ -598,11 +619,11 @@ const Index = () => {
             {heroValueProps.map(prop => {
               const Icon = prop.icon;
               return (
-                <div key={prop.title} className="flex items-center gap-3 rounded-2xl border border-[#3D5E73]/40 bg-[#395066]/60 px-4 py-3 backdrop-blur">
-                  <Icon className="h-5 w-5 text-primary-red" aria-hidden="true" />
+                <div key={prop.title} className="flex items-center gap-3 rounded-2xl border border-white/5 bg-[#395066]/80 px-4 py-3 shadow-[0_8px_30px_rgba(0,0,0,0.2)] backdrop-blur">
+                  <Icon className="h-5 w-5 text-[#E02B2B]" aria-hidden="true" />
                   <div>
                     <p className="text-sm font-semibold text-[#CEDEF2]">{prop.title}</p>
-                    <p className="text-xs text-[#CEDEF2]/75">{prop.description}</p>
+                    <p className="text-xs text-[#CEDEF2]/80">{prop.description}</p>
                   </div>
                 </div>
               );
