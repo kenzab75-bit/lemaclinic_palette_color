@@ -592,10 +592,7 @@ const Index = () => {
             {heroSegments.map(segment => {
               const Icon = segment.icon;
               return (
-                <div
-                  key={segment.id}
-                  className="rounded-2xl border border-white/10 bg-[#3D5E73]/80 p-6 shadow-lg shadow-black/30 backdrop-blur-[1px] transition-all duration-300 ease-out hover:-translate-y-[2px] hover:shadow-xl hover:shadow-black/40 hover:ring-1 hover:ring-[#3D5E73]/20"
-                >
+                <div key={segment.id} className="rounded-2xl border border-[#3D5E73]/40 bg-[#395066]/70 p-6 shadow-ink-elevated backdrop-blur">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-xs uppercase tracking-widest text-[#E02B2B] font-semibold">{segment.badge}</span>
                     <Icon className="h-6 w-6 text-[#E02B2B]" aria-hidden="true" />
@@ -636,34 +633,33 @@ const Index = () => {
       </section>
 
       {/* My Story Section - Introduction */}
-      <section id="histoire" className="relative py-section bg-[#FAF9FF] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#020813]/10 via-[#FAF9FF]/95 to-[#FAF9FF] pointer-events-none" aria-hidden />
-        <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-[#CEDEF2]/70 via-[#FAF9FF]/80 to-transparent pointer-events-none" aria-hidden />
-        <div className="absolute inset-y-10 left-10 h-72 w-72 bg-[radial-gradient(circle_at_top_left,#E02B2B14,transparent_60%)] blur-3xl" aria-hidden />
-        <div className="absolute inset-y-10 right-10 h-72 w-72 bg-[radial-gradient(circle_at_top_right,#3D5E7314,transparent_55%)] blur-3xl" aria-hidden />
+      <section id="histoire" className="relative py-section bg-gradient-to-b from-[#0E1217] via-[#151A20] to-[#0B0E13] overflow-hidden">
+        <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-[#CEDEF2]/60 via-transparent to-transparent pointer-events-none" aria-hidden />
+        <div className="absolute inset-y-10 left-10 h-72 w-72 bg-[radial-gradient(circle_at_top_left,#E02B2B1A,transparent_60%)] blur-3xl" aria-hidden />
+        <div className="absolute inset-y-10 right-10 h-72 w-72 bg-[radial-gradient(circle_at_top_right,#3D5E731A,transparent_55%)] blur-3xl" aria-hidden />
 
-        <div className="max-w-6xl mx-auto px-6 lg:px-8 relative">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl lg:text-6xl font-black text-[#020813] mb-6 font-display">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl lg:text-6xl font-black text-[#E6E8EB] drop-shadow-[0_6px_20px_rgba(0,0,0,0.35)] mb-4 font-display">
               Mon Histoire
             </h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-primary-red to-primary rounded-full mx-auto" />
+            <div className="w-24 h-1 mx-auto mt-4 bg-red-600/80 rounded-full"></div>
           </div>
 
           {/* Qui suis-je & Pourquoi ce site */}
-          <div className="grid lg:grid-cols-2 gap-8 mb-16 mt-10">
-            <div className="rounded-[20px] p-8 bg-[linear-gradient(180deg,#395066_0%,#132029_100%)] border border-white/10 shadow-[0_4px_12px_rgba(0,0,0,0.25)] backdrop-blur-[1px]">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-gradient-to-br from-primary-red to-dark-red rounded-xl mr-4">
+          <div className="grid lg:grid-cols-2 gap-8 mb-16">
+            <div className="rounded-3xl p-10 bg-gradient-to-b from-[#16212F] via-[#1C2A3A] to-[#0D141D] shadow-[0_8px_30px_rgba(0,0,0,0.45)] text-[#E6E8EB] border border-white/5 backdrop-blur">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-red-600/20 text-red-400 mb-4">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-semibold text-[#F7F9FB]">
+                <h3 className="text-2xl font-bold text-[#E6E8EB]">
                   Qui suis-je ?
                 </h3>
               </div>
-              <div className="space-y-4 text-[#DDE7EE] leading-relaxed text-lg">
+              <div className="space-y-4 text-[#E6E8EB]/90 leading-relaxed text-lg">
                 <p>
                   Je suis une patiente qui a fait confiance à la clinique{" "}
                   <span className="text-primary-red font-semibold">Lema Dental</span> à Istanbul.
@@ -680,18 +676,18 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="rounded-[20px] p-8 bg-[linear-gradient(180deg,#395066_0%,#132029_100%)] border border-white/10 shadow-[0_4px_12px_rgba(0,0,0,0.25)] backdrop-blur-[1px]">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-gradient-to-br from-primary-red to-dark-red rounded-xl mr-4">
+            <div className="rounded-3xl p-10 bg-gradient-to-b from-[#16212F] via-[#1C2A3A] to-[#0D141D] shadow-[0_8px_30px_rgba(0,0,0,0.45)] text-[#E6E8EB] border border-white/5 backdrop-blur">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-red-600/20 text-red-400 mb-4">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-semibold text-[#F7F9FB]">
+                <h3 className="text-2xl font-bold text-[#E6E8EB]">
                   Pourquoi ce site ?
                 </h3>
               </div>
-              <div className="space-y-4 text-[#DDE7EE] leading-relaxed text-lg">
+              <div className="space-y-4 text-[#E6E8EB]/90 leading-relaxed text-lg">
                 <p>
                   J'ai créé ce site pour révéler la vérité et prévenir d'autres victimes.
                 </p>
@@ -710,13 +706,13 @@ const Index = () => {
           </div>
 
           {/* Mon expérience */}
-          <div className="max-w-6xl mx-auto">
-            <div className="rounded-[20px] p-8 bg-[linear-gradient(180deg,#395066_0%,#132029_100%)] border border-white/10 shadow-[0_4px_12px_rgba(0,0,0,0.25)] backdrop-blur-[1px]">
-              <h3 className="text-2xl font-semibold text-[#F7F9FB] mb-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="rounded-3xl p-10 bg-gradient-to-b from-[#16212F] via-[#1C2A3A] to-[#0D141D] shadow-[0_8px_30px_rgba(0,0,0,0.45)] text-[#E6E8EB] border border-white/5 backdrop-blur">
+              <h3 className="text-2xl font-bold text-[#E6E8EB] mb-6">
                 Mon expérience
               </h3>
 
-              <div className="space-y-4 text-[#DDE7EE] leading-relaxed text-lg">
+              <div className="space-y-4 text-[#E6E8EB]/90 leading-relaxed text-lg">
                 <p>
                   Comme beaucoup d'autres, j'ai été attiré par les promesses alléchantes de Lema Dental Clinic à Istanbul.
                   Des soins dentaires de qualité à des prix attractifs, une équipe professionnelle, des installations modernes...
