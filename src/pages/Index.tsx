@@ -10,10 +10,10 @@ import ContactForm from "@/components/ContactForm";
 import TestimonialCard from "@/components/TestimonialCard";
 import { testimonials } from "@/data/testimonials";
 import { timelineSteps, type TimelineStep } from "@/data/timelineSteps";
-import { supabase } from "@/integrations/supabase/client";
 import MegaMenuSInformer from "@/components/MegaMenuSInformer";
 const Index = () => {
   const heroVideoRef = useRef<HTMLVideoElement | null>(null);
+
   const [scrolled, setScrolled] = useState(false);
   const [activeTimelineStep, setActiveTimelineStep] = useState<TimelineStep | null>(null);
   const [activeFilter, setActiveFilter] = useState("Tous");
@@ -167,85 +167,82 @@ const Index = () => {
       detail: "Orientation vers un espace de fichiers à la demande.",
     }
   ];
-  const handleSubmitTestimony = async () => {
-    if (!testimony.trim() || !consentChecked) {
-      toast({
-        title: "Champs requis",
-        description: "Veuillez remplir tous les champs et accepter le consentement",
-        variant: "destructive"
-      });
-      return;
-    }
-    setIsSubmittingTestimony(true);
-    setEncryptionReceipt(null);
+const handleSubmitTestimony = async () => {
+  // Vérification des champs obligatoires
+  if (!testimony.trim() || !consentChecked) {
+    toast({
+      title: "Champs requis",
+      description: "Veuillez remplir tous les champs et accepter le consentement",
+      variant: "destructive"
+    });
+    return;
+  }
 
+  // On affiche l'état de chargement
+  setIsSubmittingTestimony(true);
+  setEncryptionReceipt(null);
+
+  try {
+    // Ici tu mettras plus tard la logique d'envoi réel du témoignage
+    // Pour l'instant : confirmation locale
+    toast({
+      title: "Témoignage envoyé",
+      description: "Votre témoignage a bien été pris en compte.",
+    });
+
+    // Réinitialisation du formulaire
+    setTestimony("");
+    setConsentChecked(false);
+
+  } catch (error) {
+    console.error("Erreur lors de l'envoi du témoignage :", error);
+
+    toast({
+      title: "Erreur",
+      description: "Une erreur est survenue. Veuillez réessayer.",
+      variant: "destructive",
+    });
+
+  } finally {
+    // Toujours remettre l'état à false, même en cas d’erreur
+    setIsSubmittingTestimony(false);
+  }
+};
+
+useEffect(() => {
+  if (!heroVideoRef.current) return;
+
+  const attemptPlay = async () => {
     try {
-      const { data, error } = await supabase.functions.invoke("secure-testimony", {
-        body: {
-          testimony,
-          segment: testimonySegment,
-          channel: testimonyChannel
-        }
-      });
-
-      if (error) {
-        throw error;
-      }
-
-      toast({
-        title: "Témoignage envoyé",
-        description: data?.message || "Votre témoignage chiffré a bien été reçu."
-      });
-
-      setEncryptionReceipt(data?.receipt ?? null);
-      setTestimony("");
-      setConsentChecked(false);
+      await heroVideoRef.current?.play();
     } catch (error) {
-      console.error("Secure testimony error", error);
-      toast({
-        title: "Erreur",
-        description: "Impossible d'envoyer le témoignage. Veuillez réessayer.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubmittingTestimony(false);
+      console.warn("Hero video autoplay prevented:", error);
     }
   };
 
-  useEffect(() => {
-    if (!heroVideoRef.current) return;
+  attemptPlay();
+}, []);
 
-    const attemptPlay = async () => {
-      try {
-        await heroVideoRef.current?.play();
-      } catch (error) {
-        console.warn("Hero video autoplay prevented:", error);
-      }
-    };
+useEffect(() => {
+  const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const video = heroVideoRef.current;
 
-    attemptPlay();
-  }, []);
+  if (!video) return;
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const video = heroVideoRef.current;
+  const handleChange = () => {
+    if (mediaQuery.matches) {
+      video.pause();
+      setIsHeroPaused(true);
+    } else if (!isHeroPaused) {
+      video.play().catch(error => console.warn("Hero video autoplay prevented:", error));
+    }
+  };
 
-    if (!video) return;
+  handleChange();
+  mediaQuery.addEventListener("change", handleChange);
 
-    const handleChange = () => {
-      if (mediaQuery.matches) {
-        video.pause();
-        setIsHeroPaused(true);
-      } else if (!isHeroPaused) {
-        video.play().catch(error => console.warn("Hero video autoplay prevented:", error));
-      }
-    };
-
-    handleChange();
-    mediaQuery.addEventListener("change", handleChange);
-
-    return () => mediaQuery.removeEventListener("change", handleChange);
-  }, [isHeroPaused]);
+  return () => mediaQuery.removeEventListener("change", handleChange);
+}, [isHeroPaused]);
 
   useEffect(() => {
     const video = heroVideoRef.current;
@@ -287,65 +284,39 @@ const Index = () => {
   };
 
   const handleNewsletterSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!newsletterEmail) {
-      toast({
-        variant: "destructive",
-        title: "Email requis",
-        description: "Veuillez entrer votre adresse email.",
-      });
-      return;
-    }
+  e.preventDefault();
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(newsletterEmail)) {
-      toast({
-        variant: "destructive",
-        title: "Email invalide",
-        description: "Veuillez entrer une adresse email valide.",
-      });
-      return;
-    }
+  if (!newsletterEmail) {
+    toast({
+      variant: "destructive",
+      title: "Email requis",
+      description: "Veuillez entrer votre adresse email.",
+    });
+    return;
+  }
 
-    setIsSubscribing(true);
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(newsletterEmail)) {
+    toast({
+      variant: "destructive",
+      title: "Email invalide",
+      description: "Veuillez entrer une adresse email valide.",
+    });
+    return;
+  }
 
-    try {
-      const { data, error } = await supabase.functions.invoke('newsletter-subscribe', {
-        body: { email: newsletterEmail }
-      });
+  setIsSubscribing(true);
 
-      if (error) {
-        console.error('Newsletter subscription error:', error);
-        throw error;
-      }
+  // Newsletter logic disabled (no Supabase)
+  toast({
+    title: "Merci !",
+    description: "Merci pour votre inscription à la newsletter.",
+  });
 
-      if (data?.error) {
-        toast({
-          variant: "destructive",
-          title: "Erreur",
-          description: data.error,
-        });
-        return;
-      }
-
-      toast({
-        title: "Inscription réussie !",
-        description: data.message || "Merci de votre inscription à notre newsletter. Vérifiez votre email.",
-      });
-      setNewsletterEmail("");
-    } catch (error: any) {
-      console.error('Newsletter subscription error:', error);
-      toast({
-        variant: "destructive",
-        title: "Erreur",
-        description: "Une erreur est survenue lors de l'inscription. Veuillez réessayer.",
-      });
-    } finally {
-      setIsSubscribing(false);
-    }
-  };
-
+  setNewsletterEmail("");
+  setIsSubscribing(false);
+};
+ 
   const filteredTestimonials = activeFilter === "Tous" 
     ? testimonials 
     : testimonials.filter(t => t.category === activeFilter);
@@ -643,12 +614,18 @@ const Index = () => {
         <div className="absolute inset-y-10 right-10 h-72 w-72 bg-[radial-gradient(circle_at_top_right,#3D5E7314,transparent_55%)] blur-3xl" aria-hidden />
 
         <div className="max-w-6xl mx-auto px-6 lg:px-8 relative">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl lg:text-6xl font-black text-[#020813] mb-6 font-display">
-              Mon Histoire
-            </h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-primary-red to-primary rounded-full mx-auto" />
-          </div>
+          <div className="text-center mb-20 relative">
+  {/* Halo subtil derrière le titre */}
+  <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0a0f18] to-transparent opacity-40 blur-2xl" />
+
+  <h2 className="text-5xl lg:text-6xl font-black text-white tracking-tight mb-6 font-display">
+    Mon Histoire
+  </h2>
+
+  {/* Ligne premium */}
+  <div className="w-40 h-1 bg-gradient-to-r from-[#E02B2B] to-[#7A1CFF] rounded-full mx-auto opacity-90" />
+</div>
+
 
           {/* Qui suis-je & Pourquoi ce site */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16 mt-10">
