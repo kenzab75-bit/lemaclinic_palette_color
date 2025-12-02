@@ -636,21 +636,23 @@ const Index = () => {
       </section>
 
       {/* My Story Section - Introduction */}
-      <section
-        id="histoire"
-        className="relative py-section overflow-hidden bg-[linear-gradient(to_bottom,#0D1117_0%,#FAF9FF_18%,#FAF9FF_100%)]"
-      >
+      <section id="histoire" className="relative py-section bg-[#FAF9FF] overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#020813]/10 via-[#FAF9FF]/95 to-[#FAF9FF] pointer-events-none" aria-hidden />
+        <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-[#CEDEF2]/70 via-[#FAF9FF]/80 to-transparent pointer-events-none" aria-hidden />
+        <div className="absolute inset-y-10 left-10 h-72 w-72 bg-[radial-gradient(circle_at_top_left,#E02B2B14,transparent_60%)] blur-3xl" aria-hidden />
+        <div className="absolute inset-y-10 right-10 h-72 w-72 bg-[radial-gradient(circle_at_top_right,#3D5E7314,transparent_55%)] blur-3xl" aria-hidden />
+
         <div className="max-w-6xl mx-auto px-6 lg:px-8 relative">
-          <div className="text-center mb-14 lg:mb-16">
-            <h2 className="text-5xl lg:text-6xl font-extrabold text-[#132029] leading-[1.08] tracking-[-0.5px] mb-4 font-display">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl lg:text-6xl font-black text-[#020813] mb-6 font-display">
               Mon Histoire
             </h2>
-            <div className="h-[2px] w-[60px] bg-[#E02B2B] mx-auto rounded-full" />
+            <div className="w-32 h-1 bg-gradient-to-r from-primary-red to-primary rounded-full mx-auto" />
           </div>
 
           {/* Qui suis-je & Pourquoi ce site */}
-          <div className="grid lg:grid-cols-2 gap-8 mb-16 mt-12 max-w-5xl mx-auto">
-            <div className="rounded-2xl p-6 bg-[linear-gradient(180deg,#395066_0%,#132029_100%)] border border-white/10 shadow-[0_8px_24px_rgba(0,0,0,0.18)] backdrop-blur-[1px]">
+          <div className="grid lg:grid-cols-2 gap-8 mb-16 mt-10">
+            <div className="rounded-[20px] p-8 bg-[linear-gradient(180deg,#395066_0%,#132029_100%)] border border-white/10 shadow-[0_4px_12px_rgba(0,0,0,0.25)] backdrop-blur-[1px]">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-gradient-to-br from-primary-red to-dark-red rounded-xl mr-4">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -661,7 +663,7 @@ const Index = () => {
                   Qui suis-je ?
                 </h3>
               </div>
-              <div className="space-y-4 text-[#F5F7FA] leading-[1.65] text-lg">
+              <div className="space-y-4 text-[#DDE7EE] leading-relaxed text-lg">
                 <p>
                   Je suis une patiente qui a fait confiance à la clinique{" "}
                   <span className="text-primary-red font-semibold">Lema Dental</span> à Istanbul.
@@ -678,7 +680,7 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="rounded-2xl p-6 bg-[linear-gradient(180deg,#395066_0%,#132029_100%)] border border-white/10 shadow-[0_8px_24px_rgba(0,0,0,0.18)] backdrop-blur-[1px]">
+            <div className="rounded-[20px] p-8 bg-[linear-gradient(180deg,#395066_0%,#132029_100%)] border border-white/10 shadow-[0_4px_12px_rgba(0,0,0,0.25)] backdrop-blur-[1px]">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-gradient-to-br from-primary-red to-dark-red rounded-xl mr-4">
                   <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -689,7 +691,7 @@ const Index = () => {
                   Pourquoi ce site ?
                 </h3>
               </div>
-              <div className="space-y-4 text-[#F5F7FA] leading-[1.65] text-lg">
+              <div className="space-y-4 text-[#DDE7EE] leading-relaxed text-lg">
                 <p>
                   J'ai créé ce site pour révéler la vérité et prévenir d'autres victimes.
                 </p>
@@ -708,13 +710,13 @@ const Index = () => {
           </div>
 
           {/* Mon expérience */}
-          <div className="max-w-5xl mx-auto">
-            <div className="rounded-2xl p-6 bg-[linear-gradient(180deg,#395066_0%,#132029_100%)] border border-white/10 shadow-[0_8px_24px_rgba(0,0,0,0.18)] backdrop-blur-[1px]">
+          <div className="max-w-6xl mx-auto">
+            <div className="rounded-[20px] p-8 bg-[linear-gradient(180deg,#395066_0%,#132029_100%)] border border-white/10 shadow-[0_4px_12px_rgba(0,0,0,0.25)] backdrop-blur-[1px]">
               <h3 className="text-2xl font-semibold text-[#F7F9FB] mb-6">
                 Mon expérience
               </h3>
 
-              <div className="space-y-4 text-[#F5F7FA] leading-[1.65] text-lg">
+              <div className="space-y-4 text-[#DDE7EE] leading-relaxed text-lg">
                 <p>
                   Comme beaucoup d'autres, j'ai été attiré par les promesses alléchantes de Lema Dental Clinic à Istanbul.
                   Des soins dentaires de qualité à des prix attractifs, une équipe professionnelle, des installations modernes...
