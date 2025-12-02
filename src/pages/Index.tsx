@@ -614,18 +614,12 @@ useEffect(() => {
         <div className="absolute inset-y-10 right-10 h-72 w-72 bg-[radial-gradient(circle_at_top_right,#3D5E7314,transparent_55%)] blur-3xl" aria-hidden />
 
         <div className="max-w-6xl mx-auto px-6 lg:px-8 relative">
-          <div className="text-center mb-20 relative">
-  {/* Halo subtil derrière le titre */}
-  <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0a0f18] to-transparent opacity-40 blur-2xl" />
-
-  <h2 className="text-5xl lg:text-6xl font-black text-white tracking-tight mb-6 font-display">
-    Mon Histoire
-  </h2>
-
-  {/* Ligne premium */}
-  <div className="w-40 h-1 bg-gradient-to-r from-[#E02B2B] to-[#7A1CFF] rounded-full mx-auto opacity-90" />
-</div>
-
+          <div className="text-center mb-16">
+            <h2 className="text-5xl lg:text-6xl font-black text-[#233540] mb-6 font-display">
+              Mon Histoire
+            </h2>
+            <div className="w-32 h-1 bg-gradient-to-r from-primary-red to-primary rounded-full mx-auto" />
+          </div>
 
           {/* Qui suis-je & Pourquoi ce site */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16 mt-10">
