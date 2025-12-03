@@ -732,8 +732,16 @@ useEffect(() => {
       <div className="section-divider"></div>
 
       {/* Timeline Section */}
-      <section id="victimes" className="py-section bg-gradient-to-br from-[#FAF9FF] via-[#F1F5FB] to-[#E6EEF8] relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#E02B2B]/8 via-transparent to-[#3D5E73]/12" />
+      <section id="victimes" className="relative py-section bg-[#FAF9FF] overflow-hidden">
+        <div
+          className="absolute inset-x-0 top-0 h-[280px]
+                     bg-gradient-to-b from-[#CEDEF2]/80 via-[#FAF9FF]/85 to-transparent
+                     pointer-events-none"
+          aria-hidden
+        />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#FFFFFF0F,transparent_70%)] pointer-events-none" aria-hidden />
+        <div className="absolute inset-y-10 left-6 h-72 w-72 bg-[radial-gradient(circle_at_top_left,#E02B2B12,transparent_60%)] blur-3xl" aria-hidden />
+        <div className="absolute inset-y-10 right-6 h-72 w-72 bg-[radial-gradient(circle_at_top_right,#3D5E7314,transparent_55%)] blur-3xl" aria-hidden />
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center mb-16">
@@ -743,7 +751,7 @@ useEffect(() => {
           </div>
 
           <div className="relative max-w-6xl mx-auto">
-            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-px bg-gradient-to-b from-transparent via-[#3D5E73]/50 to-transparent" aria-hidden="true" />
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-px bg-gradient-to-b from-transparent via-[#6E8596]/50 to-transparent" aria-hidden="true" />
 
             <div className="space-y-16">
               {timelineSteps.map((step, index) => {
@@ -762,7 +770,7 @@ useEffect(() => {
                         <h3 className="text-3xl lg:text-4xl font-black text-white mb-4">{step.cardTitle}</h3>
                         <p className="text-lg text-white/80 leading-relaxed mb-6">{step.cardDescription}</p>
                         <Button
-                          className="px-6 py-4 rounded-2xl bg-gradient-to-r from-[#E02B2B] via-[#C62828] to-[#9F1C1C] border-none text-white font-semibold shadow-lg shadow-primary-red/40 hover:shadow-primary-red/60"
+                          className="px-6 py-4 rounded-2xl bg-gradient-to-r from-[#E02B2B] via-[#C73838] to-[#A31F1F] border-none text-white font-semibold shadow-lg shadow-primary-red/30 hover:shadow-primary-red/50"
                           onClick={() => setActiveTimelineStep(step)}
                         >
                           Cliquer pour voir les détails
@@ -773,13 +781,13 @@ useEffect(() => {
 
                     <div className="relative flex flex-col items-center" aria-hidden="true">
                       <div className="relative">
-                        <div className="absolute inset-0 bg-[#E02B2B]/20 blur-2xl rounded-full animate-pulse" />
-                        <div className="relative h-16 w-16 rounded-full bg-gradient-to-b from-[#F4D9DF] to-[#E02B2B] border border-white/30 flex items-center justify-center text-2xl font-black text-white shadow-ink-soft">
+                        <div className="absolute inset-0 bg-[#E02B2B]/16 blur-2xl rounded-full" />
+                        <div className="relative h-16 w-16 rounded-full bg-gradient-to-b from-[#F0DCE2] via-[#E64B4B] to-[#BE2C2C] border border-white/40 flex items-center justify-center text-2xl font-black text-white shadow-ink-soft">
                           {index + 1}
                         </div>
                       </div>
                       {index !== timelineSteps.length - 1 && (
-                        <div className="hidden lg:block w-px flex-1 bg-gradient-to-b from-[#3D5E73]/45 to-transparent mt-6" />
+                        <div className="hidden lg:block w-px flex-1 bg-gradient-to-b from-[#6E8596]/45 via-[#E02B2B]/15 to-transparent mt-6" />
                       )}
                     </div>
                   </article>
