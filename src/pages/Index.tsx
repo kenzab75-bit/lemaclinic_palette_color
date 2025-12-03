@@ -732,38 +732,28 @@ useEffect(() => {
       <div className="section-divider"></div>
 
       {/* Timeline Section */}
-      <section id="victimes" className="relative py-section bg-gradient-to-b from-[#F9FBFF] via-[#FDF7F7] to-[#F7FAFF] overflow-hidden">
-        <div
-          className="absolute inset-x-0 top-0 h-[320px]
-                     bg-gradient-to-b from-white via-[#E6EEF8]/70 to-transparent
-                     pointer-events-none"
-          aria-hidden
-        />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#FFFFFF20,transparent_70%)] pointer-events-none" aria-hidden />
-        <div className="absolute -top-10 -left-12 h-72 w-72 bg-[radial-gradient(circle_at_center,#E02B2B18,transparent_60%)] blur-3xl" aria-hidden />
-        <div className="absolute top-32 -right-16 h-80 w-80 bg-[radial-gradient(circle_at_center,#3D5E7320,transparent_65%)] blur-3xl" aria-hidden />
-        <div className="absolute bottom-10 left-1/3 h-64 w-64 bg-[radial-gradient(circle_at_center,#F1D7DF20,transparent_65%)] blur-3xl" aria-hidden />
+      <section id="victimes" className="relative py-section bg-gradient-to-b from-[#E9EDF3] to-[#CBD6E0] overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(224,43,43,0.08),transparent_55%)] pointer-events-none" aria-hidden />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_60%,rgba(63,93,122,0.08),transparent_55%)] pointer-events-none" aria-hidden />
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-          <div className="max-w-5xl mx-auto text-center mb-20 space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 backdrop-blur border border-[#E1E9F7] shadow-sm shadow-primary-red/10">
-              <span className="h-2 w-2 rounded-full bg-primary-red" />
-              <span className="text-xs font-semibold tracking-[0.3em] uppercase text-[#2F3E4D]">Parcours dévoilé</span>
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-black text-[#152330] font-display">Un système bien ficelé</h2>
-            <p className="text-xl lg:text-2xl text-[#1F2E3A]/80 leading-relaxed max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto text-center mb-20 space-y-5">
+            <p className="text-xs uppercase tracking-[0.35em] text-red-500 font-semibold text-center">Parcours dévoilé</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0A0F1C] tracking-tight text-center font-display">Un système bien ficelé</h2>
+            <div className="h-1 w-16 bg-red-600 rounded-full mx-auto mt-3" />
+            <p className="text-xl lg:text-2xl text-[#132330]/90 leading-relaxed max-w-4xl mx-auto">
               Découvrez comment un système bien rodé transforme la confiance des patients en instrument de profit.
             </p>
-            <div className="flex flex-wrap justify-center gap-3 text-sm text-[#2F3E4D]">
-              <span className="px-4 py-2 rounded-full bg-white/70 border border-[#E6EEF5] shadow-sm">Identité visuelle « Mon histoire » conservée</span>
-              <span className="px-4 py-2 rounded-full bg-white/70 border border-[#E6EEF5] shadow-sm">Narration intacte</span>
-              <span className="px-4 py-2 rounded-full bg-white/70 border border-[#E6EEF5] shadow-sm">Focus sur la confiance détournée</span>
+            <div className="flex flex-wrap justify-center gap-3 text-sm text-[#0A0F1C]/80">
+              <span className="px-4 py-2 rounded-full bg-white/40 border border-white/50 shadow-sm shadow-white/30">Identité visuelle « Mon histoire » conservée</span>
+              <span className="px-4 py-2 rounded-full bg-white/40 border border-white/50 shadow-sm shadow-white/30">Narration intacte</span>
+              <span className="px-4 py-2 rounded-full bg-white/40 border border-white/50 shadow-sm shadow-white/30">Focus sur la confiance détournée</span>
             </div>
           </div>
 
           <div className="relative max-w-6xl mx-auto">
-            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-px bg-gradient-to-b from-transparent via-[#A2B5C7]/70 to-transparent" aria-hidden="true" />
-            <div className="absolute left-1/2 -translate-x-1/2 top-10 h-24 w-24 bg-[radial-gradient(circle_at_center,#E02B2B22,transparent_60%)] blur-3xl" aria-hidden />
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-[2px] bg-white/20" aria-hidden="true" />
+            <div className="absolute left-1/2 -translate-x-1/2 top-10 h-24 w-24 bg-[radial-gradient(circle_at_center,rgba(224,43,43,0.12),transparent_60%)] blur-3xl" aria-hidden />
 
             <div className="space-y-16">
               {timelineSteps.map((step, index) => {
@@ -774,19 +764,16 @@ useEffect(() => {
                     className={`relative flex flex-col lg:flex-row items-center gap-10 ${isEven ? "lg:flex-row-reverse" : ""}`}
                   >
                     <div className="flex-1 w-full">
-                      <div className="relative overflow-hidden rounded-3xl p-8 lg:p-10 border border-[#E1E9F7] bg-white/80 backdrop-blur-xl shadow-xl shadow-primary-red/5">
-                        <div className="absolute inset-0 bg-gradient-to-br from-[#F5F8FF] via-white to-[#FFF6F6] opacity-90" aria-hidden />
-                        <div className="absolute -top-8 -left-10 h-36 w-36 bg-[radial-gradient(circle_at_center,#E02B2B18,transparent_55%)] blur-2xl" aria-hidden />
-                        <div className="absolute -bottom-6 right-4 h-28 w-28 bg-[radial-gradient(circle_at_center,#3D5E7318,transparent_60%)] blur-2xl" aria-hidden />
-                        <div className="relative">
-                          <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.3em] uppercase text-primary-red mb-4 bg-white/80 rounded-full px-3 py-1 border border-white/60 shadow-sm shadow-primary-red/10">
-                            <span className="h-2 w-2 rounded-full bg-primary-red" />
+                      <div className="relative overflow-hidden bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl shadow-xl border border-white/10 p-8 lg:p-12 text-white backdrop-blur-xl">
+                        <div className="relative space-y-4">
+                          <div className="inline-flex items-center justify-center gap-2 text-xs font-semibold tracking-[0.3em] uppercase text-white bg-white/10 rounded-full px-4 py-2 border border-white/20">
+                            <span className="h-2 w-2 rounded-full bg-red-500" />
                             <span>{step.stepNumber}</span>
                           </div>
-                          <h3 className="text-3xl lg:text-4xl font-black text-[#1B2B38] mb-4">{step.cardTitle}</h3>
-                          <p className="text-lg text-[#1F2E3A]/80 leading-relaxed mb-6">{step.cardDescription}</p>
+                          <h3 className="text-3xl lg:text-4xl font-bold text-white">{step.cardTitle}</h3>
+                          <p className="text-lg text-white/80 leading-relaxed mb-4">{step.cardDescription}</p>
                           <Button
-                            className="px-6 py-4 rounded-2xl bg-gradient-to-r from-[#E02B2B] via-[#C73838] to-[#A31F1F] border-none text-white font-semibold shadow-lg shadow-primary-red/25 hover:shadow-primary-red/50"
+                            className="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-full px-6 py-3 shadow-lg hover:shadow-red-700/50 hover:scale-[1.02] transition flex items-center"
                             onClick={() => setActiveTimelineStep(step)}
                           >
                             Cliquer pour voir les détails
@@ -797,14 +784,11 @@ useEffect(() => {
                     </div>
 
                     <div className="relative flex flex-col items-center" aria-hidden="true">
-                      <div className="relative">
-                        <div className="absolute inset-0 bg-[#E02B2B]/18 blur-2xl rounded-full" />
-                        <div className="relative h-16 w-16 rounded-full bg-gradient-to-b from-white via-[#F4D9DE] to-[#E02B2B] border border-white/70 flex items-center justify-center text-2xl font-black text-[#1B2B38] shadow-ink-soft">
-                          {index + 1}
-                        </div>
+                      <div className="relative flex items-center justify-center w-12 h-12 bg-gradient-to-b from-red-600 to-red-400 text-white rounded-full shadow-xl font-semibold">
+                        {index + 1}
                       </div>
                       {index !== timelineSteps.length - 1 && (
-                        <div className="hidden lg:block w-px flex-1 bg-gradient-to-b from-[#A2B5C7]/60 via-[#E02B2B]/25 to-transparent mt-6" />
+                        <div className="hidden lg:block w-[2px] flex-1 bg-white/20 mt-6" />
                       )}
                     </div>
                   </article>
