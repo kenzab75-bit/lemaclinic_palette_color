@@ -618,12 +618,12 @@ useEffect(() => {
     )] pointer-events-none"
   aria-hidden
 />
-{/* ⭐ 2 — ICI LE HALO PREMIUM ⭐ */}
-  <div
-    className="absolute inset-0 mx-auto w-[600px] h-[250px] bg-white/10 blur-[100px] opacity-80"
-    aria-hidden
-  />
-  
+<div
+  className="absolute top-[350px] left-1/2 -translate-x-1/2 w-[700px] h-[280px] 
+             bg-white/20 blur-[120px] opacity-70 rounded-full"
+  aria-hidden
+/>
+
         <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-[#CEDEF2]/70 via-[#FAF9FF]/80 to-transparent pointer-events-none" aria-hidden />
         <div className="absolute inset-y-10 left-10 h-72 w-72 bg-[radial-gradient(circle_at_top_left,#E02B2B14,transparent_60%)] blur-3xl" aria-hidden />
         <div className="absolute inset-y-10 right-10 h-72 w-72 bg-[radial-gradient(circle_at_top_right,#3D5E7314,transparent_55%)] blur-3xl" aria-hidden />
