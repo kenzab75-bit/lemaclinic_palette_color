@@ -732,18 +732,18 @@ useEffect(() => {
       <div className="section-divider"></div>
 
       {/* Timeline Section */}
-      <section id="victimes" className="py-section bg-gradient-to-br from-black via-background to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-red/5 via-transparent to-primary-red/5" />
+      <section id="victimes" className="py-section bg-gradient-to-br from-[#FAF9FF] via-[#F1F5FB] to-[#E6EEF8] relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#E02B2B]/8 via-transparent to-[#3D5E73]/12" />
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <p className="text-2xl lg:text-3xl text-white/90 leading-relaxed font-semibold">
+            <p className="text-2xl lg:text-3xl text-[#1F2E3A] leading-relaxed font-semibold">
               Découvrez comment un système bien rodé transforme la confiance des patients en instrument de profit.
             </p>
           </div>
 
           <div className="relative max-w-6xl mx-auto">
-            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-px bg-gradient-to-b from-transparent via-primary-red/60 to-transparent" aria-hidden="true" />
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-px bg-gradient-to-b from-transparent via-[#3D5E73]/50 to-transparent" aria-hidden="true" />
 
             <div className="space-y-16">
               {timelineSteps.map((step, index) => {
@@ -754,7 +754,7 @@ useEffect(() => {
                     className={`relative flex flex-col lg:flex-row items-center gap-10 ${isEven ? "lg:flex-row-reverse" : ""}`}
                   >
                     <div className="flex-1 w-full">
-                      <div className="glass-card rounded-3xl p-8 lg:p-10 bg-gradient-to-br from-black/80 via-[#160202] to-black/80 border border-primary-red/20 shadow-ink-pinned">
+                      <div className="glass-card rounded-3xl p-8 lg:p-10 bg-[linear-gradient(180deg,#395066_0%,#132029_100%)] border border-white/10 shadow-ink-pinned">
                         <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.3em] uppercase text-primary-red mb-4">
                           <span className="h-2 w-2 rounded-full bg-primary-red" />
                           <span>{step.stepNumber}</span>
@@ -762,7 +762,7 @@ useEffect(() => {
                         <h3 className="text-3xl lg:text-4xl font-black text-white mb-4">{step.cardTitle}</h3>
                         <p className="text-lg text-white/80 leading-relaxed mb-6">{step.cardDescription}</p>
                         <Button
-                          className="px-6 py-4 rounded-2xl bg-gradient-to-r from-primary-red via-[#ff2d2d] to-primary border-none text-white font-semibold shadow-lg shadow-primary-red/40 hover:shadow-primary-red/60"
+                          className="px-6 py-4 rounded-2xl bg-gradient-to-r from-[#E02B2B] via-[#C62828] to-[#9F1C1C] border-none text-white font-semibold shadow-lg shadow-primary-red/40 hover:shadow-primary-red/60"
                           onClick={() => setActiveTimelineStep(step)}
                         >
                           Cliquer pour voir les détails
@@ -773,13 +773,13 @@ useEffect(() => {
 
                     <div className="relative flex flex-col items-center" aria-hidden="true">
                       <div className="relative">
-                        <div className="absolute inset-0 bg-primary-red/30 blur-2xl rounded-full animate-pulse" />
-                        <div className="relative h-16 w-16 rounded-full bg-gradient-to-b from-[#ff4d4d] to-primary-red border border-white/20 flex items-center justify-center text-2xl font-black text-white shadow-ink-soft">
+                        <div className="absolute inset-0 bg-[#E02B2B]/20 blur-2xl rounded-full animate-pulse" />
+                        <div className="relative h-16 w-16 rounded-full bg-gradient-to-b from-[#F4D9DF] to-[#E02B2B] border border-white/30 flex items-center justify-center text-2xl font-black text-white shadow-ink-soft">
                           {index + 1}
                         </div>
                       </div>
                       {index !== timelineSteps.length - 1 && (
-                        <div className="hidden lg:block w-px flex-1 bg-gradient-to-b from-primary-red/60 to-transparent mt-6" />
+                        <div className="hidden lg:block w-px flex-1 bg-gradient-to-b from-[#3D5E73]/45 to-transparent mt-6" />
                       )}
                     </div>
                   </article>
@@ -788,7 +788,7 @@ useEffect(() => {
             </div>
           </div>
 
-          <p className="text-center text-sm text-white/60 mt-20">
+          <p className="text-center text-sm text-[#4C5A66]/70 mt-20">
             Si un passage n’est pas clair, demande-moi quelle version est la bonne.
           </p>
         </div>
