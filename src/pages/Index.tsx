@@ -775,6 +775,7 @@ useEffect(() => {
                           <h3 className="text-3xl lg:text-4xl font-bold text-white">{step.cardTitle}</h3>
                           <p className="text-lg text-white/80 leading-relaxed mb-4">{step.cardDescription}</p>
                           <Button
+                            type="button"
                             className="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-full px-6 py-3 shadow-lg hover:shadow-red-700/50 hover:scale-[1.02] transition flex items-center"
                             onClick={() => setActiveTimelineStep(step)}
                           >
@@ -1268,7 +1269,11 @@ useEffect(() => {
         </div>
       </footer>
 
-      <Dialog open={!!activeTimelineStep} onOpenChange={(open) => setActiveTimelineStep(open ? activeTimelineStep : null)}>
+      <Dialog open={!!activeTimelineStep} onOpenChange={(open) => {
+        if (!open) {
+          setActiveTimelineStep(null);
+        }
+      }}>
         <DialogContent className="relative max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-b from-[#213245] to-[#0f1b29] border border-white/10 text-white shadow-2xl shadow-black/40 backdrop-blur-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-offset-white/10">
           <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,rgba(62,104,136,0.28),transparent_45%)]" />
           <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_bottom_left,rgba(224,43,43,0.18),transparent_55%)]" />
