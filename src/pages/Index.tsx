@@ -30,6 +30,7 @@ const Index = () => {
   const [isSubscribing, setIsSubscribing] = useState(false);
   const [hasHeroVideoError, setHasHeroVideoError] = useState(false);
   const [isHeroPaused, setIsHeroPaused] = useState(false);
+  const [isTimelineDialogOpen, setIsTimelineDialogOpen] = useState(false);
   const {
     toast
   } = useToast();
@@ -777,7 +778,10 @@ useEffect(() => {
                           <Button
                             type="button"
                             className="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-full px-6 py-3 shadow-lg hover:shadow-red-700/50 hover:scale-[1.02] transition flex items-center"
-                            onClick={() => setActiveTimelineStep(step)}
+                            onClick={() => {
+                              setActiveTimelineStep(step);
+                              setIsTimelineDialogOpen(true);
+                            }}
                           >
                             Cliquer pour voir les détails
                             <ChevronRight className="ml-2 h-4 w-4" />
@@ -1269,11 +1273,15 @@ useEffect(() => {
         </div>
       </footer>
 
-      <Dialog open={!!activeTimelineStep} onOpenChange={(open) => {
-        if (!open) {
-          setActiveTimelineStep(null);
-        }
-      }}>
+      <Dialog
+        open={isTimelineDialogOpen}
+        onOpenChange={(open) => {
+          setIsTimelineDialogOpen(open);
+          if (!open) {
+            setActiveTimelineStep(null);
+          }
+        }}
+      >
         <DialogContent className="relative max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-b from-[#213245] to-[#0f1b29] border border-white/10 text-white shadow-2xl shadow-black/40 backdrop-blur-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-offset-white/10">
           <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,rgba(62,104,136,0.28),transparent_45%)]" />
           <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_bottom_left,rgba(224,43,43,0.18),transparent_55%)]" />
@@ -1285,7 +1293,14 @@ useEffect(() => {
                 <span>{activeTimelineStep?.stepNumber}</span>
               </div>
               <DialogTitle className="text-4xl font-black mt-4 text-white">{activeTimelineStep?.modalTitle}</DialogTitle>
-              <button onClick={() => setActiveTimelineStep(null)} className="absolute right-0 top-0 p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Fermer la modale">
+              <button
+                onClick={() => {
+                  setIsTimelineDialogOpen(false);
+                  setActiveTimelineStep(null);
+                }}
+                className="absolute right-0 top-0 p-2 rounded-full hover:bg-white/10 transition-colors"
+                aria-label="Fermer la modale"
+              >
                 <X className="h-5 w-5" />
               </button>
             </DialogHeader>
