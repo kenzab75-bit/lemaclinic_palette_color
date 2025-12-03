@@ -608,7 +608,16 @@ useEffect(() => {
 
       {/* My Story Section - Introduction */}
       <section id="histoire" className="relative py-section bg-[#FAF9FF] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#020813]/10 via-[#FAF9FF]/95 to-[#FAF9FF] pointer-events-none" aria-hidden />
+        <div
+  className="absolute inset-0 bg-[linear-gradient(
+      to_bottom,
+      #F2F4F7_0%,
+      #F7F9FB_35%,
+      #FDFDFE_70%,
+      #FFFFFF_100%
+    )] pointer-events-none"
+  aria-hidden
+/>
         <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-[#CEDEF2]/70 via-[#FAF9FF]/80 to-transparent pointer-events-none" aria-hidden />
         <div className="absolute inset-y-10 left-10 h-72 w-72 bg-[radial-gradient(circle_at_top_left,#E02B2B14,transparent_60%)] blur-3xl" aria-hidden />
         <div className="absolute inset-y-10 right-10 h-72 w-72 bg-[radial-gradient(circle_at_top_right,#3D5E7314,transparent_55%)] blur-3xl" aria-hidden />
