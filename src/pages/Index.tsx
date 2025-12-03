@@ -606,47 +606,35 @@ useEffect(() => {
         </div>
       </section>
 
-     {/* My Story Section - Introduction */}
-<section id="histoire" className="relative py-section bg-[#FAF9FF] overflow-hidden">
+      {/* My Story Section - Introduction */}
+      <section id="histoire" className="relative py-section bg-[#FAF9FF] overflow-hidden">
+        <div
+  className="absolute inset-x-0 top-0 h-[320px] 
+             bg-gradient-to-b from-[#CEDEF2]/70 via-[#FAF9FF]/80 to-transparent 
+             pointer-events-none"
+  aria-hidden
+/>
 
-  {/* 1 — GRAND GRADIENT DU HAUT (un seul !) */}
-  <div
-    className="absolute inset-x-0 top-0 h-[320px]
-               bg-gradient-to-b from-[#CEDEF2]/70 via-[#FAF9FF]/80 to-transparent
-               pointer-events-none"
-    aria-hidden
-  />
-
-  {/* 2 — HALO RADIAL GLOBAL */}
-  <div
-  className="absolute inset-0 bg-[radial-gradient(circle_at_center,#FFFFFF26,transparent_70%)] pointer-events-none"
+ {/* 2 — HALO RADIAL GLOBAL */}
+<div
+  className="absolute inset-0 bg-[radial-gradient(circle_at_center,#FFFFFF0F,transparent_70%)] pointer-events-none"
   aria-hidden
 />
 
   {/* 3 — HALOS G & D */}
-  <div className="absolute inset-y-10 left-10 h-72 w-72 
-                  bg-[radial-gradient(circle_at_top_left,#E02B2B14,transparent_60%)]
-                  blur-3xl" 
-       aria-hidden 
-  />
-
-  <div className="absolute inset-y-10 right-10 h-72 w-72 
-                  bg-[radial-gradient(circle_at_top_right,#3D5E7314,transparent_55%)]
-                  blur-3xl" 
-       aria-hidden 
-  />
+        <div className="absolute inset-y-10 left-10 h-72 w-72 bg-[radial-gradient(circle_at_top_left,#E02B2B14,transparent_60%)] blur-3xl" aria-hidden />
+        <div className="absolute inset-y-10 right-10 h-72 w-72 bg-[radial-gradient(circle_at_top_right,#3D5E7314,transparent_55%)] blur-3xl" aria-hidden />
 
   {/* CONTENU */}
-  <div className="max-w-6xl mx-auto px-6 lg:px-8 relative">
-    <div className="text-center mb-16">
-      <h2 className="text-4xl lg:text-5xl font-extrabold text-[#233540]
-                     drop-shadow-[0_2px_2px_rgba(0,0,0,0.06)]">
-        Mon Histoire
-      </h2>
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 relative">
+          <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-extrabold text-[#233540]
+               drop-shadow-[0_2px_2px_rgba(0,0,0,0.06)]">
+  Mon Histoire
+</h2>
 
-      <div className="w-32 h-1 bg-gradient-to-r from-primary-red to-primary rounded-full mx-auto" />
-    </div>
-
+            <div className="w-32 h-1 bg-gradient-to-r from-primary-red to-primary rounded-full mx-auto" />
+          </div>
 
           {/* Qui suis-je & Pourquoi ce site */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16 mt-10">
