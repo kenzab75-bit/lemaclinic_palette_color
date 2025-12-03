@@ -780,7 +780,6 @@ useEffect(() => {
                             className="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-full px-6 py-3 shadow-lg hover:shadow-red-700/50 hover:scale-[1.02] transition flex items-center"
                             onClick={() => {
                               setActiveTimelineStep(step);
-                              setIsTimelineDialogOpen(true);
                             }}
                           >
                             Cliquer pour voir les détails
@@ -1274,9 +1273,8 @@ useEffect(() => {
       </footer>
 
       <Dialog
-        open={isTimelineDialogOpen}
+        open={Boolean(activeTimelineStep)}
         onOpenChange={(open) => {
-          setIsTimelineDialogOpen(open);
           if (!open) {
             setActiveTimelineStep(null);
           }
@@ -1295,7 +1293,6 @@ useEffect(() => {
               <DialogTitle className="text-4xl font-black mt-4 text-white">{activeTimelineStep?.modalTitle}</DialogTitle>
               <button
                 onClick={() => {
-                  setIsTimelineDialogOpen(false);
                   setActiveTimelineStep(null);
                 }}
                 className="absolute right-0 top-0 p-2 rounded-full hover:bg-white/10 transition-colors"
