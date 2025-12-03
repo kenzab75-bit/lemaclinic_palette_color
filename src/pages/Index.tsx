@@ -628,12 +628,15 @@ useEffect(() => {
   {/* CONTENU */}
         <div className="max-w-6xl mx-auto px-6 lg:px-8 relative">
           <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-extrabold text-[#233540]
-               drop-shadow-[0_2px_2px_rgba(0,0,0,0.06)]">
+         <h2 className="text-[46px] md:text-[52px] font-semibold tracking-tight
+         bg-gradient-to-r from-[#384E63] via-[#273948] to-[#16232E]
+         bg-clip-text text-transparent
+         drop-shadow-[0_1px_1px_rgba(0,0,0,0.18)]
+         mb-4">
   Mon Histoire
 </h2>
 
-            <div className="w-32 h-1 bg-gradient-to-r from-primary-red to-primary rounded-full mx-auto" />
+            <div className="w-32 h-1 bg-gradient-to-r from-primary-red to-primary rounded-full mx-auto mt-4" />
           </div>
 
           {/* Qui suis-je & Pourquoi ce site */}
