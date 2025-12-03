@@ -732,11 +732,13 @@ useEffect(() => {
       <div className="section-divider"></div>
 
       {/* Timeline Section */}
-      <section id="victimes" className="relative py-section bg-gradient-to-b from-[#E9EDF3] to-[#CBD6E0] overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(224,43,43,0.08),transparent_55%)] pointer-events-none" aria-hidden />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_60%,rgba(63,93,122,0.08),transparent_55%)] pointer-events-none" aria-hidden />
+      <section id="victimes" className="relative py-section bg-[#FAF9FF] overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-b from-[#CEDEF2]/70 via-[#FAF9FF]/80 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,#FFFFFF0F,transparent_70%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_left,#E02B2B14,transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,#3D5E7314,transparent_55%)]" />
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-5xl mx-auto text-center mb-20 space-y-5">
             <p className="text-xs uppercase tracking-[0.35em] text-red-500 font-semibold text-center">Parcours dévoilé</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[#0A0F1C] tracking-tight text-center font-display">Un système bien ficelé</h2>
