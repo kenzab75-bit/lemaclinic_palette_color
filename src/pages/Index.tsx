@@ -619,9 +619,9 @@ useEffect(() => {
   aria-hidden
 />
 <div
-  className="absolute top-[420px] left-1/2 -translate-x-1/2 
-             w-[900px] h-[350px] 
-             bg-white/20 blur-[160px] opacity-80 rounded-full pointer-events-none"
+  className="absolute top-[350px] left-1/2 -translate-x-1/2 
+             w-[900px] h-[420px]
+             bg-[#233540]/40 blur-[160px] opacity-70 rounded-full pointer-events-none"
   aria-hidden
 />
 
