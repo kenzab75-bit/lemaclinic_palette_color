@@ -647,6 +647,7 @@ useEffect(() => {
       <div className="w-32 h-1 bg-gradient-to-r from-primary-red to-primary rounded-full mx-auto" />
     </div>
 
+
           {/* Qui suis-je & Pourquoi ce site */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16 mt-10">
             <div className="rounded-[20px] p-8 bg-[linear-gradient(180deg,#395066_0%,#132029_100%)] border border-white/10 shadow-[0_4px_12px_rgba(0,0,0,0.25)] backdrop-blur-[1px]">
