@@ -813,16 +813,20 @@ useEffect(() => {
       <div className="section-divider"></div>
 
       {/* Témoignages des Victimes Section */}
-      <section id="temoignages" className="py-section bg-gradient-to-br from-black via-background to-black relative overflow-hidden pattern-grid">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-red/5 via-transparent to-primary-red/5" />
-        
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
+      <section id="temoignages" className="relative py-section bg-[#FAF9FF] overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-b from-[#CEDEF2]/25 via-[#FAF9FF]/90 to-[#FAF9FF]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,#FFFFFF0A,transparent_70%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_left,#E02B2B10,transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,#3D5E731F,transparent_55%)]" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-5xl lg:text-6xl font-black text-foreground mb-6 font-display">
+            <h2 className="text-5xl lg:text-6xl font-bold text-[#0A0F1C] mb-6 font-display tracking-tight">
               Témoignages des Victimes
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <div className="h-1 w-16 bg-red-600 rounded-full mx-auto mb-6" />
+            <p className="text-xl text-[#4C5A66] max-w-3xl mx-auto leading-relaxed">
               Extraits anonymisés de personnes ayant alerté sur les pratiques décrites.
             </p>
           </div>
@@ -830,16 +834,16 @@ useEffect(() => {
           {/* Filtres */}
           <div className="flex justify-center items-center gap-4 mb-8 flex-wrap">
             {["Tous", "Complications", "Fraude", "Facturation"].map(filter => (
-              <button 
-                key={filter} 
+              <button
+                key={filter}
                 onClick={() => {
                   setActiveFilter(filter);
                   setDisplayedTestimonials(3); // Reset displayed count on filter change
                 }}
-                className={`px-6 py-2.5 rounded-full font-medium transition-all duration-300 ${
-                  activeFilter === filter 
-                    ? "bg-primary-red text-white shadow-lg shadow-primary-red/30" 
-                    : "bg-background/40 text-muted-foreground border border-white/10 hover:border-primary-red/50 hover:text-foreground"
+                className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 border ${
+                  activeFilter === filter
+                    ? "bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg shadow-red-700/30 border-red-600"
+                    : "bg-white/80 text-[#0A0F1C] border-white/60 backdrop-blur hover:border-red-400/60 hover:shadow-md hover:shadow-red-200"
                 }`}
               >
                 {filter}
@@ -848,7 +852,7 @@ useEffect(() => {
           </div>
 
           {/* Compteur */}
-          <p className="text-center text-muted-foreground mb-12">
+          <p className="text-center text-[#4C5A66]/80 mb-12">
             {filteredTestimonials.length} témoignage{filteredTestimonials.length > 1 ? 's' : ''} disponible{filteredTestimonials.length > 1 ? 's' : ''}.
           </p>
 
@@ -865,7 +869,7 @@ useEffect(() => {
               <Button
                 onClick={handleLoadMore}
                 disabled={isLoadingMore}
-                className="btn-premium px-8 py-4 text-lg font-semibold rounded-xl group"
+                className="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-full px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-red-700/50 hover:scale-[1.02] transition group"
               >
                 {isLoadingMore ? (
                   <>
@@ -884,10 +888,10 @@ useEffect(() => {
 
           {/* Footer note */}
           <div className="text-center">
-            <p className="text-muted-foreground italic mb-2">
+            <p className="text-[#4C5A66]/80 italic mb-2">
               Tous les témoignages sont anonymisés et vérifiés avant publication
             </p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-[#4C5A66]/70">
               {displayedTestimonials} sur {filteredTestimonials.length} témoignages affichés
             </p>
           </div>
