@@ -732,18 +732,30 @@ useEffect(() => {
       <div className="section-divider"></div>
 
       {/* Timeline Section */}
-      <section id="victimes" className="py-section bg-gradient-to-br from-black via-background to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-red/5 via-transparent to-primary-red/5" />
+      <section id="victimes" className="relative py-section bg-[#FAF9FF] overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-b from-[#CEDEF2]/25 via-[#FAF9FF]/90 to-[#FAF9FF]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,#FFFFFF0A,transparent_70%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_left,#E02B2B10,transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,#3D5E73/04,transparent_55%)]" />
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <p className="text-2xl lg:text-3xl text-white/90 leading-relaxed font-semibold">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-5xl mx-auto text-center mb-20 space-y-5">
+            <p className="text-xs uppercase tracking-[0.35em] text-red-500 font-semibold text-center">Parcours dévoilé</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0A0F1C] tracking-tight text-center font-display">Un système bien ficelé</h2>
+            <div className="h-1 w-16 bg-red-600 rounded-full mx-auto mt-3" />
+            <p className="text-xl lg:text-2xl text-[#132330]/90 leading-relaxed max-w-4xl mx-auto">
               Découvrez comment un système bien rodé transforme la confiance des patients en instrument de profit.
             </p>
+            <div className="flex flex-wrap justify-center gap-3 text-sm text-[#0A0F1C]/80">
+              <span className="px-4 py-2 rounded-full bg-white/40 border border-white/50 shadow-sm shadow-white/30">Identité visuelle « Mon histoire » conservée</span>
+              <span className="px-4 py-2 rounded-full bg-white/40 border border-white/50 shadow-sm shadow-white/30">Narration intacte</span>
+              <span className="px-4 py-2 rounded-full bg-white/40 border border-white/50 shadow-sm shadow-white/30">Focus sur la confiance détournée</span>
+            </div>
           </div>
 
           <div className="relative max-w-6xl mx-auto">
-            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-px bg-gradient-to-b from-transparent via-primary-red/60 to-transparent" aria-hidden="true" />
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-[2px] bg-white/20" aria-hidden="true" />
+            <div className="absolute left-1/2 -translate-x-1/2 top-10 h-24 w-24 bg-[radial-gradient(circle_at_center,rgba(224,43,43,0.12),transparent_60%)] blur-3xl" aria-hidden />
 
             <div className="space-y-16">
               {timelineSteps.map((step, index) => {
@@ -754,32 +766,34 @@ useEffect(() => {
                     className={`relative flex flex-col lg:flex-row items-center gap-10 ${isEven ? "lg:flex-row-reverse" : ""}`}
                   >
                     <div className="flex-1 w-full">
-                      <div className="glass-card rounded-3xl p-8 lg:p-10 bg-gradient-to-br from-black/80 via-[#160202] to-black/80 border border-primary-red/20 shadow-ink-pinned">
-                        <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.3em] uppercase text-primary-red mb-4">
-                          <span className="h-2 w-2 rounded-full bg-primary-red" />
-                          <span>{step.stepNumber}</span>
+                      <div className="relative overflow-hidden bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl shadow-xl border border-white/10 p-8 lg:p-12 text-white backdrop-blur-xl">
+                        <div className="relative space-y-4">
+                          <div className="inline-flex items-center justify-center gap-2 text-xs font-semibold tracking-[0.3em] uppercase text-white bg-white/10 rounded-full px-4 py-2 border border-white/20">
+                            <span className="h-2 w-2 rounded-full bg-red-500" />
+                            <span>{step.stepNumber}</span>
+                          </div>
+                          <h3 className="text-3xl lg:text-4xl font-bold text-white">{step.cardTitle}</h3>
+                          <p className="text-lg text-white/80 leading-relaxed mb-4">{step.cardDescription}</p>
+                          <Button
+                            type="button"
+                            className="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-full px-6 py-3 shadow-lg hover:shadow-red-700/50 hover:scale-[1.02] transition flex items-center"
+                            onClick={() => {
+                              setActiveTimelineStep(step);
+                            }}
+                          >
+                            Cliquer pour voir les détails
+                            <ChevronRight className="ml-2 h-4 w-4" />
+                          </Button>
                         </div>
-                        <h3 className="text-3xl lg:text-4xl font-black text-white mb-4">{step.cardTitle}</h3>
-                        <p className="text-lg text-white/80 leading-relaxed mb-6">{step.cardDescription}</p>
-                        <Button
-                          className="px-6 py-4 rounded-2xl bg-gradient-to-r from-primary-red via-[#ff2d2d] to-primary border-none text-white font-semibold shadow-lg shadow-primary-red/40 hover:shadow-primary-red/60"
-                          onClick={() => setActiveTimelineStep(step)}
-                        >
-                          Cliquer pour voir les détails
-                          <ChevronRight className="ml-2 h-4 w-4" />
-                        </Button>
                       </div>
                     </div>
 
                     <div className="relative flex flex-col items-center" aria-hidden="true">
-                      <div className="relative">
-                        <div className="absolute inset-0 bg-primary-red/30 blur-2xl rounded-full animate-pulse" />
-                        <div className="relative h-16 w-16 rounded-full bg-gradient-to-b from-[#ff4d4d] to-primary-red border border-white/20 flex items-center justify-center text-2xl font-black text-white shadow-ink-soft">
-                          {index + 1}
-                        </div>
+                      <div className="relative flex items-center justify-center w-12 h-12 bg-gradient-to-b from-red-600 to-red-400 text-white rounded-full shadow-xl font-semibold">
+                        {index + 1}
                       </div>
                       {index !== timelineSteps.length - 1 && (
-                        <div className="hidden lg:block w-px flex-1 bg-gradient-to-b from-primary-red/60 to-transparent mt-6" />
+                        <div className="hidden lg:block w-[2px] flex-1 bg-white/20 mt-6" />
                       )}
                     </div>
                   </article>
@@ -788,7 +802,7 @@ useEffect(() => {
             </div>
           </div>
 
-          <p className="text-center text-sm text-white/60 mt-20">
+          <p className="text-center text-sm text-[#4C5A66]/70 mt-20">
             Si un passage n’est pas clair, demande-moi quelle version est la bonne.
           </p>
         </div>
@@ -798,16 +812,20 @@ useEffect(() => {
       <div className="section-divider"></div>
 
       {/* Témoignages des Victimes Section */}
-      <section id="temoignages" className="py-section bg-gradient-to-br from-black via-background to-black relative overflow-hidden pattern-grid">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-red/5 via-transparent to-primary-red/5" />
-        
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
+      <section id="temoignages" className="relative py-section bg-[#FAF9FF] overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-b from-[#CEDEF2]/25 via-[#FAF9FF]/90 to-[#FAF9FF]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,#FFFFFF0A,transparent_70%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_left,#E02B2B10,transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,#3D5E731F,transparent_55%)]" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-5xl lg:text-6xl font-black text-foreground mb-6 font-display">
+            <h2 className="text-5xl lg:text-6xl font-bold text-[#0A0F1C] mb-6 font-display tracking-tight">
               Témoignages des Victimes
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <div className="h-1 w-16 bg-red-600 rounded-full mx-auto mb-6" />
+            <p className="text-xl text-[#4C5A66] max-w-3xl mx-auto leading-relaxed">
               Extraits anonymisés de personnes ayant alerté sur les pratiques décrites.
             </p>
           </div>
@@ -815,16 +833,16 @@ useEffect(() => {
           {/* Filtres */}
           <div className="flex justify-center items-center gap-4 mb-8 flex-wrap">
             {["Tous", "Complications", "Fraude", "Facturation"].map(filter => (
-              <button 
-                key={filter} 
+              <button
+                key={filter}
                 onClick={() => {
                   setActiveFilter(filter);
                   setDisplayedTestimonials(3); // Reset displayed count on filter change
                 }}
-                className={`px-6 py-2.5 rounded-full font-medium transition-all duration-300 ${
-                  activeFilter === filter 
-                    ? "bg-primary-red text-white shadow-lg shadow-primary-red/30" 
-                    : "bg-background/40 text-muted-foreground border border-white/10 hover:border-primary-red/50 hover:text-foreground"
+                className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 border ${
+                  activeFilter === filter
+                    ? "bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg shadow-red-700/30 border-red-600"
+                    : "bg-white/80 text-[#0A0F1C] border-white/60 backdrop-blur hover:border-red-400/60 hover:shadow-md hover:shadow-red-200"
                 }`}
               >
                 {filter}
@@ -833,7 +851,7 @@ useEffect(() => {
           </div>
 
           {/* Compteur */}
-          <p className="text-center text-muted-foreground mb-12">
+          <p className="text-center text-[#4C5A66]/80 mb-12">
             {filteredTestimonials.length} témoignage{filteredTestimonials.length > 1 ? 's' : ''} disponible{filteredTestimonials.length > 1 ? 's' : ''}.
           </p>
 
@@ -850,7 +868,7 @@ useEffect(() => {
               <Button
                 onClick={handleLoadMore}
                 disabled={isLoadingMore}
-                className="btn-premium px-8 py-4 text-lg font-semibold rounded-xl group"
+                className="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-full px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-red-700/50 hover:scale-[1.02] transition group"
               >
                 {isLoadingMore ? (
                   <>
@@ -869,10 +887,10 @@ useEffect(() => {
 
           {/* Footer note */}
           <div className="text-center">
-            <p className="text-muted-foreground italic mb-2">
+            <p className="text-[#4C5A66]/80 italic mb-2">
               Tous les témoignages sont anonymisés et vérifiés avant publication
             </p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-[#4C5A66]/70">
               {displayedTestimonials} sur {filteredTestimonials.length} témoignages affichés
             </p>
           </div>
@@ -883,25 +901,30 @@ useEffect(() => {
       <div className="section-divider"></div>
 
       {/* Section Témoignage Anonyme */}
-      <section className="py-section bg-gradient-to-br from-background via-black to-background relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-red/5 via-transparent to-primary-red/5" />
-        
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 relative">
+      <section className="relative py-section bg-[#FAF9FF] overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-b from-[#CEDEF2]/30 via-[#FAF9FF]/90 to-[#FAF9FF]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,#FFFFFF0D,transparent_70%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_left,#E02B2B12,transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,#3D5E7312,transparent_55%)]" />
+
+        <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-5xl lg:text-6xl font-black text-foreground mb-6 font-display">
+            <p className="text-xs uppercase tracking-[0.35em] text-red-500 font-semibold mb-4">Confidentiel</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0A0F1C] tracking-tight font-display">
               Témoignage Anonyme
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <div className="h-1 w-16 bg-red-600 rounded-full mx-auto mt-4" />
+            <p className="text-lg md:text-xl text-[#1A2433]/80 leading-relaxed mt-6">
               Partagez votre expérience de manière anonyme et sécurisée. Votre identité est protégée.
             </p>
           </div>
 
           {/* Container principal */}
-          <div className="glass-card rounded-2xl p-8 lg:p-12 border border-primary-red/20 shadow-2xl">
-            <div className="bg-[#7A1212] rounded-xl p-6 mb-8 border border-primary-red/30">
+          <div className="bg-card rounded-2xl p-8 lg:p-12 border border-border shadow-lg">
+            <div className="bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-6 mb-8 border border-white/10 shadow-lg">
               <div className="flex items-start gap-4">
-                <Shield className="h-6 w-6 text-primary-red flex-shrink-0 mt-1" />
+                <Shield className="h-6 w-6 text-red-500 flex-shrink-0 mt-1" />
                 <p className="text-white/90 leading-relaxed">
                   Tous les témoignages sont traités dans un espace isolé. Nous ne conservons pas les adresses IP dans nos exports et chaque dépôt génère un reçu chiffré.
                 </p>
@@ -909,23 +932,23 @@ useEffect(() => {
             </div>
 
             <div className="mb-8">
-              <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-4">Qui témoigne ?</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-[#1A2433]/70 mb-4">Qui témoigne ?</p>
               <div className="grid gap-3 md:grid-cols-3">
                 {testimonySegments.map(segment => (
                   <button
                     key={segment.id}
                     onClick={() => setTestimonySegment(segment.id)}
-                    className={`text-left p-4 rounded-xl border transition-all ${testimonySegment === segment.id ? "border-primary-red bg-primary-red/10" : "border-white/10 hover:border-primary-red/40"}`}
+                    className={`group text-left rounded-2xl border border-white/12 bg-gradient-to-b from-[#334E60]/95 via-[#2B4255]/95 to-[#1f2f3d]/95 p-5 md:p-6 backdrop-blur-[1px] shadow-lg shadow-black/30 transition-all duration-200 ease-out ${testimonySegment === segment.id ? "border-[#E02B2B]/70 ring-1 ring-[#E02B2B]/25 shadow-xl shadow-black/40" : "hover:-translate-y-[2px] hover:shadow-xl hover:shadow-black/40 hover:ring-1 hover:ring-[#E02B2B]/22 hover:border-white/20"}`}
                   >
-                    <p className="font-semibold text-white">{segment.label}</p>
-                    <p className="text-xs text-muted-foreground mt-1">{segment.description}</p>
+                    <p className="text-xl font-semibold text-[#F5F6F7] tracking-tight drop-shadow-sm">{segment.label}</p>
+                    <p className="text-sm text-[#D8E4EF]/90 mt-2 leading-relaxed">{segment.description}</p>
                   </button>
                 ))}
               </div>
             </div>
 
             <div className="mb-8">
-              <label htmlFor="testimony" className="block text-foreground font-semibold mb-3 text-lg">
+              <label htmlFor="testimony" className="block text-[#0A0F1C] font-semibold mb-3 text-lg">
                 Votre témoignage
               </label>
               <textarea
@@ -933,30 +956,30 @@ useEffect(() => {
                 value={testimony}
                 onChange={e => setTestimony(e.target.value)}
                 placeholder="Partagez votre histoire… (Tous les témoignages sont entièrement anonymes)"
-                className="w-full min-h-[250px] bg-[#0E0E0E] border-2 border-primary-red/30 rounded-xl p-4 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary-red focus:ring-2 focus:ring-primary-red/20 transition-all duration-300 resize-y"
+                className="w-full min-h-[250px] bg-white/60 border border-white/80 rounded-2xl p-4 text-[#0A0F1C] placeholder:text-[#1A2433]/60 focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all duration-300 resize-y shadow-inner"
               />
             </div>
 
             <div className="mb-8">
-              <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-4">Canal de dépôt</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-[#1A2433]/70 mb-4">Canal de dépôt</p>
               <div className="grid gap-3 md:grid-cols-3">
                 {testimonyChannels.map(channel => (
                   <button
                     key={channel.id}
                     onClick={() => setTestimonyChannel(channel.id)}
-                    className={`p-4 rounded-xl border text-left transition-all ${testimonyChannel === channel.id ? "border-primary-red bg-primary-red/10" : "border-white/10 hover:border-primary-red/40"}`}
+                    className={`p-4 rounded-2xl border text-left transition-all backdrop-blur ${testimonyChannel === channel.id ? "border-red-500/70 bg-white/20 shadow-lg shadow-red-700/20" : "border-white/40 bg-white/10 hover:border-red-500/60 hover:bg-white/15"}`}
                   >
-                    <p className="font-semibold text-white">{channel.label}</p>
-                    <p className="text-xs text-muted-foreground mt-1">{channel.detail}</p>
+                    <p className="font-semibold text-[#0A0F1C]">{channel.label}</p>
+                    <p className="text-xs text-[#1A2433]/70 mt-1">{channel.detail}</p>
                   </button>
                 ))}
               </div>
             </div>
 
-            <div className="bg-[#0E0E0E] rounded-xl p-6 mb-8 border border-primary-red/30">
+            <div className="bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-6 mb-8 border border-white/10 shadow-lg">
               <div className="flex items-start gap-4">
                 <button onClick={() => setConsentChecked(!consentChecked)} className="flex-shrink-0 mt-0.5">
-                  <div className={`w-6 h-6 rounded-md border-2 flex items-center justify-center transition-all duration-300 ${consentChecked ? "bg-primary-red border-primary-red" : "border-primary-red/50 hover:border-primary-red"}`}>
+                  <div className={`w-6 h-6 rounded-md border-2 flex items-center justify-center transition-all duration-300 ${consentChecked ? "bg-red-600 border-red-600 shadow-red-700/40 shadow" : "border-white/40 hover:border-red-500"}`}>
                     {consentChecked && (
                       <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
@@ -968,7 +991,7 @@ useEffect(() => {
                   <p className="text-white font-medium mb-2">
                     Je comprends que mon témoignage sera anonymisé et stocké de façon chiffrée.
                   </p>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-white/80 text-sm leading-relaxed">
                     Nous supprimons tout identifiant technique (IP, agent utilisateur) et appliquons un hachage salé avant archivage.
                   </p>
                 </div>
@@ -976,31 +999,31 @@ useEffect(() => {
             </div>
 
             {encryptionReceipt && (
-              <div className="mb-6 rounded-xl border border-primary-red/40 bg-black/40 p-4 text-sm text-muted-foreground">
-                <p className="font-semibold text-white mb-1 flex items-center gap-2">
-                  <KeyRound className="h-4 w-4 text-primary-red" />
+              <div className="mb-6 rounded-2xl border border-white/20 bg-white/10 backdrop-blur p-4 text-sm text-[#1A2433] shadow-inner">
+                <p className="font-semibold text-[#0A0F1C] mb-1 flex items-center gap-2">
+                  <KeyRound className="h-4 w-4 text-red-500" />
                   Accusé de réception sécurisé
                 </p>
-                <p>Code de suivi : <span className="font-mono text-white">{encryptionReceipt}</span></p>
+                <p>Code de suivi : <span className="font-mono text-[#0A0F1C]">{encryptionReceipt}</span></p>
               </div>
             )}
 
             <button
               onClick={handleSubmitTestimony}
               disabled={!testimony.trim() || !consentChecked || isSubmittingTestimony}
-              className="w-full bg-primary-red hover:bg-[#C41E1E] text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-lg hover:shadow-primary-red/30 hover:-translate-y-0.5"
+              className="w-full bg-gradient-to-r from-red-600 to-red-700 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-red-700/30 hover:shadow-red-700/50 hover:scale-[1.02]"
             >
               {isSubmittingTestimony ? <Loader2 className="h-5 w-5 animate-spin" /> : <Lock className="h-5 w-5" />}
               {isSubmittingTestimony ? "Chiffrement en cours..." : "Envoyer anonymement"}
             </button>
 
-            <div className="mt-6 grid gap-4 md:grid-cols-2 text-sm text-muted-foreground">
+            <div className="mt-6 grid gap-4 md:grid-cols-2 text-sm text-[#1A2433]/80">
               <div className="flex items-start gap-3">
-                <Fingerprint className="h-5 w-5 text-primary-red mt-0.5" />
+                <Fingerprint className="h-5 w-5 text-red-500 mt-0.5" />
                 <p>Les métadonnées réseau sont supprimées de nos archives partagées. Nous conservons uniquement le contenu nécessaire au suivi.</p>
               </div>
               <div className="flex items-start gap-3">
-                <KeyRound className="h-5 w-5 text-primary-red mt-0.5" />
+                <KeyRound className="h-5 w-5 text-red-500 mt-0.5" />
                 <p>Chaque dépôt génère un reçu chiffré que vous pouvez partager à votre avocat.</p>
               </div>
             </div>
@@ -1257,50 +1280,68 @@ useEffect(() => {
         </div>
       </footer>
 
-      <Dialog open={!!activeTimelineStep} onOpenChange={(open) => setActiveTimelineStep(open ? activeTimelineStep : null)}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-[hsl(var(--shadow-ink)/0.92)] border border-primary-red/40 text-foreground shadow-ink-elevated ring-overlay-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-4">
-          <DialogHeader className="relative pb-6">
-            <div className="inline-flex items-center gap-2 bg-primary-red/20 text-primary-red px-4 py-2 rounded-full text-sm font-semibold tracking-[0.3em] uppercase">
-              <span className="h-2 w-2 rounded-full bg-primary-red" />
-              <span>{activeTimelineStep?.stepNumber}</span>
-            </div>
-            <DialogTitle className="text-4xl font-black mt-4 text-white">{activeTimelineStep?.modalTitle}</DialogTitle>
-            <button onClick={() => setActiveTimelineStep(null)} className="absolute right-0 top-0 p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Fermer la modale">
-              <X className="h-5 w-5" />
-            </button>
-          </DialogHeader>
+      <Dialog
+        open={Boolean(activeTimelineStep)}
+        onOpenChange={(open) => {
+          if (!open) {
+            setActiveTimelineStep(null);
+          }
+        }}
+      >
+        <DialogContent className="relative max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-b from-[#213245] to-[#0f1b29] border border-white/10 text-white shadow-2xl shadow-black/40 backdrop-blur-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-offset-white/10">
+          <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,rgba(62,104,136,0.28),transparent_45%)]" />
+          <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_bottom_left,rgba(224,43,43,0.18),transparent_55%)]" />
 
-          {activeTimelineStep && (
-            <div className="space-y-8">
-              <p className="text-lg text-white/80 leading-relaxed">{activeTimelineStep.modalDescription}</p>
-
-              <div className="bg-black/40 border border-white/10 rounded-2xl p-6">
-                <h4 className="text-2xl font-bold text-white mb-4">Détails de l’étape</h4>
-                <ul className="space-y-3">
-                  {activeTimelineStep.details.map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-white/80">
-                      <span className="mt-1 h-2 w-2 rounded-full bg-primary-red" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+          <div className="relative z-10 space-y-8">
+            <DialogHeader className="relative pb-6">
+              <div className="inline-flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-full text-sm font-semibold tracking-[0.3em] uppercase border border-white/20">
+                <span className="h-2 w-2 rounded-full bg-primary-red" />
+                <span>{activeTimelineStep?.stepNumber}</span>
               </div>
+              <DialogTitle className="text-4xl font-black mt-4 text-white">{activeTimelineStep?.modalTitle}</DialogTitle>
+              <button
+                onClick={() => {
+                  setActiveTimelineStep(null);
+                }}
+                className="absolute right-0 top-0 p-2 rounded-full hover:bg-white/10 transition-colors"
+                aria-label="Fermer la modale"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </DialogHeader>
 
-              <div className="bg-black/40 border border-white/10 rounded-2xl p-6">
-                <h4 className="text-2xl font-bold text-white mb-4">Sources et preuves</h4>
-                <div className="space-y-4">
-                  {activeTimelineStep.sources.map((source) => (
-                    <div key={source.label} className="p-4 rounded-xl border border-white/10 bg-black/60">
-                      <p className="font-semibold text-white">{source.label}</p>
-                      {source.description && (
-                        <p className="text-sm text-white/70 mt-1">{source.description}</p>
-                      )}
-                    </div>
-                  ))}
+            {activeTimelineStep && (
+              <div className="space-y-8">
+                <p className="text-lg text-white/80 leading-relaxed">{activeTimelineStep.modalDescription}</p>
+
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow-inner shadow-black/30 backdrop-blur">
+                  <h4 className="text-2xl font-bold text-white mb-4">Détails de l’étape</h4>
+                  <ul className="space-y-3">
+                    {activeTimelineStep.details.map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-white/80">
+                        <span className="mt-1 h-2 w-2 rounded-full bg-primary-red" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow-inner shadow-black/30 backdrop-blur">
+                  <h4 className="text-2xl font-bold text-white mb-4">Sources et preuves</h4>
+                  <div className="space-y-4">
+                    {activeTimelineStep.sources.map((source) => (
+                      <div key={source.label} className="p-4 rounded-xl border border-white/20 bg-white/5 text-white">
+                        <p className="font-semibold text-white">{source.label}</p>
+                        {source.description && (
+                          <p className="text-sm text-white/70 mt-1">{source.description}</p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </DialogContent>
       </Dialog>
 
