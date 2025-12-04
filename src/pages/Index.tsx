@@ -902,25 +902,30 @@ useEffect(() => {
       <div className="section-divider"></div>
 
       {/* Section Témoignage Anonyme */}
-      <section className="py-section bg-gradient-to-br from-background via-black to-background relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-red/5 via-transparent to-primary-red/5" />
-        
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 relative">
+      <section className="relative py-section bg-[#FAF9FF] overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-b from-[#CEDEF2]/30 via-[#FAF9FF]/90 to-[#FAF9FF]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,#FFFFFF0D,transparent_70%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_left,#E02B2B12,transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,#3D5E7312,transparent_55%)]" />
+
+        <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-5xl lg:text-6xl font-black text-foreground mb-6 font-display">
+            <p className="text-xs uppercase tracking-[0.35em] text-red-500 font-semibold mb-4">Confidentiel</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0A0F1C] tracking-tight font-display">
               Témoignage Anonyme
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <div className="h-1 w-16 bg-red-600 rounded-full mx-auto mt-4" />
+            <p className="text-lg md:text-xl text-[#1A2433]/80 leading-relaxed mt-6">
               Partagez votre expérience de manière anonyme et sécurisée. Votre identité est protégée.
             </p>
           </div>
 
           {/* Container principal */}
-          <div className="glass-card rounded-2xl p-8 lg:p-12 border border-primary-red/20 shadow-2xl">
-            <div className="bg-[#7A1212] rounded-xl p-6 mb-8 border border-primary-red/30">
+          <div className="bg-gradient-to-b from-white/80 to-white/60 backdrop-blur-xl rounded-2xl p-8 lg:p-12 border border-white/50 shadow-2xl shadow-blue-900/10">
+            <div className="bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-6 mb-8 border border-white/10 shadow-lg">
               <div className="flex items-start gap-4">
-                <Shield className="h-6 w-6 text-primary-red flex-shrink-0 mt-1" />
+                <Shield className="h-6 w-6 text-red-500 flex-shrink-0 mt-1" />
                 <p className="text-white/90 leading-relaxed">
                   Tous les témoignages sont traités dans un espace isolé. Nous ne conservons pas les adresses IP dans nos exports et chaque dépôt génère un reçu chiffré.
                 </p>
@@ -928,23 +933,23 @@ useEffect(() => {
             </div>
 
             <div className="mb-8">
-              <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-4">Qui témoigne ?</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-[#1A2433]/70 mb-4">Qui témoigne ?</p>
               <div className="grid gap-3 md:grid-cols-3">
                 {testimonySegments.map(segment => (
                   <button
                     key={segment.id}
                     onClick={() => setTestimonySegment(segment.id)}
-                    className={`text-left p-4 rounded-xl border transition-all ${testimonySegment === segment.id ? "border-primary-red bg-primary-red/10" : "border-white/10 hover:border-primary-red/40"}`}
+                    className={`text-left p-4 rounded-2xl border transition-all backdrop-blur ${testimonySegment === segment.id ? "border-red-500/70 bg-white/20 shadow-lg shadow-red-700/20" : "border-white/40 bg-white/10 hover:border-red-500/60 hover:bg-white/15"}`}
                   >
-                    <p className="font-semibold text-white">{segment.label}</p>
-                    <p className="text-xs text-muted-foreground mt-1">{segment.description}</p>
+                    <p className="font-semibold text-[#0A0F1C]">{segment.label}</p>
+                    <p className="text-xs text-[#1A2433]/70 mt-1">{segment.description}</p>
                   </button>
                 ))}
               </div>
             </div>
 
             <div className="mb-8">
-              <label htmlFor="testimony" className="block text-foreground font-semibold mb-3 text-lg">
+              <label htmlFor="testimony" className="block text-[#0A0F1C] font-semibold mb-3 text-lg">
                 Votre témoignage
               </label>
               <textarea
@@ -952,30 +957,30 @@ useEffect(() => {
                 value={testimony}
                 onChange={e => setTestimony(e.target.value)}
                 placeholder="Partagez votre histoire… (Tous les témoignages sont entièrement anonymes)"
-                className="w-full min-h-[250px] bg-[#0E0E0E] border-2 border-primary-red/30 rounded-xl p-4 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary-red focus:ring-2 focus:ring-primary-red/20 transition-all duration-300 resize-y"
+                className="w-full min-h-[250px] bg-white/60 border border-white/80 rounded-2xl p-4 text-[#0A0F1C] placeholder:text-[#1A2433]/60 focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all duration-300 resize-y shadow-inner"
               />
             </div>
 
             <div className="mb-8">
-              <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-4">Canal de dépôt</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-[#1A2433]/70 mb-4">Canal de dépôt</p>
               <div className="grid gap-3 md:grid-cols-3">
                 {testimonyChannels.map(channel => (
                   <button
                     key={channel.id}
                     onClick={() => setTestimonyChannel(channel.id)}
-                    className={`p-4 rounded-xl border text-left transition-all ${testimonyChannel === channel.id ? "border-primary-red bg-primary-red/10" : "border-white/10 hover:border-primary-red/40"}`}
+                    className={`p-4 rounded-2xl border text-left transition-all backdrop-blur ${testimonyChannel === channel.id ? "border-red-500/70 bg-white/20 shadow-lg shadow-red-700/20" : "border-white/40 bg-white/10 hover:border-red-500/60 hover:bg-white/15"}`}
                   >
-                    <p className="font-semibold text-white">{channel.label}</p>
-                    <p className="text-xs text-muted-foreground mt-1">{channel.detail}</p>
+                    <p className="font-semibold text-[#0A0F1C]">{channel.label}</p>
+                    <p className="text-xs text-[#1A2433]/70 mt-1">{channel.detail}</p>
                   </button>
                 ))}
               </div>
             </div>
 
-            <div className="bg-[#0E0E0E] rounded-xl p-6 mb-8 border border-primary-red/30">
+            <div className="bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-6 mb-8 border border-white/10 shadow-lg">
               <div className="flex items-start gap-4">
                 <button onClick={() => setConsentChecked(!consentChecked)} className="flex-shrink-0 mt-0.5">
-                  <div className={`w-6 h-6 rounded-md border-2 flex items-center justify-center transition-all duration-300 ${consentChecked ? "bg-primary-red border-primary-red" : "border-primary-red/50 hover:border-primary-red"}`}>
+                  <div className={`w-6 h-6 rounded-md border-2 flex items-center justify-center transition-all duration-300 ${consentChecked ? "bg-red-600 border-red-600 shadow-red-700/40 shadow" : "border-white/40 hover:border-red-500"}`}>
                     {consentChecked && (
                       <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
@@ -987,7 +992,7 @@ useEffect(() => {
                   <p className="text-white font-medium mb-2">
                     Je comprends que mon témoignage sera anonymisé et stocké de façon chiffrée.
                   </p>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-white/80 text-sm leading-relaxed">
                     Nous supprimons tout identifiant technique (IP, agent utilisateur) et appliquons un hachage salé avant archivage.
                   </p>
                 </div>
@@ -995,31 +1000,31 @@ useEffect(() => {
             </div>
 
             {encryptionReceipt && (
-              <div className="mb-6 rounded-xl border border-primary-red/40 bg-black/40 p-4 text-sm text-muted-foreground">
-                <p className="font-semibold text-white mb-1 flex items-center gap-2">
-                  <KeyRound className="h-4 w-4 text-primary-red" />
+              <div className="mb-6 rounded-2xl border border-white/20 bg-white/10 backdrop-blur p-4 text-sm text-[#1A2433] shadow-inner">
+                <p className="font-semibold text-[#0A0F1C] mb-1 flex items-center gap-2">
+                  <KeyRound className="h-4 w-4 text-red-500" />
                   Accusé de réception sécurisé
                 </p>
-                <p>Code de suivi : <span className="font-mono text-white">{encryptionReceipt}</span></p>
+                <p>Code de suivi : <span className="font-mono text-[#0A0F1C]">{encryptionReceipt}</span></p>
               </div>
             )}
 
             <button
               onClick={handleSubmitTestimony}
               disabled={!testimony.trim() || !consentChecked || isSubmittingTestimony}
-              className="w-full bg-primary-red hover:bg-[#C41E1E] text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-lg hover:shadow-primary-red/30 hover:-translate-y-0.5"
+              className="w-full bg-gradient-to-r from-red-600 to-red-700 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-red-700/30 hover:shadow-red-700/50 hover:scale-[1.02]"
             >
               {isSubmittingTestimony ? <Loader2 className="h-5 w-5 animate-spin" /> : <Lock className="h-5 w-5" />}
               {isSubmittingTestimony ? "Chiffrement en cours..." : "Envoyer anonymement"}
             </button>
 
-            <div className="mt-6 grid gap-4 md:grid-cols-2 text-sm text-muted-foreground">
+            <div className="mt-6 grid gap-4 md:grid-cols-2 text-sm text-[#1A2433]/80">
               <div className="flex items-start gap-3">
-                <Fingerprint className="h-5 w-5 text-primary-red mt-0.5" />
+                <Fingerprint className="h-5 w-5 text-red-500 mt-0.5" />
                 <p>Les métadonnées réseau sont supprimées de nos archives partagées. Nous conservons uniquement le contenu nécessaire au suivi.</p>
               </div>
               <div className="flex items-start gap-3">
-                <KeyRound className="h-5 w-5 text-primary-red mt-0.5" />
+                <KeyRound className="h-5 w-5 text-red-500 mt-0.5" />
                 <p>Chaque dépôt génère un reçu chiffré que vous pouvez partager à votre avocat.</p>
               </div>
             </div>
