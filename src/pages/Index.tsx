@@ -922,7 +922,7 @@ useEffect(() => {
           </div>
 
           {/* Container principal */}
-          <div className="bg-card rounded-2xl p-8 lg:p-12 border border-border shadow-lg">
+          <div className="bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-8 lg:p-12 border border-white/10 shadow-xl backdrop-blur text-white">
             <div className="bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-6 mb-8 border border-white/10 shadow-lg">
               <div className="flex items-start gap-4">
                 <Shield className="h-6 w-6 text-red-500 flex-shrink-0 mt-1" />
@@ -933,13 +933,13 @@ useEffect(() => {
             </div>
 
             <div className="mb-8">
-              <p className="text-sm uppercase tracking-[0.3em] text-[#1A2433]/70 mb-4">Qui témoigne ?</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-white/70 mb-4">Qui témoigne ?</p>
               <div className="grid gap-3 md:grid-cols-3">
                 {testimonySegments.map(segment => (
                   <button
                     key={segment.id}
                     onClick={() => setTestimonySegment(segment.id)}
-                    className={`group text-left rounded-2xl border border-white/12 bg-gradient-to-b from-[#334E60]/95 via-[#2B4255]/95 to-[#1f2f3d]/95 p-5 md:p-6 backdrop-blur-[1px] shadow-lg shadow-black/30 transition-all duration-200 ease-out ${testimonySegment === segment.id ? "border-[#E02B2B]/70 ring-1 ring-[#E02B2B]/25 shadow-xl shadow-black/40" : "hover:-translate-y-[2px] hover:shadow-xl hover:shadow-black/40 hover:ring-1 hover:ring-[#E02B2B]/22 hover:border-white/20"}`}
+                    className={`group text-left rounded-2xl border border-white/12 bg-gradient-to-b from-[#334E60]/95 via-[#2B4255]/95 to-[#1f2f3d]/95 p-5 md:p-6 backdrop-blur-[1px] shadow-lg shadow-black/30 transition-all duration-200 ease-out ${testimonySegment === segment.id ? "border-[#E02B2B]/80 ring-1 ring-[#E02B2B]/35 shadow-xl shadow-black/40" : "hover:-translate-y-[2px] hover:shadow-xl hover:shadow-black/40 hover:ring-1 hover:ring-[#E02B2B]/22 hover:border-white/20"}`}
                   >
                     <p className="text-xl font-semibold text-[#F5F6F7] tracking-tight drop-shadow-sm">{segment.label}</p>
                     <p className="text-sm text-[#D8E4EF]/90 mt-2 leading-relaxed">{segment.description}</p>
@@ -949,7 +949,7 @@ useEffect(() => {
             </div>
 
             <div className="mb-8">
-              <label htmlFor="testimony" className="block text-[#0A0F1C] font-semibold mb-3 text-lg">
+              <label htmlFor="testimony" className="block text-white font-semibold mb-3 text-lg">
                 Votre témoignage
               </label>
               <textarea
@@ -957,21 +957,21 @@ useEffect(() => {
                 value={testimony}
                 onChange={e => setTestimony(e.target.value)}
                 placeholder="Partagez votre histoire… (Tous les témoignages sont entièrement anonymes)"
-                className="w-full min-h-[250px] bg-white/60 border border-white/80 rounded-2xl p-4 text-[#0A0F1C] placeholder:text-[#1A2433]/60 focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all duration-300 resize-y shadow-inner"
+                className="w-full min-h-[250px] bg-white/5 border border-white/15 rounded-2xl p-4 text-white placeholder:text-white/60 focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/30 transition-all duration-300 resize-y shadow-inner"
               />
             </div>
 
             <div className="mb-8">
-              <p className="text-sm uppercase tracking-[0.3em] text-[#1A2433]/70 mb-4">Canal de dépôt</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-white/70 mb-4">Canal de dépôt</p>
               <div className="grid gap-3 md:grid-cols-3">
                 {testimonyChannels.map(channel => (
                   <button
                     key={channel.id}
                     onClick={() => setTestimonyChannel(channel.id)}
-                    className={`p-4 rounded-2xl border text-left transition-all backdrop-blur ${testimonyChannel === channel.id ? "border-red-500/70 bg-white/20 shadow-lg shadow-red-700/20" : "border-white/40 bg-white/10 hover:border-red-500/60 hover:bg-white/15"}`}
+                    className={`group text-left rounded-2xl border border-white/12 bg-gradient-to-b from-[#334E60]/95 via-[#2B4255]/95 to-[#1f2f3d]/95 p-5 backdrop-blur-[1px] shadow-lg shadow-black/30 transition-all duration-200 ease-out ${testimonyChannel === channel.id ? "border-[#E02B2B]/80 ring-1 ring-[#E02B2B]/35 shadow-xl shadow-black/40" : "hover:-translate-y-[2px] hover:shadow-xl hover:shadow-black/40 hover:ring-1 hover:ring-[#E02B2B]/22 hover:border-white/20"}`}
                   >
-                    <p className="font-semibold text-[#0A0F1C]">{channel.label}</p>
-                    <p className="text-xs text-[#1A2433]/70 mt-1">{channel.detail}</p>
+                    <p className="font-semibold text-[#F5F6F7]">{channel.label}</p>
+                    <p className="text-xs text-[#D8E4EF]/90 mt-1">{channel.detail}</p>
                   </button>
                 ))}
               </div>
@@ -1000,12 +1000,14 @@ useEffect(() => {
             </div>
 
             {encryptionReceipt && (
-              <div className="mb-6 rounded-2xl border border-white/20 bg-white/10 backdrop-blur p-4 text-sm text-[#1A2433] shadow-inner">
-                <p className="font-semibold text-[#0A0F1C] mb-1 flex items-center gap-2">
+              <div className="mb-6 rounded-2xl border border-white/15 bg-white/5 backdrop-blur p-4 text-sm text-white shadow-inner">
+                <p className="font-semibold text-white mb-1 flex items-center gap-2">
                   <KeyRound className="h-4 w-4 text-red-500" />
                   Accusé de réception sécurisé
                 </p>
-                <p>Code de suivi : <span className="font-mono text-[#0A0F1C]">{encryptionReceipt}</span></p>
+                <p>
+                  Code de suivi : <span className="font-mono text-white">{encryptionReceipt}</span>
+                </p>
               </div>
             )}
 
@@ -1018,7 +1020,7 @@ useEffect(() => {
               {isSubmittingTestimony ? "Chiffrement en cours..." : "Envoyer anonymement"}
             </button>
 
-            <div className="mt-6 grid gap-4 md:grid-cols-2 text-sm text-[#1A2433]/80">
+            <div className="mt-6 grid gap-4 md:grid-cols-2 text-sm text-white/85">
               <div className="flex items-start gap-3">
                 <Fingerprint className="h-5 w-5 text-red-500 mt-0.5" />
                 <p>Les métadonnées réseau sont supprimées de nos archives partagées. Nous conservons uniquement le contenu nécessaire au suivi.</p>
