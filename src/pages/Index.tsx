@@ -922,7 +922,7 @@ useEffect(() => {
           </div>
 
           {/* Container principal */}
-          <div className="bg-gradient-to-b from-white/80 to-white/60 backdrop-blur-xl rounded-2xl p-8 lg:p-12 border border-white/50 shadow-2xl shadow-blue-900/10">
+          <div className="bg-card rounded-2xl p-8 lg:p-12 border border-border shadow-lg">
             <div className="bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-6 mb-8 border border-white/10 shadow-lg">
               <div className="flex items-start gap-4">
                 <Shield className="h-6 w-6 text-red-500 flex-shrink-0 mt-1" />
