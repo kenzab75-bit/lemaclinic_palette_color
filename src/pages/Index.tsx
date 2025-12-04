@@ -939,10 +939,10 @@ useEffect(() => {
                   <button
                     key={segment.id}
                     onClick={() => setTestimonySegment(segment.id)}
-                    className={`text-left p-4 rounded-2xl border transition-all backdrop-blur ${testimonySegment === segment.id ? "border-red-500/70 bg-white/20 shadow-lg shadow-red-700/20" : "border-white/40 bg-white/10 hover:border-red-500/60 hover:bg-white/15"}`}
+                    className={`group text-left rounded-2xl border border-white/10 bg-gradient-to-b from-[#334E60]/80 to-[#1f2f3d]/80 p-5 md:p-6 backdrop-blur-[1px] shadow-lg shadow-black/30 transition-all duration-200 ${testimonySegment === segment.id ? "border-[#E02B2B]/60 ring-1 ring-[#E02B2B]/25 shadow-xl shadow-black/40" : "hover:-translate-y-[2px] hover:shadow-xl hover:shadow-black/40 hover:ring-1 hover:ring-[#E02B2B]/20"}`}
                   >
-                    <p className="font-semibold text-[#0A0F1C]">{segment.label}</p>
-                    <p className="text-xs text-[#1A2433]/70 mt-1">{segment.description}</p>
+                    <p className="font-semibold text-[#F5F6F7] text-lg">{segment.label}</p>
+                    <p className="text-sm text-[#D8E4EF] mt-1">{segment.description}</p>
                   </button>
                 ))}
               </div>
