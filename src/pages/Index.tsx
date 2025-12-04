@@ -732,18 +732,30 @@ useEffect(() => {
       <div className="section-divider"></div>
 
       {/* Timeline Section */}
-      <section id="victimes" className="py-section bg-gradient-to-br from-black via-background to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-red/5 via-transparent to-primary-red/5" />
+      <section id="victimes" className="relative py-section bg-[#FAF9FF] overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-b from-[#CEDEF2]/25 via-[#FAF9FF]/90 to-[#FAF9FF]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,#FFFFFF0A,transparent_70%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_left,#E02B2B10,transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,#3D5E73/04,transparent_55%)]" />
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <p className="text-2xl lg:text-3xl text-white/90 leading-relaxed font-semibold">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-5xl mx-auto text-center mb-20 space-y-5">
+            <p className="text-xs uppercase tracking-[0.35em] text-red-500 font-semibold text-center">Parcours dévoilé</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0A0F1C] tracking-tight text-center font-display">Un système bien ficelé</h2>
+            <div className="h-1 w-16 bg-red-600 rounded-full mx-auto mt-3" />
+            <p className="text-xl lg:text-2xl text-[#132330]/90 leading-relaxed max-w-4xl mx-auto">
               Découvrez comment un système bien rodé transforme la confiance des patients en instrument de profit.
             </p>
+            <div className="flex flex-wrap justify-center gap-3 text-sm text-[#0A0F1C]/80">
+              <span className="px-4 py-2 rounded-full bg-white/40 border border-white/50 shadow-sm shadow-white/30">Identité visuelle « Mon histoire » conservée</span>
+              <span className="px-4 py-2 rounded-full bg-white/40 border border-white/50 shadow-sm shadow-white/30">Narration intacte</span>
+              <span className="px-4 py-2 rounded-full bg-white/40 border border-white/50 shadow-sm shadow-white/30">Focus sur la confiance détournée</span>
+            </div>
           </div>
 
           <div className="relative max-w-6xl mx-auto">
-            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-px bg-gradient-to-b from-transparent via-primary-red/60 to-transparent" aria-hidden="true" />
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-[2px] bg-white/20" aria-hidden="true" />
+            <div className="absolute left-1/2 -translate-x-1/2 top-10 h-24 w-24 bg-[radial-gradient(circle_at_center,rgba(224,43,43,0.12),transparent_60%)] blur-3xl" aria-hidden />
 
             <div className="space-y-16">
               {timelineSteps.map((step, index) => {
@@ -754,32 +766,34 @@ useEffect(() => {
                     className={`relative flex flex-col lg:flex-row items-center gap-10 ${isEven ? "lg:flex-row-reverse" : ""}`}
                   >
                     <div className="flex-1 w-full">
-                      <div className="glass-card rounded-3xl p-8 lg:p-10 bg-gradient-to-br from-black/80 via-[#160202] to-black/80 border border-primary-red/20 shadow-ink-pinned">
-                        <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.3em] uppercase text-primary-red mb-4">
-                          <span className="h-2 w-2 rounded-full bg-primary-red" />
-                          <span>{step.stepNumber}</span>
+                      <div className="relative overflow-hidden bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl shadow-xl border border-white/10 p-8 lg:p-12 text-white backdrop-blur-xl">
+                        <div className="relative space-y-4">
+                          <div className="inline-flex items-center justify-center gap-2 text-xs font-semibold tracking-[0.3em] uppercase text-white bg-white/10 rounded-full px-4 py-2 border border-white/20">
+                            <span className="h-2 w-2 rounded-full bg-red-500" />
+                            <span>{step.stepNumber}</span>
+                          </div>
+                          <h3 className="text-3xl lg:text-4xl font-bold text-white">{step.cardTitle}</h3>
+                          <p className="text-lg text-white/80 leading-relaxed mb-4">{step.cardDescription}</p>
+                          <Button
+                            type="button"
+                            className="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-full px-6 py-3 shadow-lg hover:shadow-red-700/50 hover:scale-[1.02] transition flex items-center"
+                            onClick={() => {
+                              setActiveTimelineStep(step);
+                            }}
+                          >
+                            Cliquer pour voir les détails
+                            <ChevronRight className="ml-2 h-4 w-4" />
+                          </Button>
                         </div>
-                        <h3 className="text-3xl lg:text-4xl font-black text-white mb-4">{step.cardTitle}</h3>
-                        <p className="text-lg text-white/80 leading-relaxed mb-6">{step.cardDescription}</p>
-                        <Button
-                          className="px-6 py-4 rounded-2xl bg-gradient-to-r from-primary-red via-[#ff2d2d] to-primary border-none text-white font-semibold shadow-lg shadow-primary-red/40 hover:shadow-primary-red/60"
-                          onClick={() => setActiveTimelineStep(step)}
-                        >
-                          Cliquer pour voir les détails
-                          <ChevronRight className="ml-2 h-4 w-4" />
-                        </Button>
                       </div>
                     </div>
 
                     <div className="relative flex flex-col items-center" aria-hidden="true">
-                      <div className="relative">
-                        <div className="absolute inset-0 bg-primary-red/30 blur-2xl rounded-full animate-pulse" />
-                        <div className="relative h-16 w-16 rounded-full bg-gradient-to-b from-[#ff4d4d] to-primary-red border border-white/20 flex items-center justify-center text-2xl font-black text-white shadow-ink-soft">
-                          {index + 1}
-                        </div>
+                      <div className="relative flex items-center justify-center w-12 h-12 bg-gradient-to-b from-red-600 to-red-400 text-white rounded-full shadow-xl font-semibold">
+                        {index + 1}
                       </div>
                       {index !== timelineSteps.length - 1 && (
-                        <div className="hidden lg:block w-px flex-1 bg-gradient-to-b from-primary-red/60 to-transparent mt-6" />
+                        <div className="hidden lg:block w-[2px] flex-1 bg-white/20 mt-6" />
                       )}
                     </div>
                   </article>
@@ -788,7 +802,7 @@ useEffect(() => {
             </div>
           </div>
 
-          <p className="text-center text-sm text-white/60 mt-20">
+          <p className="text-center text-sm text-[#4C5A66]/70 mt-20">
             Si un passage n’est pas clair, demande-moi quelle version est la bonne.
           </p>
         </div>
@@ -1257,50 +1271,68 @@ useEffect(() => {
         </div>
       </footer>
 
-      <Dialog open={!!activeTimelineStep} onOpenChange={(open) => setActiveTimelineStep(open ? activeTimelineStep : null)}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-[hsl(var(--shadow-ink)/0.92)] border border-primary-red/40 text-foreground shadow-ink-elevated ring-overlay-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-4">
-          <DialogHeader className="relative pb-6">
-            <div className="inline-flex items-center gap-2 bg-primary-red/20 text-primary-red px-4 py-2 rounded-full text-sm font-semibold tracking-[0.3em] uppercase">
-              <span className="h-2 w-2 rounded-full bg-primary-red" />
-              <span>{activeTimelineStep?.stepNumber}</span>
-            </div>
-            <DialogTitle className="text-4xl font-black mt-4 text-white">{activeTimelineStep?.modalTitle}</DialogTitle>
-            <button onClick={() => setActiveTimelineStep(null)} className="absolute right-0 top-0 p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Fermer la modale">
-              <X className="h-5 w-5" />
-            </button>
-          </DialogHeader>
+      <Dialog
+        open={Boolean(activeTimelineStep)}
+        onOpenChange={(open) => {
+          if (!open) {
+            setActiveTimelineStep(null);
+          }
+        }}
+      >
+        <DialogContent className="relative max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-b from-[#213245] to-[#0f1b29] border border-white/10 text-white shadow-2xl shadow-black/40 backdrop-blur-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-offset-white/10">
+          <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,rgba(62,104,136,0.28),transparent_45%)]" />
+          <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_bottom_left,rgba(224,43,43,0.18),transparent_55%)]" />
 
-          {activeTimelineStep && (
-            <div className="space-y-8">
-              <p className="text-lg text-white/80 leading-relaxed">{activeTimelineStep.modalDescription}</p>
-
-              <div className="bg-black/40 border border-white/10 rounded-2xl p-6">
-                <h4 className="text-2xl font-bold text-white mb-4">Détails de l’étape</h4>
-                <ul className="space-y-3">
-                  {activeTimelineStep.details.map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-white/80">
-                      <span className="mt-1 h-2 w-2 rounded-full bg-primary-red" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+          <div className="relative z-10 space-y-8">
+            <DialogHeader className="relative pb-6">
+              <div className="inline-flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-full text-sm font-semibold tracking-[0.3em] uppercase border border-white/20">
+                <span className="h-2 w-2 rounded-full bg-primary-red" />
+                <span>{activeTimelineStep?.stepNumber}</span>
               </div>
+              <DialogTitle className="text-4xl font-black mt-4 text-white">{activeTimelineStep?.modalTitle}</DialogTitle>
+              <button
+                onClick={() => {
+                  setActiveTimelineStep(null);
+                }}
+                className="absolute right-0 top-0 p-2 rounded-full hover:bg-white/10 transition-colors"
+                aria-label="Fermer la modale"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </DialogHeader>
 
-              <div className="bg-black/40 border border-white/10 rounded-2xl p-6">
-                <h4 className="text-2xl font-bold text-white mb-4">Sources et preuves</h4>
-                <div className="space-y-4">
-                  {activeTimelineStep.sources.map((source) => (
-                    <div key={source.label} className="p-4 rounded-xl border border-white/10 bg-black/60">
-                      <p className="font-semibold text-white">{source.label}</p>
-                      {source.description && (
-                        <p className="text-sm text-white/70 mt-1">{source.description}</p>
-                      )}
-                    </div>
-                  ))}
+            {activeTimelineStep && (
+              <div className="space-y-8">
+                <p className="text-lg text-white/80 leading-relaxed">{activeTimelineStep.modalDescription}</p>
+
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow-inner shadow-black/30 backdrop-blur">
+                  <h4 className="text-2xl font-bold text-white mb-4">Détails de l’étape</h4>
+                  <ul className="space-y-3">
+                    {activeTimelineStep.details.map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-white/80">
+                        <span className="mt-1 h-2 w-2 rounded-full bg-primary-red" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow-inner shadow-black/30 backdrop-blur">
+                  <h4 className="text-2xl font-bold text-white mb-4">Sources et preuves</h4>
+                  <div className="space-y-4">
+                    {activeTimelineStep.sources.map((source) => (
+                      <div key={source.label} className="p-4 rounded-xl border border-white/20 bg-white/5 text-white">
+                        <p className="font-semibold text-white">{source.label}</p>
+                        {source.description && (
+                          <p className="text-sm text-white/70 mt-1">{source.description}</p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </DialogContent>
       </Dialog>
 
