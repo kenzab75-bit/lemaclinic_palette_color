@@ -492,10 +492,10 @@ useEffect(() => {
 
               <div className="relative">
                 <div className="pt-10 md:pt-14">
-                  <div className="relative inline-flex items-center gap-4 rounded-full border border-[#E02B2B]/55 bg-gradient-to-r from-[#E02B2B] via-[#c22222] to-[#901717] px-6 py-3 text-base text-white shadow-lg shadow-[#E02B2B]/30 backdrop-blur-md">
-                    <span className="pointer-events-none absolute inset-0 rounded-full bg-[#E02B2B]/35 blur-xl opacity-70" aria-hidden />
-                    <div className="relative flex h-9 w-9 items-center justify-center rounded-full bg-white/12 text-white ring-1 ring-[#E02B2B]/40 shadow-inner shadow-[#E02B2B]/20">
-                      <AlertTriangle className="h-4 w-4 animate-pulse" aria-hidden="true" />
+                  <div className="relative inline-flex items-center gap-4 rounded-full border border-white/15 bg-gradient-to-r from-[#E02B2B]/75 via-[#c22222]/70 to-[#901717]/75 px-5 py-2.5 text-base text-white shadow-[0_10px_30px_-12px_rgba(224,43,43,0.45)] backdrop-blur-md ring-1 ring-inset ring-white/12 hover:shadow-[0_16px_40px_-16px_rgba(224,43,43,0.5)] transition">
+                    <span className="pointer-events-none absolute inset-0 rounded-full bg-[#E02B2B]/25 blur-xl opacity-70" aria-hidden />
+                    <div className="relative flex h-8 w-8 items-center justify-center rounded-full bg-white/12 text-white ring-1 ring-inset ring-white/20 border border-white/10 shadow-inner shadow-[#E02B2B]/15">
+                      <AlertTriangle className="h-4 w-4" aria-hidden="true" />
                     </div>
                     <div className="relative flex flex-col sm:flex-row sm:items-center sm:gap-3 text-left">
                       <span className="text-sm font-semibold tracking-[0.3em] text-white/90 sm:text-base">ALERTE</span>
