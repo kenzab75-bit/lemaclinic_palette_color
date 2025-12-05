@@ -492,14 +492,14 @@ useEffect(() => {
 
               <div className="relative">
                 <div className="pt-10 md:pt-14">
-                  <div className="relative inline-flex items-center gap-4 rounded-full border border-white/15 bg-gradient-to-r from-[#E02B2B]/75 via-[#c22222]/70 to-[#901717]/75 px-5 py-2.5 text-base text-white shadow-[0_10px_30px_-12px_rgba(224,43,43,0.45)] backdrop-blur-md ring-1 ring-inset ring-white/12 hover:shadow-[0_16px_40px_-16px_rgba(224,43,43,0.5)] transition">
-                    <span className="pointer-events-none absolute inset-0 rounded-full bg-[#E02B2B]/25 blur-xl opacity-70" aria-hidden />
-                    <div className="relative flex h-8 w-8 items-center justify-center rounded-full bg-white/12 text-white ring-1 ring-inset ring-white/20 border border-white/10 shadow-inner shadow-[#E02B2B]/15">
-                      <AlertTriangle className="h-4 w-4" aria-hidden="true" />
+                  <div className="relative inline-flex items-center gap-3 rounded-full border border-white/10 bg-[#C40000]/70 px-5 py-2 text-sm text-white shadow-[0_2px_16px_rgba(0,0,0,0.25)] backdrop-blur-md ring-1 ring-inset ring-white/12 hover:shadow-[0_10px_30px_-14px_rgba(0,0,0,0.35)] transition">
+                    <span className="pointer-events-none absolute inset-0 rounded-full bg-[#E02B2B]/18 blur-lg opacity-80" aria-hidden />
+                    <div className="relative flex h-7 w-7 items-center justify-center rounded-full bg-white/12 text-white ring-1 ring-inset ring-white/20 border border-white/10 shadow-inner shadow-black/20">
+                      <AlertTriangle className="h-3.5 w-3.5" aria-hidden="true" />
                     </div>
                     <div className="relative flex flex-col sm:flex-row sm:items-center sm:gap-3 text-left">
-                      <span className="text-sm font-semibold tracking-[0.3em] text-white/90 sm:text-base">ALERTE</span>
-                      <span className="text-white/90 leading-snug">Révélations documentées sur les pratiques de la Lema Dental Clinic à Istanbul.</span>
+                      <span className="text-xs sm:text-sm font-semibold tracking-[0.5em] text-white/90">ALERTE</span>
+                      <span className="text-[13px] sm:text-sm text-white/90 leading-snug">Révélations documentées sur les pratiques de la Lema Dental Clinic à Istanbul.</span>
                     </div>
                   </div>
 
