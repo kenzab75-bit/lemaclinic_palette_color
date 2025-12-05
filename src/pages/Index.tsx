@@ -30,6 +30,7 @@ const Index = () => {
   const [isSubscribing, setIsSubscribing] = useState(false);
   const [hasHeroVideoError, setHasHeroVideoError] = useState(false);
   const [isHeroPaused, setIsHeroPaused] = useState(false);
+  const [isTimelineDialogOpen, setIsTimelineDialogOpen] = useState(false);
   const {
     toast
   } = useToast();
