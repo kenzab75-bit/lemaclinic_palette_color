@@ -1037,126 +1037,100 @@ useEffect(() => {
       {/* Elegant Section Divider */}
       <div className="section-divider"></div>
 
-      {/* Section RGPD - Vos données, vos droits */}
-      <section className="py-section bg-gradient-to-br from-black via-background to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-red/5 via-transparent to-primary-red/5" />
-        
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-          {/* Header */}
-          <div className="text-center mb-20">
-            <div className="flex items-center justify-center gap-2 mb-6">
-              <AlertTriangle className="h-4 w-4 text-primary-red" />
-              <span className="text-primary-red font-medium tracking-widest text-sm uppercase">
-                Transparence RGPD
-              </span>
-            </div>
-            <h2 className="text-5xl lg:text-6xl font-black text-foreground mb-6 font-display">
-              Vos données, vos droits
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Nous respectons le Règlement Général sur la Protection des Données (RGPD) et détaillons clairement la finalité de chaque collecte.
-            </p>
-          </div>
+      {/* Section RGPD + Contact alignée */}
+      <section id="contact" className="relative py-section bg-[#FAF9FF] overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-b from-[#CEDEF2]/25 via-[#FAF9FF]/90 to-[#FAF9FF]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,#FFFFFF0A,transparent_70%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_left,#E02B2B10,transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,#3D5E73/04,transparent_55%)]" />
 
-          {/* 3 Cartes principales */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {/* Carte 1 - Chiffrement */}
-            <div className="bg-[#020813] rounded-2xl p-8 border border-[#3D5E73]/50 hover:border-primary-red/40 transition-all duration-300">
-              <ShieldCheck className="h-10 w-10 text-primary-red mb-6" />
-              <h3 className="text-xl font-bold text-foreground mb-4">
-                Chiffrement de bout en bout
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Les données envoyées via nos formulaires transitent par HTTPS et sont stockées dans un espace chiffré au sein de Supabase.
-              </p>
-            </div>
-
-            {/* Carte 2 - Consentement */}
-            <div className="bg-[#020813] rounded-2xl p-8 border border-[#3D5E73]/50 hover:border-primary-red/40 transition-all duration-300">
-              <FileText className="h-10 w-10 text-primary-red mb-6" />
-              <h3 className="text-xl font-bold text-foreground mb-4">
-                Consentement explicite
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Nous recueillons uniquement les informations nécessaires à votre demande et vous pouvez retirer votre consentement à tout moment.
-              </p>
-            </div>
-
-            {/* Carte 3 - Conservation */}
-            <div className="bg-[#020813] rounded-2xl p-8 border border-[#3D5E73]/50 hover:border-primary-red/40 transition-all duration-300">
-              <Lock className="h-10 w-10 text-primary-red mb-6" />
-              <h3 className="text-xl font-bold text-foreground mb-4">
-                Conservation limitée
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Les messages sont conservés uniquement le temps nécessaire à l'accompagnement, sauf obligation légale contraire.
-              </p>
-            </div>
-          </div>
-
-          {/* 2 Grandes cartes */}
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* Carte 4 - Vos droits */}
-            <div className="bg-[#020813] rounded-2xl p-10 border border-[#3D5E73]/50 hover:border-primary-red/40 transition-all duration-300">
-              <h3 className="text-2xl font-bold text-foreground mb-8">
-                Vos droits à tout moment
-              </h3>
-              <div className="space-y-6">
-                <div className="flex items-start gap-3">
-                  <span className="text-primary-red font-bold mt-1">•</span>
-                  <p className="text-muted-foreground leading-relaxed">
-                    <span className="text-foreground font-medium">Accéder à vos données :</span> écrivez-nous via le formulaire de contact en précisant l'email utilisé.
-                  </p>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 xl:gap-16 items-start">
+            {/* Bloc RGPD compact */}
+            <div className="space-y-10">
+              <div className="text-center lg:text-left max-w-3xl">
+                <div className="flex items-center justify-center lg:justify-start gap-2 mb-4">
+                  <AlertTriangle className="h-4 w-4 text-primary-red" />
+                  <span className="text-primary-red font-semibold tracking-[0.35em] text-xs uppercase">Transparence RGPD</span>
                 </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-primary-red font-bold mt-1">•</span>
-                  <p className="text-muted-foreground leading-relaxed">
-                    <span className="text-foreground font-medium">Rectifier ou supprimer :</span> nous traitons les demandes au plus vite, avec priorité donnée aux situations urgentes.
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-primary-red font-bold mt-1">•</span>
-                  <p className="text-muted-foreground leading-relaxed">
-                    <span className="text-foreground font-medium">Obtenir une copie :</span> les exports sont fournis dans un format ouvert (.json) signé pour garantir leur intégrité.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Carte 5 - API Sécurisée */}
-            <div className="bg-[#020813] rounded-2xl p-10 border border-primary-red/30 hover:border-primary-red/50 transition-all duration-300">
-              <h3 className="text-2xl font-bold text-foreground mb-6">
-                Notre API sécurisée
-              </h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Les formulaires utilisent une fonction Supabase Edge. Chaque témoignage est haché, consigné puis isolé dans un coffre-fort numérique, ce qui permet de tracer les dépôts sans exposer l'identité des témoins.
-              </p>
-              <div className="bg-[#395066]/50 rounded-lg p-4 border border-[#3D5E73]/50">
-                <p className="text-sm text-muted-foreground font-mono">
-                  Journalisation: hash SHA-256 + reçu public · Transmission: HTTPS Supabase.
+                <h2 className="text-4xl md:text-5xl font-bold text-[#0A0F1C] tracking-tight">Vos données, vos droits</h2>
+                <div className="h-1 w-16 bg-red-600 rounded-full mt-4 mb-6 mx-auto lg:mx-0" />
+                <p className="text-lg text-slate-700 leading-relaxed">
+                  Nous respectons le Règlement Général sur la Protection des Données (RGPD) et détaillons clairement la finalité de chaque collecte.
                 </p>
               </div>
+
+              <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <div className="bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-8 border border-white/10 shadow-xl backdrop-blur text-white">
+                  <ShieldCheck className="h-10 w-10 text-red-400 mb-6" />
+                  <h3 className="text-xl font-bold mb-3">Chiffrement de bout en bout</h3>
+                  <p className="text-white/80 leading-relaxed">
+                    Les données envoyées via nos formulaires transitent par HTTPS et sont stockées dans un espace chiffré au sein de Supabase.
+                  </p>
+                </div>
+                <div className="bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-8 border border-white/10 shadow-xl backdrop-blur text-white">
+                  <FileText className="h-10 w-10 text-red-400 mb-6" />
+                  <h3 className="text-xl font-bold mb-3">Consentement explicite</h3>
+                  <p className="text-white/80 leading-relaxed">
+                    Nous recueillons uniquement les informations nécessaires à votre demande et vous pouvez retirer votre consentement à tout moment.
+                  </p>
+                </div>
+                <div className="bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-8 border border-white/10 shadow-xl backdrop-blur text-white md:col-span-2 xl:col-span-1">
+                  <Lock className="h-10 w-10 text-red-400 mb-6" />
+                  <h3 className="text-xl font-bold mb-3">Conservation limitée</h3>
+                  <p className="text-white/80 leading-relaxed">
+                    Les messages sont conservés uniquement le temps nécessaire à l'accompagnement, sauf obligation légale contraire.
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid lg:grid-cols-2 gap-6">
+                <div className="bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-8 border border-white/10 shadow-xl backdrop-blur text-white">
+                  <h3 className="text-2xl font-bold mb-6">Vos droits à tout moment</h3>
+                  <div className="space-y-5 text-white/85">
+                    <div className="flex items-start gap-3">
+                      <span className="text-red-400 font-bold mt-1">•</span>
+                      <p>
+                        <span className="text-white font-semibold">Accéder à vos données :</span> écrivez-nous via le formulaire de contact en précisant l'email utilisé.
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-red-400 font-bold mt-1">•</span>
+                      <p>
+                        <span className="text-white font-semibold">Rectifier ou supprimer :</span> nous traitons les demandes au plus vite, avec priorité donnée aux situations urgentes.
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-red-400 font-bold mt-1">•</span>
+                      <p>
+                        <span className="text-white font-semibold">Obtenir une copie :</span> les exports sont fournis dans un format ouvert (.json) signé pour garantir leur intégrité.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-8 border border-white/10 shadow-xl backdrop-blur text-white">
+                  <h3 className="text-2xl font-bold mb-4">Notre API sécurisée</h3>
+                  <p className="text-white/80 leading-relaxed mb-6">
+                    Les formulaires utilisent une fonction Supabase Edge. Chaque témoignage est haché, consigné puis isolé dans un coffre-fort numérique, ce qui permet de tracer les dépôts sans exposer l'identité des témoins.
+                  </p>
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/15">
+                    <p className="text-sm text-white/80 font-mono">
+                      Journalisation: hash SHA-256 + reçu public · Transmission: HTTPS Supabase.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Bloc Contact aligné */}
+            <div className="relative">
+              <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,#FFFFFF0C,transparent_70%)]" />
+              <div className="relative z-10">
+                <ContactForm />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Elegant Section Divider */}
-      <div className="section-divider"></div>
-
-      {/* Contact Section */}
-      <section id="contact" className="relative py-section overflow-hidden pattern-dots">
-        {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-black to-background" />
-        
-        {/* Decorative Elements */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary-red/10 rounded-full blur-[100px] animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-red/5 rounded-full blur-[120px] animate-pulse" style={{
-        animationDelay: "1s"
-      }} />
-        
-        <div className="relative max-w-4xl mx-auto px-6 lg:px-8">
-          <ContactForm />
         </div>
       </section>
 
