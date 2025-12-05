@@ -1135,15 +1135,20 @@ useEffect(() => {
       </section>
 
       {/* Footer Enrichi */}
-      <footer className="bg-gradient-to-br from-background via-black to-background py-section border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <footer className="relative overflow-hidden bg-gradient-to-br from-[#121b28] via-[#0e1623] to-[#070d17] text-white py-section border-t border-white/10">
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_20%_20%,#E02B2B14,transparent_45%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_80%_30%,#3D5E7314,transparent_45%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,#ffffff10,transparent_65%)]" />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           {/* Main Footer Grid */}
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 mb-16">
             {/* Brand Section */}
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-3 mb-6 group">
-                <Scale className="h-8 w-8 text-primary-red transition-transform duration-300 group-hover:scale-110" />
-                <span className="text-2xl font-bold font-display">LemaClinic Truth</span>
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 border border-white/10 shadow-lg shadow-black/30">
+                  <Scale className="h-6 w-6 text-[#E02B2B] transition-transform duration-300 group-hover:scale-110" />
+                </div>
+                <span className="text-2xl font-bold font-display tracking-tight">LemaClinic Truth</span>
               </div>
               <p className="text-muted-foreground text-base leading-relaxed mb-8">
                 Un mouvement déterminé pour la vérité, la justice et la protection des patients face aux abus médicaux.
@@ -1151,17 +1156,17 @@ useEffect(() => {
               
               {/* Security Badges */}
               <div className="flex flex-wrap gap-3 mb-8">
-                <div className="glass-card px-4 py-2 rounded-lg border border-primary-red/20 flex items-center gap-2">
-                  <Shield className="h-4 w-4 text-primary-red" />
-                  <span className="text-xs font-medium">Données sécurisées</span>
+                <div className="rounded-xl px-4 py-2 border border-white/15 bg-white/5 backdrop-blur-xl shadow-lg shadow-black/30 flex items-center gap-2">
+                  <Shield className="h-4 w-4 text-[#E02B2B]" />
+                  <span className="text-xs font-medium text-white">Données sécurisées</span>
                 </div>
-                <div className="glass-card px-4 py-2 rounded-lg border border-primary-red/20 flex items-center gap-2">
-                  <Lock className="h-4 w-4 text-primary-red" />
-                  <span className="text-xs font-medium">SSL Crypté</span>
+                <div className="rounded-xl px-4 py-2 border border-white/15 bg-white/5 backdrop-blur-xl shadow-lg shadow-black/30 flex items-center gap-2">
+                  <Lock className="h-4 w-4 text-[#E02B2B]" />
+                  <span className="text-xs font-medium text-white">SSL Crypté</span>
                 </div>
-                <div className="glass-card px-4 py-2 rounded-lg border border-primary-red/20 flex items-center gap-2">
-                  <FileCheck className="h-4 w-4 text-primary-red" />
-                  <span className="text-xs font-medium">RGPD Conforme</span>
+                <div className="rounded-xl px-4 py-2 border border-white/15 bg-white/5 backdrop-blur-xl shadow-lg shadow-black/30 flex items-center gap-2">
+                  <FileCheck className="h-4 w-4 text-[#E02B2B]" />
+                  <span className="text-xs font-medium text-white">RGPD Conforme</span>
                 </div>
               </div>
               
@@ -1192,43 +1197,43 @@ useEffect(() => {
 
             {/* Navigation */}
             <div>
-              <h3 className="text-xl font-bold mb-6">Navigation</h3>
+              <h3 className="text-xl font-bold mb-6 text-white">Navigation</h3>
               <ul className="space-y-3">
-                <li><button onClick={() => scrollToSection("histoire")} className="text-muted-foreground hover:text-primary-red transition-all duration-300 text-base hover:translate-x-1 inline-block">Mon histoire</button></li>
-                <li><button onClick={() => scrollToSection("victimes")} className="text-muted-foreground hover:text-primary-red transition-all duration-300 text-base hover:translate-x-1 inline-block">Leurs méthodes</button></li>
-                <li><button onClick={() => scrollToSection("temoignages")} className="text-muted-foreground hover:text-primary-red transition-all duration-300 text-base hover:translate-x-1 inline-block">Témoignages</button></li>
-                <li><button onClick={() => scrollToSection("support")} className="text-muted-foreground hover:text-primary-red transition-all duration-300 text-base hover:translate-x-1 inline-block">Soutenir</button></li>
+                <li><button onClick={() => scrollToSection("histoire")} className="text-slate-200/80 hover:text-[#E02B2B] transition-all duration-300 text-base hover:translate-x-1 inline-block">Mon histoire</button></li>
+                <li><button onClick={() => scrollToSection("victimes")} className="text-slate-200/80 hover:text-[#E02B2B] transition-all duration-300 text-base hover:translate-x-1 inline-block">Leurs méthodes</button></li>
+                <li><button onClick={() => scrollToSection("temoignages")} className="text-slate-200/80 hover:text-[#E02B2B] transition-all duration-300 text-base hover:translate-x-1 inline-block">Témoignages</button></li>
+                <li><button onClick={() => scrollToSection("support")} className="text-slate-200/80 hover:text-[#E02B2B] transition-all duration-300 text-base hover:translate-x-1 inline-block">Soutenir</button></li>
               </ul>
             </div>
 
             {/* Legal */}
             <div>
-              <h3 className="text-xl font-bold mb-6">Légal</h3>
+              <h3 className="text-xl font-bold mb-6 text-white">Légal</h3>
               <ul className="space-y-3">
-                <li><Link to="/mentions-legales" className="text-muted-foreground hover:text-primary-red transition-all duration-300 text-base hover:translate-x-1 inline-block">Mentions légales</Link></li>
-                <li><Link to="/politique-confidentialite" className="text-muted-foreground hover:text-primary-red transition-all duration-300 text-base hover:translate-x-1 inline-block">Confidentialité</Link></li>
-                <li><Link to="/conditions-utilisation" className="text-muted-foreground hover:text-primary-red transition-all duration-300 text-base hover:translate-x-1 inline-block">Conditions</Link></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary-red transition-all duration-300 text-base hover:translate-x-1 inline-block">Cookies</a></li>
+                <li><Link to="/mentions-legales" className="text-slate-200/80 hover:text-[#E02B2B] transition-all duration-300 text-base hover:translate-x-1 inline-block">Mentions légales</Link></li>
+                <li><Link to="/politique-confidentialite" className="text-slate-200/80 hover:text-[#E02B2B] transition-all duration-300 text-base hover:translate-x-1 inline-block">Confidentialité</Link></li>
+                <li><Link to="/conditions-utilisation" className="text-slate-200/80 hover:text-[#E02B2B] transition-all duration-300 text-base hover:translate-x-1 inline-block">Conditions</Link></li>
+                <li><a href="#" className="text-slate-200/80 hover:text-[#E02B2B] transition-all duration-300 text-base hover:translate-x-1 inline-block">Cookies</a></li>
               </ul>
             </div>
 
             {/* Newsletter */}
             <div>
-              <h3 className="text-xl font-bold mb-6">Newsletter</h3>
-              <p className="text-muted-foreground mb-4 text-sm leading-relaxed">Restez informé des dernières actualités.</p>
+              <h3 className="text-xl font-bold mb-6 text-white">Newsletter</h3>
+              <p className="text-slate-200/80 mb-4 text-sm leading-relaxed">Restez informé des dernières actualités.</p>
               <form onSubmit={handleNewsletterSubmit} className="space-y-3">
-                <input 
-                  type="email" 
-                  placeholder="Votre email" 
+                <input
+                  type="email"
+                  placeholder="Votre email"
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
                   disabled={isSubscribing}
-                  className="w-full px-4 py-3 bg-black/40 border border-white/10 rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary-red transition-colors disabled:opacity-50 disabled:cursor-not-allowed" 
+                  className="w-full px-4 py-3 bg-white/5 border border-white/15 rounded-lg text-white placeholder:text-slate-300 focus:outline-none focus:border-[#E02B2B] focus:ring-2 focus:ring-[#E02B2B]/30 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 />
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   disabled={isSubscribing}
-                  className="w-full bg-gradient-to-r from-primary-red to-red-600 hover:shadow-[0_0_20px_rgba(220,38,38,0.4)] transition-all duration-300"
+                  className="w-full bg-gradient-to-r from-[#E02B2B] to-[#b71f1f] text-white rounded-full shadow-lg shadow-[#E02B2B]/30 hover:shadow-[#E02B2B]/50 hover:scale-[1.01] transition-transform duration-300"
                 >
                   {isSubscribing ? (
                     <>
@@ -1242,15 +1247,15 @@ useEffect(() => {
                   )}
                 </Button>
               </form>
-              <p className="text-xs text-muted-foreground mt-3">Données protégées RGPD</p>
+              <p className="text-xs text-slate-300 mt-3">Données protégées RGPD</p>
             </div>
           </div>
 
           {/* Bottom Bar */}
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-muted-foreground text-sm">&copy; 2024 LemaClinic Truth. Tous droits réservés.</p>
-            <div className="flex items-center gap-2 text-muted-foreground text-sm">
-              <Heart className="h-4 w-4 text-primary-red" />
+            <p className="text-slate-300 text-sm">&copy; 2024 LemaClinic Truth. Tous droits réservés.</p>
+            <div className="flex items-center gap-2 text-slate-300 text-sm">
+              <Heart className="h-4 w-4 text-[#E02B2B]" />
               <span>Fait avec passion pour la vérité et la justice</span>
             </div>
           </div>
