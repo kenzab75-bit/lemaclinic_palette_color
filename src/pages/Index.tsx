@@ -467,7 +467,7 @@ useEffect(() => {
 
           {/* Hero content */}
           <div className="relative z-20">
-            <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 pt-32 md:pt-40 pb-24">
+            <div className="relative z-10 max-w-6xl mx-auto px-8 lg:px-12 pt-32 md:pt-40 pb-24">
               <div className="absolute right-6 top-6 flex items-center gap-3 rounded-full border border-white/10 bg-black/40 px-3 py-1.5 backdrop-blur-lg shadow-ink-soft">
                 <span className="text-xs uppercase tracking-[0.3em] text-white/70">Vidéo</span>
                 <button
@@ -490,27 +490,23 @@ useEffect(() => {
               </div>
 
               <div className="relative">
-                <div className="absolute left-0 top-0 inline-flex items-center gap-3 text-xs uppercase tracking-[0.4em] text-white/70">
-                  <span className="absolute -left-10 -top-6 w-24 h-24 rounded-full bg-red-500/20 blur-3xl" aria-hidden />
-                  <div className="relative inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-4 py-2 backdrop-blur">
-                    <span className="pointer-events-none absolute inset-0 rounded-full opacity-30 mix-blend-screen bg-[url('/grain.png')]" aria-hidden />
-                    <Scale className="relative h-4 w-4 text-primary-red" aria-hidden="true" />
-                    <span className="relative font-semibold">LemaClinic Truth</span>
-                  </div>
-                </div>
-
-                <div className="pt-16 md:pt-20">
-                  <div className="inline-flex items-center gap-3 rounded-full border border-red-500/30 bg-red-500/15 px-5 py-2 text-sm text-white/90 backdrop-blur">
-                    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-red-500/20 text-red-400">
-                      <AlertTriangle className="h-3.5 w-3.5 animate-pulse" aria-hidden="true" />
+                <div className="pt-10 md:pt-14">
+                  <div className="relative inline-flex items-center gap-3 rounded-full border border-white/10 bg-[#C40000]/70 px-5 py-2 text-sm text-white shadow-[0_2px_16px_rgba(0,0,0,0.25)] backdrop-blur-md ring-1 ring-inset ring-white/12 hover:shadow-[0_10px_30px_-14px_rgba(0,0,0,0.35)] transition">
+                    <span className="pointer-events-none absolute inset-0 rounded-full bg-[#E02B2B]/18 blur-lg opacity-80" aria-hidden />
+                    <div className="relative flex h-7 w-7 items-center justify-center rounded-full bg-white/12 text-white ring-1 ring-inset ring-white/20 border border-white/10 shadow-inner shadow-black/20">
+                      <AlertTriangle className="h-3.5 w-3.5" aria-hidden="true" />
                     </div>
-                    <span className="font-semibold tracking-wide text-red-200/90">ALERTE</span>
-                    <span className="text-white/80">Révélations documentées sur les pratiques de la Lema Dental Clinic à Istanbul.</span>
+                    <div className="relative flex flex-col sm:flex-row sm:items-center sm:gap-3 text-left">
+                      <span className="text-xs sm:text-sm font-semibold tracking-[0.5em] text-white/90">ALERTE</span>
+                      <span className="text-[13px] sm:text-sm text-white/90 leading-snug">Révélations documentées sur les pratiques de la Lema Dental Clinic à Istanbul.</span>
+                    </div>
                   </div>
 
                   <div className="mt-8 text-left">
-                    <div className="max-w-3xl rounded-3xl border border-white/10 bg-black/35 p-8 backdrop-blur-xl shadow-ink-elevated">
-                      <div className="space-y-6">
+                    <div className="relative max-w-3xl rounded-3xl border border-white/10 bg-gradient-to-b from-[#213245]/92 to-[#0f1b29]/96 p-8 md:p-10 backdrop-blur-xl shadow-ink-elevated overflow-hidden">
+                      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(224,43,43,0.08),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(61,94,115,0.12),transparent_45%)]" aria-hidden />
+                      <div className="pointer-events-none absolute inset-x-6 top-10 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" aria-hidden />
+                      <div className="space-y-6 relative z-10">
                         <div className="space-y-3">
                           <h1 className="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight font-display text-white drop-shadow-ink">LemaClinic Truth</h1>
                           <p className="text-xl sm:text-2xl text-red-300/90">La vérité éclaire toujours.</p>
@@ -521,7 +517,7 @@ useEffect(() => {
                         <div className="flex flex-wrap items-center gap-4">
                           <Button
                             onClick={() => scrollToSection("histoire")}
-                            className="group rounded-full px-8 py-3 text-base font-semibold border border-[rgba(224,43,43,0.45)] text-[#E02B2B] bg-transparent shadow-none hover:bg-[rgba(224,43,43,0.08)] hover:shadow-[0_8px_24px_rgba(224,43,43,0.25)] hover:-translate-y-0.5 transition-all"
+                            className="group rounded-full px-8 py-3 text-base font-semibold text-white bg-gradient-to-r from-[#E02B2B] to-[#b51f1f] border border-[#E02B2B]/60 shadow-lg shadow-[#E02B2B]/30 hover:shadow-[#E02B2B]/50 hover:-translate-y-0.5 transition-all"
                           >
                             <span className="flex items-center gap-2">
                               Découvrir la vérité
@@ -531,7 +527,7 @@ useEffect(() => {
                           <Button
                             variant="ghost"
                             onClick={() => scrollToSection("contact")}
-                            className="rounded-full px-8 py-3 text-base font-medium border border-white/25 bg-white/5 text-white/90 hover:text-white hover:bg-white/10 hover:border-white/40 backdrop-blur-sm transition-all"
+                            className="rounded-full px-8 py-3 text-base font-medium border border-white/20 bg-white/10 text-white/90 hover:text-white hover:bg-white/15 hover:border-white/40 backdrop-blur-md transition-all shadow-lg shadow-black/20"
                           >
                             Soutenir les victimes
                           </Button>
@@ -732,18 +728,30 @@ useEffect(() => {
       <div className="section-divider"></div>
 
       {/* Timeline Section */}
-      <section id="victimes" className="py-section bg-gradient-to-br from-black via-background to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-red/5 via-transparent to-primary-red/5" />
+      <section id="victimes" className="relative py-section bg-[#FAF9FF] overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-b from-[#CEDEF2]/25 via-[#FAF9FF]/90 to-[#FAF9FF]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,#FFFFFF0A,transparent_70%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_left,#E02B2B10,transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,#3D5E73/04,transparent_55%)]" />
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <p className="text-2xl lg:text-3xl text-white/90 leading-relaxed font-semibold">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-5xl mx-auto text-center mb-20 space-y-5">
+            <p className="text-xs uppercase tracking-[0.35em] text-red-500 font-semibold text-center">Parcours dévoilé</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0A0F1C] tracking-tight text-center font-display">Un système bien ficelé</h2>
+            <div className="h-1 w-16 bg-red-600 rounded-full mx-auto mt-3" />
+            <p className="text-xl lg:text-2xl text-[#132330]/90 leading-relaxed max-w-4xl mx-auto">
               Découvrez comment un système bien rodé transforme la confiance des patients en instrument de profit.
             </p>
+            <div className="flex flex-wrap justify-center gap-3 text-sm text-[#0A0F1C]/80">
+              <span className="px-4 py-2 rounded-full bg-white/40 border border-white/50 shadow-sm shadow-white/30">Identité visuelle « Mon histoire » conservée</span>
+              <span className="px-4 py-2 rounded-full bg-white/40 border border-white/50 shadow-sm shadow-white/30">Narration intacte</span>
+              <span className="px-4 py-2 rounded-full bg-white/40 border border-white/50 shadow-sm shadow-white/30">Focus sur la confiance détournée</span>
+            </div>
           </div>
 
           <div className="relative max-w-6xl mx-auto">
-            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-px bg-gradient-to-b from-transparent via-primary-red/60 to-transparent" aria-hidden="true" />
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-[2px] bg-white/20" aria-hidden="true" />
+            <div className="absolute left-1/2 -translate-x-1/2 top-10 h-24 w-24 bg-[radial-gradient(circle_at_center,rgba(224,43,43,0.12),transparent_60%)] blur-3xl" aria-hidden />
 
             <div className="space-y-16">
               {timelineSteps.map((step, index) => {
@@ -754,32 +762,34 @@ useEffect(() => {
                     className={`relative flex flex-col lg:flex-row items-center gap-10 ${isEven ? "lg:flex-row-reverse" : ""}`}
                   >
                     <div className="flex-1 w-full">
-                      <div className="glass-card rounded-3xl p-8 lg:p-10 bg-gradient-to-br from-black/80 via-[#160202] to-black/80 border border-primary-red/20 shadow-ink-pinned">
-                        <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.3em] uppercase text-primary-red mb-4">
-                          <span className="h-2 w-2 rounded-full bg-primary-red" />
-                          <span>{step.stepNumber}</span>
+                      <div className="relative overflow-hidden bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl shadow-xl border border-white/10 p-8 lg:p-12 text-white backdrop-blur-xl">
+                        <div className="relative space-y-4">
+                          <div className="inline-flex items-center justify-center gap-2 text-xs font-semibold tracking-[0.3em] uppercase text-white bg-white/10 rounded-full px-4 py-2 border border-white/20">
+                            <span className="h-2 w-2 rounded-full bg-red-500" />
+                            <span>{step.stepNumber}</span>
+                          </div>
+                          <h3 className="text-3xl lg:text-4xl font-bold text-white">{step.cardTitle}</h3>
+                          <p className="text-lg text-white/80 leading-relaxed mb-4">{step.cardDescription}</p>
+                          <Button
+                            type="button"
+                            className="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-full px-6 py-3 shadow-lg hover:shadow-red-700/50 hover:scale-[1.02] transition flex items-center"
+                            onClick={() => {
+                              setActiveTimelineStep(step);
+                            }}
+                          >
+                            Cliquer pour voir les détails
+                            <ChevronRight className="ml-2 h-4 w-4" />
+                          </Button>
                         </div>
-                        <h3 className="text-3xl lg:text-4xl font-black text-white mb-4">{step.cardTitle}</h3>
-                        <p className="text-lg text-white/80 leading-relaxed mb-6">{step.cardDescription}</p>
-                        <Button
-                          className="px-6 py-4 rounded-2xl bg-gradient-to-r from-primary-red via-[#ff2d2d] to-primary border-none text-white font-semibold shadow-lg shadow-primary-red/40 hover:shadow-primary-red/60"
-                          onClick={() => setActiveTimelineStep(step)}
-                        >
-                          Cliquer pour voir les détails
-                          <ChevronRight className="ml-2 h-4 w-4" />
-                        </Button>
                       </div>
                     </div>
 
                     <div className="relative flex flex-col items-center" aria-hidden="true">
-                      <div className="relative">
-                        <div className="absolute inset-0 bg-primary-red/30 blur-2xl rounded-full animate-pulse" />
-                        <div className="relative h-16 w-16 rounded-full bg-gradient-to-b from-[#ff4d4d] to-primary-red border border-white/20 flex items-center justify-center text-2xl font-black text-white shadow-ink-soft">
-                          {index + 1}
-                        </div>
+                      <div className="relative flex items-center justify-center w-12 h-12 bg-gradient-to-b from-red-600 to-red-400 text-white rounded-full shadow-xl font-semibold">
+                        {index + 1}
                       </div>
                       {index !== timelineSteps.length - 1 && (
-                        <div className="hidden lg:block w-px flex-1 bg-gradient-to-b from-primary-red/60 to-transparent mt-6" />
+                        <div className="hidden lg:block w-[2px] flex-1 bg-white/20 mt-6" />
                       )}
                     </div>
                   </article>
@@ -788,7 +798,7 @@ useEffect(() => {
             </div>
           </div>
 
-          <p className="text-center text-sm text-white/60 mt-20">
+          <p className="text-center text-sm text-[#4C5A66]/70 mt-20">
             Si un passage n’est pas clair, demande-moi quelle version est la bonne.
           </p>
         </div>
@@ -798,16 +808,20 @@ useEffect(() => {
       <div className="section-divider"></div>
 
       {/* Témoignages des Victimes Section */}
-      <section id="temoignages" className="py-section bg-gradient-to-br from-black via-background to-black relative overflow-hidden pattern-grid">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-red/5 via-transparent to-primary-red/5" />
-        
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
+      <section id="temoignages" className="relative py-section bg-[#FAF9FF] overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-b from-[#CEDEF2]/25 via-[#FAF9FF]/90 to-[#FAF9FF]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,#FFFFFF0A,transparent_70%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_left,#E02B2B10,transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,#3D5E731F,transparent_55%)]" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-5xl lg:text-6xl font-black text-foreground mb-6 font-display">
+            <h2 className="text-5xl lg:text-6xl font-bold text-[#0A0F1C] mb-6 font-display tracking-tight">
               Témoignages des Victimes
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <div className="h-1 w-16 bg-red-600 rounded-full mx-auto mb-6" />
+            <p className="text-xl text-[#4C5A66] max-w-3xl mx-auto leading-relaxed">
               Extraits anonymisés de personnes ayant alerté sur les pratiques décrites.
             </p>
           </div>
@@ -815,16 +829,16 @@ useEffect(() => {
           {/* Filtres */}
           <div className="flex justify-center items-center gap-4 mb-8 flex-wrap">
             {["Tous", "Complications", "Fraude", "Facturation"].map(filter => (
-              <button 
-                key={filter} 
+              <button
+                key={filter}
                 onClick={() => {
                   setActiveFilter(filter);
                   setDisplayedTestimonials(3); // Reset displayed count on filter change
                 }}
-                className={`px-6 py-2.5 rounded-full font-medium transition-all duration-300 ${
-                  activeFilter === filter 
-                    ? "bg-primary-red text-white shadow-lg shadow-primary-red/30" 
-                    : "bg-background/40 text-muted-foreground border border-white/10 hover:border-primary-red/50 hover:text-foreground"
+                className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 border ${
+                  activeFilter === filter
+                    ? "bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg shadow-red-700/30 border-red-600"
+                    : "bg-white/80 text-[#0A0F1C] border-white/60 backdrop-blur hover:border-red-400/60 hover:shadow-md hover:shadow-red-200"
                 }`}
               >
                 {filter}
@@ -833,7 +847,7 @@ useEffect(() => {
           </div>
 
           {/* Compteur */}
-          <p className="text-center text-muted-foreground mb-12">
+          <p className="text-center text-[#4C5A66]/80 mb-12">
             {filteredTestimonials.length} témoignage{filteredTestimonials.length > 1 ? 's' : ''} disponible{filteredTestimonials.length > 1 ? 's' : ''}.
           </p>
 
@@ -850,7 +864,7 @@ useEffect(() => {
               <Button
                 onClick={handleLoadMore}
                 disabled={isLoadingMore}
-                className="btn-premium px-8 py-4 text-lg font-semibold rounded-xl group"
+                className="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-full px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-red-700/50 hover:scale-[1.02] transition group"
               >
                 {isLoadingMore ? (
                   <>
@@ -869,10 +883,10 @@ useEffect(() => {
 
           {/* Footer note */}
           <div className="text-center">
-            <p className="text-muted-foreground italic mb-2">
+            <p className="text-[#4C5A66]/80 italic mb-2">
               Tous les témoignages sont anonymisés et vérifiés avant publication
             </p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-[#4C5A66]/70">
               {displayedTestimonials} sur {filteredTestimonials.length} témoignages affichés
             </p>
           </div>
@@ -883,25 +897,30 @@ useEffect(() => {
       <div className="section-divider"></div>
 
       {/* Section Témoignage Anonyme */}
-      <section className="py-section bg-gradient-to-br from-background via-black to-background relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-red/5 via-transparent to-primary-red/5" />
-        
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 relative">
+      <section className="relative py-section bg-[#FAF9FF] overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-b from-[#CEDEF2]/30 via-[#FAF9FF]/90 to-[#FAF9FF]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,#FFFFFF0D,transparent_70%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_left,#E02B2B12,transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,#3D5E7312,transparent_55%)]" />
+
+        <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-5xl lg:text-6xl font-black text-foreground mb-6 font-display">
+            <p className="text-xs uppercase tracking-[0.35em] text-red-500 font-semibold mb-4">Confidentiel</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0A0F1C] tracking-tight font-display">
               Témoignage Anonyme
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <div className="h-1 w-16 bg-red-600 rounded-full mx-auto mt-4" />
+            <p className="text-lg md:text-xl text-[#1A2433]/80 leading-relaxed mt-6">
               Partagez votre expérience de manière anonyme et sécurisée. Votre identité est protégée.
             </p>
           </div>
 
           {/* Container principal */}
-          <div className="glass-card rounded-2xl p-8 lg:p-12 border border-primary-red/20 shadow-2xl">
-            <div className="bg-[#7A1212] rounded-xl p-6 mb-8 border border-primary-red/30">
+          <div className="bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-8 lg:p-12 border border-white/10 shadow-xl backdrop-blur text-white">
+            <div className="bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-6 mb-8 border border-white/10 shadow-lg">
               <div className="flex items-start gap-4">
-                <Shield className="h-6 w-6 text-primary-red flex-shrink-0 mt-1" />
+                <Shield className="h-6 w-6 text-red-500 flex-shrink-0 mt-1" />
                 <p className="text-white/90 leading-relaxed">
                   Tous les témoignages sont traités dans un espace isolé. Nous ne conservons pas les adresses IP dans nos exports et chaque dépôt génère un reçu chiffré.
                 </p>
@@ -909,23 +928,23 @@ useEffect(() => {
             </div>
 
             <div className="mb-8">
-              <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-4">Qui témoigne ?</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-white/70 mb-4">Qui témoigne ?</p>
               <div className="grid gap-3 md:grid-cols-3">
                 {testimonySegments.map(segment => (
                   <button
                     key={segment.id}
                     onClick={() => setTestimonySegment(segment.id)}
-                    className={`text-left p-4 rounded-xl border transition-all ${testimonySegment === segment.id ? "border-primary-red bg-primary-red/10" : "border-white/10 hover:border-primary-red/40"}`}
+                    className={`group text-left rounded-2xl border border-white/12 bg-gradient-to-b from-[#334E60]/95 via-[#2B4255]/95 to-[#1f2f3d]/95 p-5 md:p-6 backdrop-blur-[1px] shadow-lg shadow-black/30 transition-all duration-200 ease-out ${testimonySegment === segment.id ? "border-[#E02B2B]/80 ring-1 ring-[#E02B2B]/35 shadow-xl shadow-black/40" : "hover:-translate-y-[2px] hover:shadow-xl hover:shadow-black/40 hover:ring-1 hover:ring-[#E02B2B]/22 hover:border-white/20"}`}
                   >
-                    <p className="font-semibold text-white">{segment.label}</p>
-                    <p className="text-xs text-muted-foreground mt-1">{segment.description}</p>
+                    <p className="text-xl font-semibold text-[#F5F6F7] tracking-tight drop-shadow-sm">{segment.label}</p>
+                    <p className="text-sm text-[#D8E4EF]/90 mt-2 leading-relaxed">{segment.description}</p>
                   </button>
                 ))}
               </div>
             </div>
 
             <div className="mb-8">
-              <label htmlFor="testimony" className="block text-foreground font-semibold mb-3 text-lg">
+              <label htmlFor="testimony" className="block text-white font-semibold mb-3 text-lg">
                 Votre témoignage
               </label>
               <textarea
@@ -933,30 +952,30 @@ useEffect(() => {
                 value={testimony}
                 onChange={e => setTestimony(e.target.value)}
                 placeholder="Partagez votre histoire… (Tous les témoignages sont entièrement anonymes)"
-                className="w-full min-h-[250px] bg-[#0E0E0E] border-2 border-primary-red/30 rounded-xl p-4 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary-red focus:ring-2 focus:ring-primary-red/20 transition-all duration-300 resize-y"
+                className="w-full min-h-[250px] bg-white/5 border border-white/15 rounded-2xl p-4 text-white placeholder:text-white/60 focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/30 transition-all duration-300 resize-y shadow-inner"
               />
             </div>
 
             <div className="mb-8">
-              <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-4">Canal de dépôt</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-white/70 mb-4">Canal de dépôt</p>
               <div className="grid gap-3 md:grid-cols-3">
                 {testimonyChannels.map(channel => (
                   <button
                     key={channel.id}
                     onClick={() => setTestimonyChannel(channel.id)}
-                    className={`p-4 rounded-xl border text-left transition-all ${testimonyChannel === channel.id ? "border-primary-red bg-primary-red/10" : "border-white/10 hover:border-primary-red/40"}`}
+                    className={`group text-left rounded-2xl border border-white/12 bg-gradient-to-b from-[#334E60]/95 via-[#2B4255]/95 to-[#1f2f3d]/95 p-5 backdrop-blur-[1px] shadow-lg shadow-black/30 transition-all duration-200 ease-out ${testimonyChannel === channel.id ? "border-[#E02B2B]/80 ring-1 ring-[#E02B2B]/35 shadow-xl shadow-black/40" : "hover:-translate-y-[2px] hover:shadow-xl hover:shadow-black/40 hover:ring-1 hover:ring-[#E02B2B]/22 hover:border-white/20"}`}
                   >
-                    <p className="font-semibold text-white">{channel.label}</p>
-                    <p className="text-xs text-muted-foreground mt-1">{channel.detail}</p>
+                    <p className="font-semibold text-[#F5F6F7]">{channel.label}</p>
+                    <p className="text-xs text-[#D8E4EF]/90 mt-1">{channel.detail}</p>
                   </button>
                 ))}
               </div>
             </div>
 
-            <div className="bg-[#0E0E0E] rounded-xl p-6 mb-8 border border-primary-red/30">
+            <div className="bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-6 mb-8 border border-white/10 shadow-lg">
               <div className="flex items-start gap-4">
                 <button onClick={() => setConsentChecked(!consentChecked)} className="flex-shrink-0 mt-0.5">
-                  <div className={`w-6 h-6 rounded-md border-2 flex items-center justify-center transition-all duration-300 ${consentChecked ? "bg-primary-red border-primary-red" : "border-primary-red/50 hover:border-primary-red"}`}>
+                  <div className={`w-6 h-6 rounded-md border-2 flex items-center justify-center transition-all duration-300 ${consentChecked ? "bg-red-600 border-red-600 shadow-red-700/40 shadow" : "border-white/40 hover:border-red-500"}`}>
                     {consentChecked && (
                       <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
@@ -968,7 +987,7 @@ useEffect(() => {
                   <p className="text-white font-medium mb-2">
                     Je comprends que mon témoignage sera anonymisé et stocké de façon chiffrée.
                   </p>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-white/80 text-sm leading-relaxed">
                     Nous supprimons tout identifiant technique (IP, agent utilisateur) et appliquons un hachage salé avant archivage.
                   </p>
                 </div>
@@ -976,31 +995,33 @@ useEffect(() => {
             </div>
 
             {encryptionReceipt && (
-              <div className="mb-6 rounded-xl border border-primary-red/40 bg-black/40 p-4 text-sm text-muted-foreground">
+              <div className="mb-6 rounded-2xl border border-white/15 bg-white/5 backdrop-blur p-4 text-sm text-white shadow-inner">
                 <p className="font-semibold text-white mb-1 flex items-center gap-2">
-                  <KeyRound className="h-4 w-4 text-primary-red" />
+                  <KeyRound className="h-4 w-4 text-red-500" />
                   Accusé de réception sécurisé
                 </p>
-                <p>Code de suivi : <span className="font-mono text-white">{encryptionReceipt}</span></p>
+                <p>
+                  Code de suivi : <span className="font-mono text-white">{encryptionReceipt}</span>
+                </p>
               </div>
             )}
 
             <button
               onClick={handleSubmitTestimony}
               disabled={!testimony.trim() || !consentChecked || isSubmittingTestimony}
-              className="w-full bg-primary-red hover:bg-[#C41E1E] text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-lg hover:shadow-primary-red/30 hover:-translate-y-0.5"
+              className="w-full bg-gradient-to-r from-red-600 to-red-700 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-red-700/30 hover:shadow-red-700/50 hover:scale-[1.02]"
             >
               {isSubmittingTestimony ? <Loader2 className="h-5 w-5 animate-spin" /> : <Lock className="h-5 w-5" />}
               {isSubmittingTestimony ? "Chiffrement en cours..." : "Envoyer anonymement"}
             </button>
 
-            <div className="mt-6 grid gap-4 md:grid-cols-2 text-sm text-muted-foreground">
+            <div className="mt-6 grid gap-4 md:grid-cols-2 text-sm text-white/85">
               <div className="flex items-start gap-3">
-                <Fingerprint className="h-5 w-5 text-primary-red mt-0.5" />
+                <Fingerprint className="h-5 w-5 text-red-500 mt-0.5" />
                 <p>Les métadonnées réseau sont supprimées de nos archives partagées. Nous conservons uniquement le contenu nécessaire au suivi.</p>
               </div>
               <div className="flex items-start gap-3">
-                <KeyRound className="h-5 w-5 text-primary-red mt-0.5" />
+                <KeyRound className="h-5 w-5 text-red-500 mt-0.5" />
                 <p>Chaque dépôt génère un reçu chiffré que vous pouvez partager à votre avocat.</p>
               </div>
             </div>
@@ -1011,179 +1032,171 @@ useEffect(() => {
       {/* Elegant Section Divider */}
       <div className="section-divider"></div>
 
-      {/* Section RGPD - Vos données, vos droits */}
-      <section className="py-section bg-gradient-to-br from-black via-background to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-red/5 via-transparent to-primary-red/5" />
-        
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-          {/* Header */}
-          <div className="text-center mb-20">
-            <div className="flex items-center justify-center gap-2 mb-6">
-              <AlertTriangle className="h-4 w-4 text-primary-red" />
-              <span className="text-primary-red font-medium tracking-widest text-sm uppercase">
-                Transparence RGPD
-              </span>
-            </div>
-            <h2 className="text-5xl lg:text-6xl font-black text-foreground mb-6 font-display">
-              Vos données, vos droits
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Nous respectons le Règlement Général sur la Protection des Données (RGPD) et détaillons clairement la finalité de chaque collecte.
-            </p>
-          </div>
+      {/* Section RGPD + Contact alignée */}
+      <section id="contact" className="relative py-section bg-[#FAF9FF] overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-b from-[#CEDEF2]/25 via-[#FAF9FF]/90 to-[#FAF9FF]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,#FFFFFF0A,transparent_70%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_left,#E02B2B10,transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,#3D5E73/04,transparent_55%)]" />
 
-          {/* 3 Cartes principales */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {/* Carte 1 - Chiffrement */}
-            <div className="bg-[#020813] rounded-2xl p-8 border border-[#3D5E73]/50 hover:border-primary-red/40 transition-all duration-300">
-              <ShieldCheck className="h-10 w-10 text-primary-red mb-6" />
-              <h3 className="text-xl font-bold text-foreground mb-4">
-                Chiffrement de bout en bout
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Les données envoyées via nos formulaires transitent par HTTPS et sont stockées dans un espace chiffré au sein de Supabase.
-              </p>
-            </div>
-
-            {/* Carte 2 - Consentement */}
-            <div className="bg-[#020813] rounded-2xl p-8 border border-[#3D5E73]/50 hover:border-primary-red/40 transition-all duration-300">
-              <FileText className="h-10 w-10 text-primary-red mb-6" />
-              <h3 className="text-xl font-bold text-foreground mb-4">
-                Consentement explicite
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Nous recueillons uniquement les informations nécessaires à votre demande et vous pouvez retirer votre consentement à tout moment.
-              </p>
-            </div>
-
-            {/* Carte 3 - Conservation */}
-            <div className="bg-[#020813] rounded-2xl p-8 border border-[#3D5E73]/50 hover:border-primary-red/40 transition-all duration-300">
-              <Lock className="h-10 w-10 text-primary-red mb-6" />
-              <h3 className="text-xl font-bold text-foreground mb-4">
-                Conservation limitée
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Les messages sont conservés uniquement le temps nécessaire à l'accompagnement, sauf obligation légale contraire.
-              </p>
-            </div>
-          </div>
-
-          {/* 2 Grandes cartes */}
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* Carte 4 - Vos droits */}
-            <div className="bg-[#020813] rounded-2xl p-10 border border-[#3D5E73]/50 hover:border-primary-red/40 transition-all duration-300">
-              <h3 className="text-2xl font-bold text-foreground mb-8">
-                Vos droits à tout moment
-              </h3>
-              <div className="space-y-6">
-                <div className="flex items-start gap-3">
-                  <span className="text-primary-red font-bold mt-1">•</span>
-                  <p className="text-muted-foreground leading-relaxed">
-                    <span className="text-foreground font-medium">Accéder à vos données :</span> écrivez-nous via le formulaire de contact en précisant l'email utilisé.
-                  </p>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-10 xl:gap-14 items-stretch">
+            {/* Bloc RGPD compact */}
+            <div className="space-y-10 h-full flex flex-col">
+              <div className="text-center lg:text-left max-w-3xl">
+                <div className="flex items-center justify-center lg:justify-start gap-2 mb-4">
+                  <AlertTriangle className="h-4 w-4 text-primary-red" />
+                  <span className="text-primary-red font-semibold tracking-[0.35em] text-xs uppercase">Transparence RGPD</span>
                 </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-primary-red font-bold mt-1">•</span>
-                  <p className="text-muted-foreground leading-relaxed">
-                    <span className="text-foreground font-medium">Rectifier ou supprimer :</span> nous traitons les demandes au plus vite, avec priorité donnée aux situations urgentes.
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-primary-red font-bold mt-1">•</span>
-                  <p className="text-muted-foreground leading-relaxed">
-                    <span className="text-foreground font-medium">Obtenir une copie :</span> les exports sont fournis dans un format ouvert (.json) signé pour garantir leur intégrité.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Carte 5 - API Sécurisée */}
-            <div className="bg-[#020813] rounded-2xl p-10 border border-primary-red/30 hover:border-primary-red/50 transition-all duration-300">
-              <h3 className="text-2xl font-bold text-foreground mb-6">
-                Notre API sécurisée
-              </h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Les formulaires utilisent une fonction Supabase Edge. Chaque témoignage est haché, consigné puis isolé dans un coffre-fort numérique, ce qui permet de tracer les dépôts sans exposer l'identité des témoins.
-              </p>
-              <div className="bg-[#395066]/50 rounded-lg p-4 border border-[#3D5E73]/50">
-                <p className="text-sm text-muted-foreground font-mono">
-                  Journalisation: hash SHA-256 + reçu public · Transmission: HTTPS Supabase.
+                <h2 className="text-4xl md:text-5xl font-bold text-[#0A0F1C] tracking-tight">Vos données, vos droits</h2>
+                <div className="h-1 w-16 bg-red-600 rounded-full mt-4 mb-6 mx-auto lg:mx-0" />
+                <p className="text-lg text-slate-700 leading-relaxed">
+                  Nous respectons le Règlement Général sur la Protection des Données (RGPD) et détaillons clairement la finalité de chaque collecte.
                 </p>
               </div>
+
+              <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 items-stretch">
+                <div className="h-full flex flex-col bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-8 border border-white/10 shadow-xl backdrop-blur text-white">
+                  <ShieldCheck className="h-10 w-10 text-red-400 mb-6" />
+                  <h3 className="text-xl font-bold mb-3">Chiffrement de bout en bout</h3>
+                  <p className="text-white/80 leading-relaxed">
+                    Les données envoyées via nos formulaires transitent par HTTPS et sont stockées dans un espace chiffré au sein de Supabase.
+                  </p>
+                </div>
+                <div className="h-full flex flex-col bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-8 border border-white/10 shadow-xl backdrop-blur text-white">
+                  <FileText className="h-10 w-10 text-red-400 mb-6" />
+                  <h3 className="text-xl font-bold mb-3">Consentement explicite</h3>
+                  <p className="text-white/80 leading-relaxed">
+                    Nous recueillons uniquement les informations nécessaires à votre demande et vous pouvez retirer votre consentement à tout moment.
+                  </p>
+                </div>
+                <div className="h-full flex flex-col bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-8 border border-white/10 shadow-xl backdrop-blur text-white md:col-span-2 xl:col-span-1">
+                  <Lock className="h-10 w-10 text-red-400 mb-6" />
+                  <h3 className="text-xl font-bold mb-3">Conservation limitée</h3>
+                  <p className="text-white/80 leading-relaxed">
+                    Les messages sont conservés uniquement le temps nécessaire à l'accompagnement, sauf obligation légale contraire.
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid lg:grid-cols-2 gap-6 items-stretch">
+                <div className="h-full flex flex-col bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-8 border border-white/10 shadow-xl backdrop-blur text-white">
+                  <h3 className="text-2xl font-bold mb-6">Vos droits à tout moment</h3>
+                  <div className="space-y-5 text-white/85">
+                    <div className="flex items-start gap-3">
+                      <span className="text-red-400 font-bold mt-1">•</span>
+                      <p>
+                        <span className="text-white font-semibold">Accéder à vos données :</span> écrivez-nous via le formulaire de contact en précisant l'email utilisé.
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-red-400 font-bold mt-1">•</span>
+                      <p>
+                        <span className="text-white font-semibold">Rectifier ou supprimer :</span> nous traitons les demandes au plus vite, avec priorité donnée aux situations urgentes.
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-red-400 font-bold mt-1">•</span>
+                      <p>
+                        <span className="text-white font-semibold">Obtenir une copie :</span> les exports sont fournis dans un format ouvert (.json) signé pour garantir leur intégrité.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="h-full flex flex-col bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-8 border border-white/10 shadow-xl backdrop-blur text-white">
+                  <h3 className="text-2xl font-bold mb-4">Notre API sécurisée</h3>
+                  <p className="text-white/80 leading-relaxed mb-6">
+                    Les formulaires utilisent une fonction Supabase Edge. Chaque témoignage est haché, consigné puis isolé dans un coffre-fort numérique, ce qui permet de tracer les dépôts sans exposer l'identité des témoins.
+                  </p>
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/15">
+                    <p className="text-sm text-white/80 font-mono">
+                      Journalisation: hash SHA-256 + reçu public · Transmission: HTTPS Supabase.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Bloc Contact aligné */}
+            <div className="relative h-full">
+              <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,#FFFFFF0C,transparent_70%)]" />
+              <div className="relative z-10">
+                <ContactForm />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Elegant Section Divider */}
-      <div className="section-divider"></div>
-
-      {/* Contact Section */}
-      <section id="contact" className="relative py-section overflow-hidden pattern-dots">
-        {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-black to-background" />
-        
-        {/* Decorative Elements */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary-red/10 rounded-full blur-[100px] animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-red/5 rounded-full blur-[120px] animate-pulse" style={{
-        animationDelay: "1s"
-      }} />
-        
-        <div className="relative max-w-4xl mx-auto px-6 lg:px-8">
-          <ContactForm />
         </div>
       </section>
 
       {/* Footer Enrichi */}
-      <footer className="bg-gradient-to-br from-background via-black to-background py-section border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          {/* Main Footer Grid */}
-          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 mb-16">
-            {/* Brand Section */}
-            <div className="lg:col-span-2">
-              <div className="flex items-center space-x-3 mb-6 group">
-                <Scale className="h-8 w-8 text-primary-red transition-transform duration-300 group-hover:scale-110" />
-                <span className="text-2xl font-bold font-display">LemaClinic Truth</span>
+      <footer className="relative overflow-hidden bg-gradient-to-b from-[#213245] via-[#192637] to-[#0f1b29] text-white py-section border-t border-white/10">
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_18%_22%,#E02B2B1F,transparent_42%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_82%_26%,#3D5E731A,transparent_42%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,#FFFFFF0A,transparent_70%)]" />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-12">
+            <div className="flex items-center gap-3">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 border border-white/10 shadow-lg shadow-black/30">
+                <Scale className="h-6 w-6 text-[#E02B2B] transition-transform duration-300" />
               </div>
-              <p className="text-muted-foreground text-base leading-relaxed mb-8">
+              <div>
+                <div className="text-xs uppercase tracking-[0.26em] text-[#E02B2B] font-semibold">LemaClinic</div>
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl font-bold font-display tracking-tight">Truth</span>
+                  <div className="h-0.5 w-12 bg-gradient-to-r from-[#E02B2B] to-[#ff5454] rounded-full" />
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="h-px w-16 bg-white/15" />
+              <p className="text-sm text-slate-200/80">Vérité, justice & protection des patients</p>
+            </div>
+          </div>
+
+          {/* Main Footer Grid */}
+          <div className="grid lg:grid-cols-4 gap-10 lg:gap-12 mb-14 items-start">
+            {/* Brand Section */}
+            <div className="space-y-6">
+              <p className="text-slate-200/80 text-base leading-relaxed">
                 Un mouvement déterminé pour la vérité, la justice et la protection des patients face aux abus médicaux.
               </p>
-              
+
               {/* Security Badges */}
-              <div className="flex flex-wrap gap-3 mb-8">
-                <div className="glass-card px-4 py-2 rounded-lg border border-primary-red/20 flex items-center gap-2">
-                  <Shield className="h-4 w-4 text-primary-red" />
-                  <span className="text-xs font-medium">Données sécurisées</span>
+              <div className="flex flex-wrap gap-3">
+                <div className="rounded-xl px-4 py-2 border border-white/15 bg-white/5 backdrop-blur-xl shadow-lg shadow-black/30 flex items-center gap-2">
+                  <Shield className="h-4 w-4 text-[#E02B2B]" />
+                  <span className="text-xs font-medium text-white">Données sécurisées</span>
                 </div>
-                <div className="glass-card px-4 py-2 rounded-lg border border-primary-red/20 flex items-center gap-2">
-                  <Lock className="h-4 w-4 text-primary-red" />
-                  <span className="text-xs font-medium">SSL Crypté</span>
+                <div className="rounded-xl px-4 py-2 border border-white/15 bg-white/5 backdrop-blur-xl shadow-lg shadow-black/30 flex items-center gap-2">
+                  <Lock className="h-4 w-4 text-[#E02B2B]" />
+                  <span className="text-xs font-medium text-white">SSL Crypté</span>
                 </div>
-                <div className="glass-card px-4 py-2 rounded-lg border border-primary-red/20 flex items-center gap-2">
-                  <FileCheck className="h-4 w-4 text-primary-red" />
-                  <span className="text-xs font-medium">RGPD Conforme</span>
+                <div className="rounded-xl px-4 py-2 border border-white/15 bg-white/5 backdrop-blur-xl shadow-lg shadow-black/30 flex items-center gap-2">
+                  <FileCheck className="h-4 w-4 text-[#E02B2B]" />
+                  <span className="text-xs font-medium text-white">RGPD Conforme</span>
                 </div>
               </div>
-              
+
               {/* Social Media */}
-              <div className="flex items-center space-x-4">
-                <a href="#" className="text-muted-foreground hover:text-primary-red transition-all duration-300 hover:scale-110" aria-label="Facebook">
-                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <div className="flex items-center space-x-3">
+                <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 border border-white/10 text-slate-200/80 hover:text-white hover:bg-white/10 transition-all duration-200 hover:-translate-y-[1px]" aria-label="Facebook">
+                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                   </svg>
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-primary-red transition-all duration-300 hover:scale-110" aria-label="Twitter">
-                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 border border-white/10 text-slate-200/80 hover:text-white hover:bg-white/10 transition-all duration-200 hover:-translate-y-[1px]" aria-label="Twitter">
+                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.924 4.924 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
                   </svg>
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-primary-red transition-all duration-300 hover:scale-110" aria-label="LinkedIn">
-                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 border border-white/10 text-slate-200/80 hover:text-white hover:bg-white/10 transition-all duration-200 hover:-translate-y-[1px]" aria-label="LinkedIn">
+                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                   </svg>
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-primary-red transition-all duration-300 hover:scale-110" aria-label="Instagram">
-                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 border border-white/10 text-slate-200/80 hover:text-white hover:bg-white/10 transition-all duration-200 hover:-translate-y-[1px]" aria-label="Instagram">
+                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
                   </svg>
                 </a>
@@ -1192,43 +1205,46 @@ useEffect(() => {
 
             {/* Navigation */}
             <div>
-              <h3 className="text-xl font-bold mb-6">Navigation</h3>
-              <ul className="space-y-3">
-                <li><button onClick={() => scrollToSection("histoire")} className="text-muted-foreground hover:text-primary-red transition-all duration-300 text-base hover:translate-x-1 inline-block">Mon histoire</button></li>
-                <li><button onClick={() => scrollToSection("victimes")} className="text-muted-foreground hover:text-primary-red transition-all duration-300 text-base hover:translate-x-1 inline-block">Leurs méthodes</button></li>
-                <li><button onClick={() => scrollToSection("temoignages")} className="text-muted-foreground hover:text-primary-red transition-all duration-300 text-base hover:translate-x-1 inline-block">Témoignages</button></li>
-                <li><button onClick={() => scrollToSection("support")} className="text-muted-foreground hover:text-primary-red transition-all duration-300 text-base hover:translate-x-1 inline-block">Soutenir</button></li>
+              <h3 className="text-sm uppercase tracking-[0.16em] text-[#E02B2B] font-semibold mb-3">Navigation</h3>
+              <div className="h-0.5 w-12 bg-white/20 mb-5 rounded-full" />
+              <ul className="space-y-3 text-base text-slate-200/80">
+                <li><button onClick={() => scrollToSection("histoire")} className="inline-flex items-center gap-2 hover:text-white transition-all duration-200 hover:translate-x-1">Mon histoire</button></li>
+                <li><button onClick={() => scrollToSection("victimes")} className="inline-flex items-center gap-2 hover:text-white transition-all duration-200 hover:translate-x-1">Leurs méthodes</button></li>
+                <li><button onClick={() => scrollToSection("temoignages")} className="inline-flex items-center gap-2 hover:text-white transition-all duration-200 hover:translate-x-1">Témoignages</button></li>
+                <li><button onClick={() => scrollToSection("support")} className="inline-flex items-center gap-2 hover:text-white transition-all duration-200 hover:translate-x-1">Soutenir</button></li>
               </ul>
             </div>
 
             {/* Legal */}
             <div>
-              <h3 className="text-xl font-bold mb-6">Légal</h3>
-              <ul className="space-y-3">
-                <li><Link to="/mentions-legales" className="text-muted-foreground hover:text-primary-red transition-all duration-300 text-base hover:translate-x-1 inline-block">Mentions légales</Link></li>
-                <li><Link to="/politique-confidentialite" className="text-muted-foreground hover:text-primary-red transition-all duration-300 text-base hover:translate-x-1 inline-block">Confidentialité</Link></li>
-                <li><Link to="/conditions-utilisation" className="text-muted-foreground hover:text-primary-red transition-all duration-300 text-base hover:translate-x-1 inline-block">Conditions</Link></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary-red transition-all duration-300 text-base hover:translate-x-1 inline-block">Cookies</a></li>
+              <h3 className="text-sm uppercase tracking-[0.16em] text-[#E02B2B] font-semibold mb-3">Légal</h3>
+              <div className="h-0.5 w-12 bg-white/20 mb-5 rounded-full" />
+              <ul className="space-y-3 text-base text-slate-200/80">
+                <li><Link to="/mentions-legales" className="inline-flex items-center gap-2 hover:text-white transition-all duration-200 hover:translate-x-1">Mentions légales</Link></li>
+                <li><Link to="/politique-confidentialite" className="inline-flex items-center gap-2 hover:text-white transition-all duration-200 hover:translate-x-1">Confidentialité</Link></li>
+                <li><Link to="/conditions-utilisation" className="inline-flex items-center gap-2 hover:text-white transition-all duration-200 hover:translate-x-1">Conditions</Link></li>
+                <li><a href="#" className="inline-flex items-center gap-2 hover:text-white transition-all duration-200 hover:translate-x-1">Cookies</a></li>
               </ul>
             </div>
 
             {/* Newsletter */}
             <div>
-              <h3 className="text-xl font-bold mb-6">Newsletter</h3>
-              <p className="text-muted-foreground mb-4 text-sm leading-relaxed">Restez informé des dernières actualités.</p>
+              <h3 className="text-sm uppercase tracking-[0.16em] text-[#E02B2B] font-semibold mb-3">Newsletter</h3>
+              <div className="h-0.5 w-12 bg-white/20 mb-5 rounded-full" />
+              <p className="text-slate-200/80 mb-4 text-sm leading-relaxed">Restez informé des dernières actualités.</p>
               <form onSubmit={handleNewsletterSubmit} className="space-y-3">
-                <input 
-                  type="email" 
-                  placeholder="Votre email" 
+                <input
+                  type="email"
+                  placeholder="Votre email"
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
                   disabled={isSubscribing}
-                  className="w-full px-4 py-3 bg-black/40 border border-white/10 rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary-red transition-colors disabled:opacity-50 disabled:cursor-not-allowed" 
+                  className="w-full px-4 py-3 bg-white/8 border border-white/15 rounded-lg text-white placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-[#E02B2B]/40 focus:border-[#E02B2B] backdrop-blur-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 />
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   disabled={isSubscribing}
-                  className="w-full bg-gradient-to-r from-primary-red to-red-600 hover:shadow-[0_0_20px_rgba(220,38,38,0.4)] transition-all duration-300"
+                  className="w-full bg-gradient-to-r from-[#E02B2B] to-[#b51f1f] text-white rounded-full shadow-lg shadow-[#E02B2B]/30 hover:shadow-[#E02B2B]/50 hover:scale-[1.02] transition-transform duration-300"
                 >
                   {isSubscribing ? (
                     <>
@@ -1242,65 +1258,83 @@ useEffect(() => {
                   )}
                 </Button>
               </form>
-              <p className="text-xs text-muted-foreground mt-3">Données protégées RGPD</p>
+              <p className="text-xs text-slate-300 mt-3">Données protégées RGPD</p>
             </div>
           </div>
 
           {/* Bottom Bar */}
-          <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-muted-foreground text-sm">&copy; 2024 LemaClinic Truth. Tous droits réservés.</p>
-            <div className="flex items-center gap-2 text-muted-foreground text-sm">
-              <Heart className="h-4 w-4 text-primary-red" />
+          <div className="relative mt-10 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="absolute -top-0.5 left-1/2 -translate-x-1/2 h-1 w-16 bg-gradient-to-r from-[#E02B2B] via-[#ff5b5b] to-[#E02B2B] rounded-full blur-[2px]" />
+            <p className="text-slate-300 text-sm">&copy; 2024 LemaClinic Truth. Tous droits réservés.</p>
+            <div className="flex items-center gap-2 text-slate-300 text-sm">
+              <Heart className="h-4 w-4 text-[#E02B2B]" />
               <span>Fait avec passion pour la vérité et la justice</span>
             </div>
           </div>
         </div>
       </footer>
+      <Dialog
+        open={Boolean(activeTimelineStep)}
+        onOpenChange={(open) => {
+          if (!open) {
+            setActiveTimelineStep(null);
+          }
+        }}
+      >
+        <DialogContent className="relative max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-b from-[#213245] to-[#0f1b29] border border-white/10 text-white shadow-2xl shadow-black/40 backdrop-blur-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-offset-white/10">
+          <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,rgba(62,104,136,0.28),transparent_45%)]" />
+          <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_bottom_left,rgba(224,43,43,0.18),transparent_55%)]" />
 
-      <Dialog open={!!activeTimelineStep} onOpenChange={(open) => setActiveTimelineStep(open ? activeTimelineStep : null)}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-[hsl(var(--shadow-ink)/0.92)] border border-primary-red/40 text-foreground shadow-ink-elevated ring-overlay-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-4">
-          <DialogHeader className="relative pb-6">
-            <div className="inline-flex items-center gap-2 bg-primary-red/20 text-primary-red px-4 py-2 rounded-full text-sm font-semibold tracking-[0.3em] uppercase">
-              <span className="h-2 w-2 rounded-full bg-primary-red" />
-              <span>{activeTimelineStep?.stepNumber}</span>
-            </div>
-            <DialogTitle className="text-4xl font-black mt-4 text-white">{activeTimelineStep?.modalTitle}</DialogTitle>
-            <button onClick={() => setActiveTimelineStep(null)} className="absolute right-0 top-0 p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Fermer la modale">
-              <X className="h-5 w-5" />
-            </button>
-          </DialogHeader>
-
-          {activeTimelineStep && (
-            <div className="space-y-8">
-              <p className="text-lg text-white/80 leading-relaxed">{activeTimelineStep.modalDescription}</p>
-
-              <div className="bg-black/40 border border-white/10 rounded-2xl p-6">
-                <h4 className="text-2xl font-bold text-white mb-4">Détails de l’étape</h4>
-                <ul className="space-y-3">
-                  {activeTimelineStep.details.map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-white/80">
-                      <span className="mt-1 h-2 w-2 rounded-full bg-primary-red" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+          <div className="relative z-10 space-y-8">
+            <DialogHeader className="relative pb-6">
+              <div className="inline-flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-full text-sm font-semibold tracking-[0.3em] uppercase border border-white/20">
+                <span className="h-2 w-2 rounded-full bg-primary-red" />
+                <span>{activeTimelineStep?.stepNumber}</span>
               </div>
+              <DialogTitle className="text-4xl font-black mt-4 text-white">{activeTimelineStep?.modalTitle}</DialogTitle>
+              <button
+                onClick={() => {
+                  setActiveTimelineStep(null);
+                }}
+                className="absolute right-0 top-0 p-2 rounded-full hover:bg-white/10 transition-colors"
+                aria-label="Fermer la modale"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </DialogHeader>
 
-              <div className="bg-black/40 border border-white/10 rounded-2xl p-6">
-                <h4 className="text-2xl font-bold text-white mb-4">Sources et preuves</h4>
-                <div className="space-y-4">
-                  {activeTimelineStep.sources.map((source) => (
-                    <div key={source.label} className="p-4 rounded-xl border border-white/10 bg-black/60">
-                      <p className="font-semibold text-white">{source.label}</p>
-                      {source.description && (
-                        <p className="text-sm text-white/70 mt-1">{source.description}</p>
-                      )}
-                    </div>
-                  ))}
+            {activeTimelineStep && (
+              <div className="space-y-8">
+                <p className="text-lg text-white/80 leading-relaxed">{activeTimelineStep.modalDescription}</p>
+
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow-inner shadow-black/30 backdrop-blur">
+                  <h4 className="text-2xl font-bold text-white mb-4">Détails de l’étape</h4>
+                  <ul className="space-y-3">
+                    {activeTimelineStep.details.map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-white/80">
+                        <span className="mt-1 h-2 w-2 rounded-full bg-primary-red" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow-inner shadow-black/30 backdrop-blur">
+                  <h4 className="text-2xl font-bold text-white mb-4">Sources et preuves</h4>
+                  <div className="space-y-4">
+                    {activeTimelineStep.sources.map((source) => (
+                      <div key={source.label} className="p-4 rounded-xl border border-white/20 bg-white/5 text-white">
+                        <p className="font-semibold text-white">{source.label}</p>
+                        {source.description && (
+                          <p className="text-sm text-white/70 mt-1">{source.description}</p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </DialogContent>
       </Dialog>
 
