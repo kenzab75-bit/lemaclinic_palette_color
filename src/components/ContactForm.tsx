@@ -91,21 +91,21 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-8 bg-card rounded-lg border border-border shadow-lg">
+    <div className="w-full max-w-2xl mx-auto p-8 lg:p-10 bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl border border-white/10 shadow-xl backdrop-blur text-white">
       <div className="text-center mb-8">
-        <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-          <Mail className="w-8 h-8 text-primary" />
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full mb-4 border border-white/15 shadow-lg">
+          <Mail className="w-8 h-8 text-white" />
         </div>
-        <h2 className="text-3xl font-bold text-foreground mb-2">Contactez-nous</h2>
-        <p className="text-muted-foreground">
+        <h2 className="text-3xl font-bold text-white mb-2">Contactez-nous</h2>
+        <p className="text-white/80">
           Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais
         </p>
-        <div className="mt-4 text-sm text-muted-foreground flex flex-col items-center gap-2 text-center">
+        <div className="mt-4 text-sm text-white/75 flex flex-col items-center gap-2 text-center">
           <p className="flex items-center gap-2">
-            <ShieldCheck className="h-4 w-4 text-primary" />
+            <ShieldCheck className="h-4 w-4 text-red-500" />
             Vos messages sont priorisés selon l'urgence médicale ou juridique.
           </p>
-          <p className="text-xs uppercase tracking-widest">Équipe bénévole santé + juridique</p>
+          <p className="text-xs uppercase tracking-widest text-white/70">Équipe bénévole santé + juridique</p>
         </div>
       </div>
 
@@ -116,12 +116,12 @@ export default function ContactForm() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-foreground font-semibold">Nom complet *</FormLabel>
+                <FormLabel className="text-white font-semibold">Nom complet *</FormLabel>
                 <FormControl>
-                  <Input 
-                    placeholder="Jean Dupont" 
+                  <Input
+                    placeholder="Jean Dupont"
                     {...field}
-                    className="transition-all duration-200 focus:scale-[1.02]"
+                    className="transition-all duration-200 focus:scale-[1.02] bg-white/5 border border-white/15 text-white placeholder:text-white/60 focus:border-red-500 focus:ring-2 focus:ring-red-500/30"
                   />
                 </FormControl>
                 <FormMessage />
@@ -134,13 +134,13 @@ export default function ContactForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-foreground font-semibold">Adresse email *</FormLabel>
+                <FormLabel className="text-white font-semibold">Adresse email *</FormLabel>
                 <FormControl>
-                  <Input 
+                  <Input
                     type="email"
-                    placeholder="jean.dupont@example.com" 
+                    placeholder="jean.dupont@example.com"
                     {...field}
-                    className="transition-all duration-200 focus:scale-[1.02]"
+                    className="transition-all duration-200 focus:scale-[1.02] bg-white/5 border border-white/15 text-white placeholder:text-white/60 focus:border-red-500 focus:ring-2 focus:ring-red-500/30"
                   />
                 </FormControl>
                 <FormMessage />
@@ -153,32 +153,32 @@ export default function ContactForm() {
             name="channel"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-foreground font-semibold">Canal de réponse privilégié</FormLabel>
+                <FormLabel className="text-white font-semibold">Canal de réponse privilégié</FormLabel>
                 <FormControl>
                   <RadioGroup className="grid gap-3 md:grid-cols-3" value={field.value} onValueChange={field.onChange}>
-                    <FormItem className="border rounded-xl p-4">
+                    <FormItem className="rounded-2xl border border-white/12 bg-gradient-to-b from-[#334E60]/95 via-[#2B4255]/95 to-[#1f2f3d]/95 p-4 backdrop-blur-[1px] shadow-lg shadow-black/30 transition-all duration-200 ease-out data-[state=checked]:border-[#E02B2B]/80 data-[state=checked]:ring-1 data-[state=checked]:ring-[#E02B2B]/35">
                       <FormControl>
-                        <RadioGroupItem value="email" />
+                        <RadioGroupItem value="email" className="border-white/60 data-[state=checked]:border-red-500 data-[state=checked]:bg-red-500" />
                       </FormControl>
-                    <FormLabel className="font-semibold">Email</FormLabel>
-                    <p className="text-xs text-muted-foreground">Réponse directe via messagerie sécurisée</p>
-                  </FormItem>
-                  <FormItem className="border rounded-xl p-4">
-                    <FormControl>
-                      <RadioGroupItem value="whatsapp" />
-                    </FormControl>
-                    <FormLabel className="font-semibold">WhatsApp</FormLabel>
-                    <p className="text-xs text-muted-foreground">Nous convenons d'un relais sécurisé après votre email</p>
-                  </FormItem>
-                  <FormItem className="border rounded-xl p-4">
-                    <FormControl>
-                      <RadioGroupItem value="signal" />
-                    </FormControl>
-                    <FormLabel className="font-semibold">Signal</FormLabel>
-                    <p className="text-xs text-muted-foreground">Lien confidentiel transmis sur demande</p>
-                  </FormItem>
-                </RadioGroup>
-              </FormControl>
+                      <FormLabel className="font-semibold text-[#F5F6F7]">Email</FormLabel>
+                      <p className="text-xs text-[#D8E4EF]/90">Réponse directe via messagerie sécurisée</p>
+                    </FormItem>
+                    <FormItem className="rounded-2xl border border-white/12 bg-gradient-to-b from-[#334E60]/95 via-[#2B4255]/95 to-[#1f2f3d]/95 p-4 backdrop-blur-[1px] shadow-lg shadow-black/30 transition-all duration-200 ease-out data-[state=checked]:border-[#E02B2B]/80 data-[state=checked]:ring-1 data-[state=checked]:ring-[#E02B2B]/35">
+                      <FormControl>
+                        <RadioGroupItem value="whatsapp" className="border-white/60 data-[state=checked]:border-red-500 data-[state=checked]:bg-red-500" />
+                      </FormControl>
+                      <FormLabel className="font-semibold text-[#F5F6F7]">WhatsApp</FormLabel>
+                      <p className="text-xs text-[#D8E4EF]/90">Nous convenons d'un relais sécurisé après votre email</p>
+                    </FormItem>
+                    <FormItem className="rounded-2xl border border-white/12 bg-gradient-to-b from-[#334E60]/95 via-[#2B4255]/95 to-[#1f2f3d]/95 p-4 backdrop-blur-[1px] shadow-lg shadow-black/30 transition-all duration-200 ease-out data-[state=checked]:border-[#E02B2B]/80 data-[state=checked]:ring-1 data-[state=checked]:ring-[#E02B2B]/35">
+                      <FormControl>
+                        <RadioGroupItem value="signal" className="border-white/60 data-[state=checked]:border-red-500 data-[state=checked]:bg-red-500" />
+                      </FormControl>
+                      <FormLabel className="font-semibold text-[#F5F6F7]">Signal</FormLabel>
+                      <p className="text-xs text-[#D8E4EF]/90">Lien confidentiel transmis sur demande</p>
+                    </FormItem>
+                  </RadioGroup>
+                </FormControl>
                 <FormMessage />
               </FormItem>
             )}
@@ -189,11 +189,11 @@ export default function ContactForm() {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-foreground font-semibold">Votre message *</FormLabel>
+                <FormLabel className="text-white font-semibold">Votre message *</FormLabel>
                 <FormControl>
-                  <Textarea 
+                  <Textarea
                     placeholder="Décrivez votre situation ou posez votre question..."
-                    className="min-h-[150px] resize-none transition-all duration-200 focus:scale-[1.02]"
+                    className="min-h-[150px] resize-none transition-all duration-200 focus:scale-[1.02] bg-white/5 border border-white/15 text-white placeholder:text-white/60 focus:border-red-500 focus:ring-2 focus:ring-red-500/30"
                     {...field}
                   />
                 </FormControl>
@@ -206,15 +206,16 @@ export default function ContactForm() {
             control={form.control}
             name="consent"
             render={({ field }) => (
-              <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-border p-4 bg-muted/30">
+              <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-xl border border-white/15 p-4 bg-white/5">
                 <FormControl>
                   <Checkbox
                     checked={field.value}
                     onCheckedChange={field.onChange}
+                    className="border-white/50 data-[state=checked]:bg-red-600 data-[state=checked]:border-red-600"
                   />
                 </FormControl>
                 <div className="space-y-1 leading-none">
-                  <FormLabel className="text-sm font-normal text-foreground cursor-pointer">
+                  <FormLabel className="text-sm font-normal text-white cursor-pointer">
                     J'accepte que mes données soient traitées conformément à la{" "}
                     <a href="/politique-confidentialite" className="text-primary hover:underline font-semibold">
                       politique de confidentialité
@@ -229,19 +230,19 @@ export default function ContactForm() {
 
           <Button
             type="submit"
-            className="w-full h-12 text-base font-semibold group"
+            className="w-full h-12 text-base font-semibold group bg-gradient-to-r from-red-600 to-red-700 text-white rounded-full shadow-lg shadow-red-700/30 hover:shadow-red-700/50 hover:scale-[1.02]"
             disabled={form.formState.isSubmitting}
           >
             <Send className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             {form.formState.isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
           </Button>
 
-          <div className="rounded-xl border border-border p-4 flex items-center gap-3 text-sm text-muted-foreground">
-            <PhoneCall className="h-5 w-5 text-primary" />
+          <div className="rounded-2xl border border-white/15 p-4 flex items-center gap-3 text-sm text-white/85 bg-white/5">
+            <PhoneCall className="h-5 w-5 text-red-500" />
             <p>Besoin d'une ligne dédiée ? Indiquez-le dans votre message et nous vous communiquerons le numéro sécurisé.</p>
           </div>
 
-          <p className="text-sm text-muted-foreground text-center">
+          <p className="text-sm text-white/70 text-center">
             * Champs obligatoires
           </p>
         </form>
