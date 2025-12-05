@@ -99,12 +99,12 @@ const MegaMenuSInformer = ({ scrollToSection }: MegaMenuSInformerProps) => {
           <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 p-6 lg:p-10">
             {/* Carte principale gauche */}
             <div className="lg:col-span-5">
-              <div className="relative overflow-hidden rounded-2xl border border-white/30 bg-gradient-to-br from-[#F04444] to-[#000000] text-white shadow-xl shadow-black/25">
-                <div className="absolute inset-0 opacity-60 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.08),transparent_45%),radial-gradient(circle_at_80%_80%,rgba(0,0,0,0.35),transparent_45%)]" />
-                <div className="absolute right-4 top-6 h-24 w-24 rounded-xl bg-gradient-to-br from-red-700/70 to-red-900/80 blur-3xl" />
+              <div className="relative overflow-hidden rounded-2xl border border-white/15 bg-gradient-to-b from-[#213245] to-[#0f1b29] text-white shadow-xl shadow-black/30 backdrop-blur-xl">
+                <div className="absolute inset-0 opacity-70 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.12),transparent_42%),radial-gradient(circle_at_80%_80%,rgba(224,43,43,0.18),transparent_48%)]" />
+                <div className="absolute right-4 top-6 h-24 w-24 rounded-xl bg-gradient-to-br from-red-600/40 to-red-900/45 blur-3xl" />
                 <div className="relative p-6 lg:p-8 flex flex-col gap-6">
                   <div className="flex items-center gap-3">
-                    <div className="h-11 w-11 rounded-xl bg-white/10 border border-white/30 flex items-center justify-center shadow-lg shadow-red-900/40">
+                    <div className="h-11 w-11 rounded-xl bg-white/10 border border-white/25 flex items-center justify-center shadow-lg shadow-red-900/35">
                       <AlertTriangle className="h-5 w-5 text-red-100" />
                     </div>
                     <div>
@@ -117,7 +117,7 @@ const MegaMenuSInformer = ({ scrollToSection }: MegaMenuSInformerProps) => {
                   </p>
                   <div className="flex flex-wrap items-center gap-3">
                     <button
-                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white text-red-900 font-semibold text-sm shadow-lg shadow-black/20 transition-transform duration-200 hover:-translate-y-0.5"
+                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-red-600 to-red-700 text-white font-semibold text-sm shadow-lg shadow-red-900/30 transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-red-800/45"
                     >
                       Télécharger le guide
                       <ArrowRight className="h-4 w-4" />
@@ -127,12 +127,13 @@ const MegaMenuSInformer = ({ scrollToSection }: MegaMenuSInformerProps) => {
                       PDF sécurisé, 15 pages
                     </div>
                   </div>
-                  <div className="relative overflow-hidden rounded-xl border border-white/20 bg-gradient-to-br from-[#5b0f15]/70 via-[#3a0b12]/80 to-[#0f0609]/80 min-h-[120px] flex items-center justify-between px-5 py-4">
-                    <div className="space-y-1 text-sm text-red-50/90">
+                  <div className="relative overflow-hidden rounded-xl border border-white/15 bg-gradient-to-b from-[#213245]/95 to-[#0f1b29]/95 min-h-[120px] flex items-center justify-between px-5 py-4 shadow-lg shadow-black/25">
+                    <div className="absolute inset-0 opacity-70 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.12),transparent_55%),radial-gradient(circle_at_75%_30%,rgba(224,43,43,0.18),transparent_60%)]" />
+                    <div className="relative space-y-1 text-sm text-red-50/90">
                       <p className="font-semibold text-red-100">Alerte Istanbul</p>
                       <p>Comprendre les tactiques commerciales et juridiques.</p>
                     </div>
-                    <div className="h-16 w-16 rounded-lg bg-white/15 border border-white/20 flex items-center justify-center">
+                    <div className="relative h-16 w-16 rounded-lg bg-white/12 border border-white/20 flex items-center justify-center shadow-inner shadow-black/20">
                       <AlertTriangle className="h-7 w-7 text-red-100" />
                     </div>
                   </div>
