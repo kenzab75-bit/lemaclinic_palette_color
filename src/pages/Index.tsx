@@ -1045,9 +1045,9 @@ useEffect(() => {
         <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,#3D5E73/04,transparent_55%)]" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-10 xl:gap-14 items-start">
+          <div className="grid lg:grid-cols-2 gap-10 xl:gap-14 items-stretch">
             {/* Bloc RGPD compact */}
-            <div className="space-y-10">
+            <div className="space-y-10 h-full flex flex-col">
               <div className="text-center lg:text-left max-w-3xl">
                 <div className="flex items-center justify-center lg:justify-start gap-2 mb-4">
                   <AlertTriangle className="h-4 w-4 text-primary-red" />
