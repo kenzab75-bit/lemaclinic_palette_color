@@ -491,22 +491,16 @@ useEffect(() => {
               </div>
 
               <div className="relative">
-                <div className="absolute left-0 top-0 inline-flex items-center gap-3 text-xs uppercase tracking-[0.4em] text-[#E02B2B] font-semibold">
-                  <span className="absolute -left-10 -top-6 w-24 h-24 rounded-full bg-[#E02B2B]/18 blur-3xl" aria-hidden />
-                  <div className="relative inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/8 px-4 py-2 backdrop-blur">
-                    <span className="pointer-events-none absolute inset-0 rounded-full opacity-40 mix-blend-screen bg-[url('/grain.png')]" aria-hidden />
-                    <Scale className="relative h-4 w-4 text-[#E02B2B]" aria-hidden="true" />
-                    <span className="relative font-semibold text-white">LemaClinic Truth</span>
-                  </div>
-                </div>
-
-                <div className="pt-16 md:pt-20">
-                  <div className="inline-flex items-center gap-3 rounded-full border border-[#E02B2B]/35 bg-gradient-to-r from-[#E02B2B]/18 via-[#E02B2B]/12 to-[#E02B2B]/18 px-5 py-2 text-sm text-white/90 backdrop-blur">
-                    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#E02B2B]/25 text-red-100">
-                      <AlertTriangle className="h-3.5 w-3.5 animate-pulse" aria-hidden="true" />
+                <div className="pt-10 md:pt-14">
+                  <div className="relative inline-flex items-center gap-4 rounded-full border border-[#E02B2B]/55 bg-gradient-to-r from-[#E02B2B] via-[#c22222] to-[#901717] px-6 py-3 text-base text-white shadow-lg shadow-[#E02B2B]/30 backdrop-blur-md">
+                    <span className="pointer-events-none absolute inset-0 rounded-full bg-[#E02B2B]/35 blur-xl opacity-70" aria-hidden />
+                    <div className="relative flex h-9 w-9 items-center justify-center rounded-full bg-white/12 text-white ring-1 ring-[#E02B2B]/40 shadow-inner shadow-[#E02B2B]/20">
+                      <AlertTriangle className="h-4 w-4 animate-pulse" aria-hidden="true" />
                     </div>
-                    <span className="font-semibold tracking-[0.25em] text-sm text-[#FFD4D4]">ALERTE</span>
-                    <span className="text-white/80">Révélations documentées sur les pratiques de la Lema Dental Clinic à Istanbul.</span>
+                    <div className="relative flex flex-col sm:flex-row sm:items-center sm:gap-3 text-left">
+                      <span className="text-sm font-semibold tracking-[0.3em] text-white/90 sm:text-base">ALERTE</span>
+                      <span className="text-white/90 leading-snug">Révélations documentées sur les pratiques de la Lema Dental Clinic à Istanbul.</span>
+                    </div>
                   </div>
 
                   <div className="mt-8 text-left">
