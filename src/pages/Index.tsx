@@ -468,7 +468,7 @@ useEffect(() => {
 
           {/* Hero content */}
           <div className="relative z-20">
-            <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 pt-32 md:pt-40 pb-24">
+            <div className="relative z-10 max-w-6xl mx-auto px-8 lg:px-12 pt-32 md:pt-40 pb-24">
               <div className="absolute right-6 top-6 flex items-center gap-3 rounded-full border border-white/10 bg-black/40 px-3 py-1.5 backdrop-blur-lg shadow-ink-soft">
                 <span className="text-xs uppercase tracking-[0.3em] text-white/70">Vidéo</span>
                 <button
@@ -491,27 +491,29 @@ useEffect(() => {
               </div>
 
               <div className="relative">
-                <div className="absolute left-0 top-0 inline-flex items-center gap-3 text-xs uppercase tracking-[0.4em] text-white/70">
-                  <span className="absolute -left-10 -top-6 w-24 h-24 rounded-full bg-red-500/20 blur-3xl" aria-hidden />
-                  <div className="relative inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-4 py-2 backdrop-blur">
-                    <span className="pointer-events-none absolute inset-0 rounded-full opacity-30 mix-blend-screen bg-[url('/grain.png')]" aria-hidden />
-                    <Scale className="relative h-4 w-4 text-primary-red" aria-hidden="true" />
-                    <span className="relative font-semibold">LemaClinic Truth</span>
+                <div className="absolute left-0 top-0 inline-flex items-center gap-3 text-xs uppercase tracking-[0.4em] text-[#E02B2B] font-semibold">
+                  <span className="absolute -left-10 -top-6 w-24 h-24 rounded-full bg-[#E02B2B]/18 blur-3xl" aria-hidden />
+                  <div className="relative inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/8 px-4 py-2 backdrop-blur">
+                    <span className="pointer-events-none absolute inset-0 rounded-full opacity-40 mix-blend-screen bg-[url('/grain.png')]" aria-hidden />
+                    <Scale className="relative h-4 w-4 text-[#E02B2B]" aria-hidden="true" />
+                    <span className="relative font-semibold text-white">LemaClinic Truth</span>
                   </div>
                 </div>
 
                 <div className="pt-16 md:pt-20">
-                  <div className="inline-flex items-center gap-3 rounded-full border border-red-500/30 bg-red-500/15 px-5 py-2 text-sm text-white/90 backdrop-blur">
-                    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-red-500/20 text-red-400">
+                  <div className="inline-flex items-center gap-3 rounded-full border border-[#E02B2B]/35 bg-gradient-to-r from-[#E02B2B]/18 via-[#E02B2B]/12 to-[#E02B2B]/18 px-5 py-2 text-sm text-white/90 backdrop-blur">
+                    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#E02B2B]/25 text-red-100">
                       <AlertTriangle className="h-3.5 w-3.5 animate-pulse" aria-hidden="true" />
                     </div>
-                    <span className="font-semibold tracking-wide text-red-200/90">ALERTE</span>
+                    <span className="font-semibold tracking-[0.25em] text-sm text-[#FFD4D4]">ALERTE</span>
                     <span className="text-white/80">Révélations documentées sur les pratiques de la Lema Dental Clinic à Istanbul.</span>
                   </div>
 
                   <div className="mt-8 text-left">
-                    <div className="max-w-3xl rounded-3xl border border-white/10 bg-black/35 p-8 backdrop-blur-xl shadow-ink-elevated">
-                      <div className="space-y-6">
+                    <div className="relative max-w-3xl rounded-3xl border border-white/10 bg-gradient-to-b from-[#213245]/92 to-[#0f1b29]/96 p-8 md:p-10 backdrop-blur-xl shadow-ink-elevated overflow-hidden">
+                      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(224,43,43,0.08),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(61,94,115,0.12),transparent_45%)]" aria-hidden />
+                      <div className="pointer-events-none absolute inset-x-6 top-10 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" aria-hidden />
+                      <div className="space-y-6 relative z-10">
                         <div className="space-y-3">
                           <h1 className="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight font-display text-white drop-shadow-ink">LemaClinic Truth</h1>
                           <p className="text-xl sm:text-2xl text-red-300/90">La vérité éclaire toujours.</p>
@@ -522,7 +524,7 @@ useEffect(() => {
                         <div className="flex flex-wrap items-center gap-4">
                           <Button
                             onClick={() => scrollToSection("histoire")}
-                            className="group rounded-full px-8 py-3 text-base font-semibold border border-[rgba(224,43,43,0.45)] text-[#E02B2B] bg-transparent shadow-none hover:bg-[rgba(224,43,43,0.08)] hover:shadow-[0_8px_24px_rgba(224,43,43,0.25)] hover:-translate-y-0.5 transition-all"
+                            className="group rounded-full px-8 py-3 text-base font-semibold text-white bg-gradient-to-r from-[#E02B2B] to-[#b51f1f] border border-[#E02B2B]/60 shadow-lg shadow-[#E02B2B]/30 hover:shadow-[#E02B2B]/50 hover:-translate-y-0.5 transition-all"
                           >
                             <span className="flex items-center gap-2">
                               Découvrir la vérité
@@ -532,7 +534,7 @@ useEffect(() => {
                           <Button
                             variant="ghost"
                             onClick={() => scrollToSection("contact")}
-                            className="rounded-full px-8 py-3 text-base font-medium border border-white/25 bg-white/5 text-white/90 hover:text-white hover:bg-white/10 hover:border-white/40 backdrop-blur-sm transition-all"
+                            className="rounded-full px-8 py-3 text-base font-medium border border-white/20 bg-white/10 text-white/90 hover:text-white hover:bg-white/15 hover:border-white/40 backdrop-blur-md transition-all shadow-lg shadow-black/20"
                           >
                             Soutenir les victimes
                           </Button>
