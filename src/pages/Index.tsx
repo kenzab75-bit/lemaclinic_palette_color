@@ -1045,7 +1045,7 @@ useEffect(() => {
         <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,#3D5E73/04,transparent_55%)]" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 xl:gap-16 items-start">
+          <div className="grid lg:grid-cols-2 gap-10 xl:gap-14 items-start">
             {/* Bloc RGPD compact */}
             <div className="space-y-10">
               <div className="text-center lg:text-left max-w-3xl">
@@ -1060,22 +1060,22 @@ useEffect(() => {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-                <div className="bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-8 border border-white/10 shadow-xl backdrop-blur text-white">
+              <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 items-stretch">
+                <div className="h-full flex flex-col bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-8 border border-white/10 shadow-xl backdrop-blur text-white">
                   <ShieldCheck className="h-10 w-10 text-red-400 mb-6" />
                   <h3 className="text-xl font-bold mb-3">Chiffrement de bout en bout</h3>
                   <p className="text-white/80 leading-relaxed">
                     Les données envoyées via nos formulaires transitent par HTTPS et sont stockées dans un espace chiffré au sein de Supabase.
                   </p>
                 </div>
-                <div className="bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-8 border border-white/10 shadow-xl backdrop-blur text-white">
+                <div className="h-full flex flex-col bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-8 border border-white/10 shadow-xl backdrop-blur text-white">
                   <FileText className="h-10 w-10 text-red-400 mb-6" />
                   <h3 className="text-xl font-bold mb-3">Consentement explicite</h3>
                   <p className="text-white/80 leading-relaxed">
                     Nous recueillons uniquement les informations nécessaires à votre demande et vous pouvez retirer votre consentement à tout moment.
                   </p>
                 </div>
-                <div className="bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-8 border border-white/10 shadow-xl backdrop-blur text-white md:col-span-2 xl:col-span-1">
+                <div className="h-full flex flex-col bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-8 border border-white/10 shadow-xl backdrop-blur text-white md:col-span-2 xl:col-span-1">
                   <Lock className="h-10 w-10 text-red-400 mb-6" />
                   <h3 className="text-xl font-bold mb-3">Conservation limitée</h3>
                   <p className="text-white/80 leading-relaxed">
@@ -1084,8 +1084,8 @@ useEffect(() => {
                 </div>
               </div>
 
-              <div className="grid lg:grid-cols-2 gap-6">
-                <div className="bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-8 border border-white/10 shadow-xl backdrop-blur text-white">
+              <div className="grid lg:grid-cols-2 gap-6 items-stretch">
+                <div className="h-full flex flex-col bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-8 border border-white/10 shadow-xl backdrop-blur text-white">
                   <h3 className="text-2xl font-bold mb-6">Vos droits à tout moment</h3>
                   <div className="space-y-5 text-white/85">
                     <div className="flex items-start gap-3">
@@ -1109,7 +1109,7 @@ useEffect(() => {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-8 border border-white/10 shadow-xl backdrop-blur text-white">
+                <div className="h-full flex flex-col bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl p-8 border border-white/10 shadow-xl backdrop-blur text-white">
                   <h3 className="text-2xl font-bold mb-4">Notre API sécurisée</h3>
                   <p className="text-white/80 leading-relaxed mb-6">
                     Les formulaires utilisent une fonction Supabase Edge. Chaque témoignage est haché, consigné puis isolé dans un coffre-fort numérique, ce qui permet de tracer les dépôts sans exposer l'identité des témoins.
@@ -1124,7 +1124,7 @@ useEffect(() => {
             </div>
 
             {/* Bloc Contact aligné */}
-            <div className="relative">
+            <div className="relative h-full">
               <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,#FFFFFF0C,transparent_70%)]" />
               <div className="relative z-10">
                 <ContactForm />

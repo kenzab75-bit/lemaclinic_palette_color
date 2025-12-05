@@ -88,7 +88,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-8 lg:p-10 bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl border border-white/10 shadow-xl backdrop-blur text-white">
+    <div className="w-full h-full p-8 lg:p-10 bg-gradient-to-b from-[#213245] to-[#0f1b29] rounded-2xl border border-white/10 shadow-xl backdrop-blur text-white">
       <div className="text-center mb-8">
         <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full mb-4 border border-white/15 shadow-lg">
           <Mail className="w-8 h-8 text-white" />
